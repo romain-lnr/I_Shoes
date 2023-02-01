@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>User Login</title>
+    <title>Register</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -35,6 +35,15 @@
                            class="demo-input-box">
                 </div>
             </div>
+            <div class="field-column">
+                <div>
+                    <label for="password">Confirm password</label><span id="password_info" class="error-info"></span>
+                </div>
+                <div>
+                    <input name="password" id="password" type="password"
+                           class="demo-input-box">
+                </div>
+            </div>
             <div class=field-column>
                 <div>
                     <input type="submit" name="login" value="Login"
@@ -43,19 +52,9 @@
             </div>
             <div class=field-column>
                 <div>
-                    <p>Pas inscrit ?<a href="register.php"> S'inscrire</a></p>
+                    <p>Pas inscrit ?<a href="login.php">Déjà inscrit</a>
                 </div>
             </div>
         </div>
     </form>
 </div>
-<?php
-session_start();
-if (! empty($_SESSION["userId"])) {
-    require_once './view/dashboard.php';
-} else {
-    require_once './view/login-form.php';
-}
-?>
-</body>
-</html>
