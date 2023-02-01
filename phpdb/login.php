@@ -8,11 +8,11 @@ session_destroy();
 <html>
     <head>
        <meta charset="utf-8">
-       <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+       <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
     </head>
     <body>
         <div id="container">
-            <form action="../model/test_login.php" method="POST">
+            <form action="test_login.php" method="POST">
                 <h1>Connexion</h1>
  
                 <label><b>Nom d'utilisateur</b></label>
