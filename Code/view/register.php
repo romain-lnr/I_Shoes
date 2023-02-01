@@ -37,10 +37,10 @@
             </div>
             <div class="field-column">
                 <div>
-                    <label for="password">Confirm password</label><span id="password_info" class="error-info"></span>
+                    <label for="confirm_password">Confirm password</label><span id="confirm_password_info" class="error-info"></span>
                 </div>
                 <div>
-                    <input name="password" id="password" type="password"
+                    <input name="confirm_password" id="password" type="password"
                            class="demo-input-box">
                 </div>
             </div>

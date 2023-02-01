@@ -7,9 +7,10 @@ function WriteInJSON() {
 
         $username = $_POST['username'];
         $password = $_POST['password'];
+        $confirm_password = $_POST['confirm_password'];
 
 //checking if the received values are blank
-        if($username == '' || $password == ''){
+        if($username == '' || $password == '' || $confirm_password == ''){
 
 //giving a message to fill all values if the values are blank
             echo 'please fill all values';
