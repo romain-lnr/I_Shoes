@@ -47,7 +47,7 @@
             <div class=field-column>
                 <div>
                     <input type="submit" name="login" value="Login"
-                           class="btnLogin"></span>
+                           class="btnLogin">
                 </div>
             </div>
             <div class=field-column>
