@@ -41,6 +41,11 @@
                            class="btnLogin"></span>
                 </div>
             </div>
+            <div class=field-column>
+                <div>
+                    <p>Pas inscrit ?<a href="#"> S'inscrire</a></p>
+                </div>
+            </div>
         </div>
     </form>
 </div>
