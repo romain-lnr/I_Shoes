@@ -18,5 +18,6 @@ if(isset($_POST['insert'])){
 
         //Save the file.
       file_put_contents('../data/data.json', $json);
+      header("Location:../view/login.php");
 }
 ?>

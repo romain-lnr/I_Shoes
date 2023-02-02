@@ -1,8 +1,8 @@
 <?php
 	session_start();
-	if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']){
+	/* if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']){
 		 header("Location: login.php");
-	}
+	} */
 ?>
 
 <!DOCTYPE html>
@@ -13,8 +13,14 @@
     </head>
     <body>
 	<div class="topnav">
-		<a href="login.php">logout</a>
-		<a href="#about"><?php echo $_SESSION['id_user']?></a>
+        <?php
+        if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']) { ?>
+            <a href="login.php">login</a>
+        <?php } else { ?>
+            <a href="../model/logout.php">logout</a>
+            <a href="#about"><?php echo $_SESSION['id_user']?></a>
+        <?php } ?>
+
 	</div>
     </body>
 </html>
