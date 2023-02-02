@@ -1,5 +1,5 @@
 <?php
-require "receiveN_U.php";
+require "receiveUser.php";
 if(isset($_POST['insert'])){
 
         //Load the file

@@ -12,7 +12,7 @@ session_destroy();
     </head>
     <body>
         <div id="container">
-            <form action="../model/test_login.php" method="POST">
+            <form action="../controller/test_login.php" method="POST">
                 <h1>Connexion</h1>
  
                 <label><b>Nom d'utilisateur</b></label>
@@ -30,8 +30,6 @@ session_destroy();
                     $err = $_GET['erreur'];
                     if($err==1 || $err==2)
                         echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
-                    if($err==3)
-                        echo "<p style='color:red'>Nouvel utilisateur creé</p>";
                 }
 
                 ?>
