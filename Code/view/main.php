@@ -16,7 +16,11 @@
         <?php
         if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']) { ?>
             <a href="login.php">login</a>
-        <?php } else { ?>
+        <?php } else {
+            if (isset($_GET['admin'])){
+                echo "Admin OK";
+              } else
+            ?>
             <a href="../model/logout.php">logout</a>
             <a href="#about"><?php echo $_SESSION['id_user']?></a>
         <?php } ?>

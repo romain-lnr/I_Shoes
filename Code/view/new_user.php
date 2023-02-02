@@ -16,11 +16,11 @@
  	<label for="nom"><b>Nom</b></label>
 	<input type="text" placeholder="Entrer le nom" name="nom" required>
 	<label for="email"><b>Email</b></label>
-	<input type="text" placeholder="Entrer l'email" name="email" required>
+	<input type="email" placeholder="Entrer l'email" name="email" required>
  	<label for="password"><b>Mot de passe</b></label>
 	<input type="password" placeholder="Entrer le mot de passe" name="password" required>
 	<input type="submit" name="insert" value="ENREGISTRER">
     </form>
-</div>
+    </div>
   </body>
 </html>
