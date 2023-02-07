@@ -21,5 +21,4 @@ if ($obj == NULL) {
         } else header("Location:../view/login.php?erreur=1");
     }
 } else header("Location:../view/login.php?erreur=3");
-
 ?>

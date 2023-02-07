@@ -12,7 +12,7 @@ if(isset($_POST['insert'])){
       // Decode the JSON data into a PHP array.
       $json = json_decode($contents, true);
       $user = array_search($id_user, array_column( $json, 'username' ) );
-      if( $user !== False) header("Location:../view/new_user.php?erreur=1");
+      if ($user !== False) header("Location:../view/new_user.php?erreur=1");
       else {
             $json[] = array("username" => $id_user, "firstname" => $prenom, "name" => $nom, "Email" => $email, "password" => $passhash);
             header("Location:../view/login.php");
