@@ -2,12 +2,12 @@
 <html>
     <head>
        <meta charset="utf-8">
-       <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+       <link rel="stylesheet" href="../media/css/style.css" media="screen" type="text/css" />
     </head>
   <body>
     <div id="container">
 
-    <form action="../model/insert_user.php" method="post" enctype="multipart/form-data">
+    <form action="../models/insert_user.php" method="post" enctype="multipart/form-data">
 	<h1>Nouvel Utilisateur</h1>
 	<label for="id_user"><b>Pseudo</b></label>
 	<input type="text" placeholder="Entrer le nom d'utilisateur" name="id_user" required>

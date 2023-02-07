@@ -1,24 +1,26 @@
 <?php
 session_start();
-require "../model/receiveLogin.php";
-//Load the file
+require "../controllers/receive_login.php";
+// Load the file
 $JSONfile = '../data/data.json';
 $data = file_get_contents($JSONfile);
 // décoder le flux JSON
 $obj = json_decode($data);
 // accéder à l'élément approprié
-if ($obj == NULL) {
-    for ($i = 0; $i < count($obj); $i++) {
-        if ($obj[$i]->username == $id_user) {
-            if (password_verify($password, $obj[$i]->password)) {
-                $_SESSION['id_user'] = $obj[$i]->username;
-                $_SESSION['logged'] = true;
-                if ($id_user == "admin" && $password == "admin") {
-                    header("Location:../view/main.php?admin");
-                } else header("Location:../view/main.php");
-                return;
-            } else header("Location:../view/login.php?erreur=2");
-        } else header("Location:../view/login.php?erreur=1");
-    }
-} else header("Location:../view/login.php?erreur=3");
+for ($i = 0; $i < count($obj); $i++) {
+    if ($obj[$i]->username == $id_user) {
+        if (password_verify($password, $obj[$i]->password)) {
+            $_SESSION['id_user'] = $obj[$i]->username;
+            $_SESSION['logged'] = true;
+            if ($id_user == "admin" && $password == "admin") {
+                $_SESSION['adminLogged'] = true;
+                header("Location:../views/main.php?admin");
+            } else {
+                $_SESSION['adminLogged'] = false;
+                header("Location:../views/main.php");
+            }
+            return;
+        } else header("Location:../views/login.php?erreur=2");
+    } else header("Location:../views/login.php?erreur=1");
+}
 ?>
