@@ -20,6 +20,13 @@
  	<label for="password"><b>Mot de passe</b></label>
 	<input type="password" placeholder="Entrer le mot de passe" name="password" required>
 	<input type="submit" name="insert" value="ENREGISTRER">
+    <?php
+    if(isset($_GET['erreur'])){
+        $err = $_GET['erreur'];
+        if($err==1)
+            echo "<p style='color:red'>Votre utilisateur n'est pas unique</p>";
+    }
+        ?>
     </form>
     </div>
   </body>
