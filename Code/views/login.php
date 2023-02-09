@@ -12,7 +12,7 @@ session_destroy();
     </head>
     <body>
         <div id="container">
-            <form action="../models/test_login.php" method="POST">
+            <form action="../index.php?action=logged" method="POST">
                 <h1>Connexion</h1>
                 <label><b>Nom d'utilisateur</b></label>
                 <input type="text" placeholder="Entrer le nom d'utilisateur" name="id_user" required>

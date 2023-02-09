@@ -7,7 +7,7 @@
   <body>
     <div id="container">
 
-    <form action="../models/insert_user.php" method="post" enctype="multipart/form-data">
+    <form action="../index.php?action=insert_user" method="POST" enctype="multipart/form-data">
 	<h1>Nouvel Utilisateur</h1>
 	<label for="id_user"><b>Pseudo</b></label>
 	<input type="text" placeholder="Entrer le nom d'utilisateur" name="id_user" required>

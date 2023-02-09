@@ -18,7 +18,7 @@
                 echo "Admin OK";
               } else
             ?>
-            <a href="../models/logout.php">logout</a>
+            <a href="../index.php?action=logout">logout</a>
             <a href="#about"><?php echo $_SESSION['id_user']?></a>
         <?php } ?>
 
