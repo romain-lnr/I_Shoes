@@ -8,11 +8,11 @@ session_destroy();
 <html>
     <head>
        <meta charset="utf-8">
-       <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+       <link rel="stylesheet" href="../media/css/style.css" media="screen" type="text/css" />
     </head>
     <body>
         <div id="container">
-            <form action="../controller/test_login.php" method="POST">
+            <form action="../models/test_login.php" method="POST">
                 <h1>Connexion</h1>
                 <label><b>Nom d'utilisateur</b></label>
                 <input type="text" placeholder="Entrer le nom d'utilisateur" name="id_user" required>
@@ -23,7 +23,7 @@ session_destroy();
 		<?php
                 if(isset($_GET['erreur'])){
                     $err = $_GET['erreur'];
-                    if($err == 1 || $err == 2 || $err == 3) echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
+                    if($err == 1 || $err == 2) echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
                 }
 
                 ?>
