@@ -1,5 +1,5 @@
 body{
-    background: #4b7bbe;
+    background: cornflowerblue;
     font-family: Arial;
 }
 #container{
@@ -65,7 +65,7 @@ body{
 
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #333;
+  background-color: cadetblue;
   overflow: hidden;
 }
 
@@ -81,6 +81,19 @@ body{
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #364cbf;
+  background-color: lightblue;
   color: white;
+}
+
+/* Change the search bar on accueil page*/
+#search {
+    margin-top: 15px;
+    margin-left: 200px;
+    width: 900px;
+}
+@media screen and (max-width: 1500px) {
+    #search {
+        width: 100px;
+        margin-left: 10px;
+    }
 }
