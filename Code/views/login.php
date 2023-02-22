@@ -23,6 +23,7 @@ session_destroy();
                     <input type="submit" name="insert" value='LOGIN' >
                 </div>
 		<a href="new_user.php" style="float: right;"><b>Nouvel Utilisateur</b></a>
+        <a href="main.php" style="float: left;"><b>Retour à la page d'acceuil</b></a>
 		<?php
                 if(isset($_GET['erreur'])){
                     $err = $_GET['erreur'];
