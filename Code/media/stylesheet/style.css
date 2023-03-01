@@ -91,6 +91,12 @@ body{
     margin-left: 200px;
     width: 900px;
 }
+
+/* Change the case statements */
+.case {
+    background-color: orange;
+    border: solid 3px dimgrey;
+}
 @media screen and (max-width: 1500px) {
     #search {
         width: 100px;

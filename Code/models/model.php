@@ -16,7 +16,7 @@ function test_login($id_user, $password) {
                 $_SESSION['logged'] = true;
                 if ($id_user == "admin" && $password == "admin") {
                     $_SESSION['adminLogged'] = true;
-                    header("Location:views/main.php?admin");
+                    header("Location:views/admin.php");
                 } else {
                     $_SESSION['adminLogged'] = false;
                     header("Location:views/main.php");
