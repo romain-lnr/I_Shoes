@@ -2,7 +2,7 @@
 function test_login($id_user, $password) {
 
     // Load the file
-    $JSONfile = 'data/data.json';
+    $JSONfile = 'data/dataUsers.json';
     $data = file_get_contents($JSONfile);
 
     // décoder le flux JSON
@@ -16,7 +16,7 @@ function test_login($id_user, $password) {
                 $_SESSION['logged'] = true;
                 if ($id_user == "admin" && $password == "admin") {
                     $_SESSION['adminLogged'] = true;
-                    header("Location:views/admin.php");
+                    header("Location:views/main.php");
                 } else {
                     $_SESSION['adminLogged'] = false;
                     header("Location:views/main.php");
@@ -31,7 +31,7 @@ function insert_user($id_user, $prenom, $nom, $email, $password) {
     if(isset($_POST['insert'])){
 
         // Load the file
-        $JSONfile = 'data/data.json';
+        $JSONfile = 'data/dataUsers.json';
         $contents = file_get_contents($JSONfile);
 
         // HASH Password
