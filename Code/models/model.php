@@ -1,5 +1,5 @@
 <?php
-function test_login($id_user, $password) {
+function Test_login($id_user, $password) {
 
     // Load the file
     $JSONfile = 'data/dataUsers.json';
@@ -16,7 +16,7 @@ function test_login($id_user, $password) {
                 $_SESSION['logged'] = true;
                 if ($id_user == "admin" && $password == "admin") {
                     $_SESSION['adminLogged'] = true;
-                    header("Location:views/main.php");
+                    header("Location:views/admin.php");
                 } else {
                     $_SESSION['adminLogged'] = false;
                     header("Location:views/main.php");
@@ -26,8 +26,7 @@ function test_login($id_user, $password) {
         } else header("Location:views/login.php?erreur=1");
     }
 }
-
-function insert_user($id_user, $prenom, $nom, $email, $password) {
+function Insert_user($id_user, $prenom, $nom, $email, $password) {
     if(isset($_POST['insert'])){
 
         // Load the file
@@ -50,11 +49,53 @@ function insert_user($id_user, $prenom, $nom, $email, $password) {
         $json = json_encode($json);
 
         // Save the file.
-        file_put_contents('data/data.json', $json);
+        file_put_contents('data/dataUsers.json', $json);
     }
 }
+function Add_article($id_article, $mark, $desc, $price, $imagepath) {
+    if(isset($_POST['insert'])){
 
-function login_out() {
+        // Load the file
+        $JSONfile = 'data/dataArticles.json';
+        $contents = file_get_contents($JSONfile);
+
+        // Decode the JSON data into a PHP array.
+        $json = json_decode($contents, true);
+        $article = array_search($id_article, array_column( $json, 'article' ) );
+        if ($article !== False) header("Location:views/TDC_admin.php?erreur=1");
+        else {
+            $json[] = array("article" => $id_article, "mark" => $mark, "description" => $desc, "price" => $price, "image" => $imagepath);
+            header("Location:views/admin.php");
+        }
+
+        // Encode the array back into a JSON string.
+        $json = json_encode($json);
+
+        // Save the file.
+        file_put_contents('data/dataArticles.json', $json);
+    }
+}
+function DisplayArticles() {
+
+    // Load the file
+    $JSONfile = '../data/dataArticles.json';
+    $data = file_get_contents($JSONfile);
+
+    // décoder le flux JSON
+    $obj = json_decode($data);
+
+    // accéder à l'élément approprié
+    for ($i = 0; $i < count($obj); $i++) {
+        echo $obj[$i]->article;
+        echo $obj[$i]->mark;
+        echo $obj[$i]->description;
+        echo $obj[$i]->price;
+
+        $img_article = $obj[$i]->image;
+        echo "<img src=$img_article>";
+    }
+}
+function Login_out() {
     $_SESSION['logged'] = false;
     header("Location:index.php");
 }

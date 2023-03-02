@@ -6,25 +6,28 @@ if (isset($_GET['action'])) {
     $action = $_GET['action'];
     switch ($action) {
         case 'login' :
-            login();
+            Login();
             break;
         case 'logged' :
-            check_login();
+            Check_login();
             break;
         case 'logout' :
-            logout();
-            break;
-        case 'basket' :
-            basket();
+            Logout();
             break;
         case 'insert_user' :
-            account();
+            Account();
+            break;
+        case 'basket' :
+            Basket();
+            break;
+        case 'article' :
+            New_Article();
             break;
         default :
-            home_page();
+            Home_page();
     }
 }
 else {
-    home_page();
+    Home_page();
 }
 ?>

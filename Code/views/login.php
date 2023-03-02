@@ -23,11 +23,11 @@ session_destroy();
                     <input type="submit" name="insert" value='LOGIN' >
                 </div>
 		<a href="new_user.php" style="float: right;"><b>Nouvel Utilisateur</b></a>
-        <a href="main.php" style="float: left;"><b>Retour à la page d'acceuil</b></a>
+        <a href="main.php" style="float: left;"><b>Retour</b></a>
 		<?php
                 if(isset($_GET['erreur'])){
                     $err = $_GET['erreur'];
-                    if($err == 1 || $err == 2) echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
+                    if($err == 1 || $err == 2) echo "<br><p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
                 }
 
                 ?>
