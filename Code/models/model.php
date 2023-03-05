@@ -92,7 +92,7 @@ function DisplayArticles() {
         echo $obj[$i]->price;
 
         $img_article = $obj[$i]->image;
-        echo "<img src=$img_article>";
+        echo "<img src=$img_article height='200' width='200'>";
     }
 }
 function Login_out() {

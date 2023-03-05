@@ -41,64 +41,14 @@ function New_Article() {
             $file = $_FILES['img_article']['tmp_name'];
             $sourceProperties = getimagesize($file);
             $fileNewName = $id_article;
-            $folderPath = "../media/img/";
+            $folderPath = "../media/img/articles/";
             $ext = pathinfo($_FILES['img_article']['name'], PATHINFO_EXTENSION);
-            $imageType = $sourceProperties[2];
-
-            switch ($imageType) {
-
-                case IMAGETYPE_PNG:
-                    $imageResourceId = imagecreatefrompng($file);
-//                $size = min($sourceProperties[0],$sourceProperties[1]);
-//                $imageResourceId = imagecrop($imageResourceId, ['x' => (int) ($sourceProperties[0]-$size)/2, 'y' => (int) ($sourceProperties[1]-$size)/2, 'width' => $s>
-//                $targetLayer = imageResize($imageResourceId,$size,$size);
-                    $targetLayer = imageResize($imageResourceId,$sourceProperties[0],$sourceProperties[1]);
-                    imagepng($targetLayer,$folderPath.$fileNewName.".".$ext);
-                    break;
-
-                case IMAGETYPE_GIF:
-                    $imageResourceId = imagecreatefromgif($file);
-//                $size = min($sourceProperties[0],$sourceProperties[1]);
-//                $imageResourceId = imagecrop($imageResourceId, ['x' => (int) ($sourceProperties[0]-$size)/2, 'y' => (int) ($sourceProperties[1]-$size)/2, 'width' => $s>
-//                $targetLayer = imageResize($imageResourceId,$size,$size);
-                    $targetLayer = imageResize($imageResourceId,$sourceProperties[0],$sourceProperties[1]);
-                    imagegif($targetLayer,$folderPath.$fileNewName.".".$ext);
-                    break;
-
-                case IMAGETYPE_JPEG:
-                    $imageResourceId = imagecreatefromjpeg($file);
-//		$size = min($sourceProperties[0],$sourceProperties[1]);
-//		$imageResourceId = imagecrop($imageResourceId, ['x' => (int) ($sourceProperties[0]-$size)/2, 'y' => (int) ($sourceProperties[1]-$size)/2, 'width' => $size, 'height' => $size]);
-//              $targetLayer = imageResize($imageResourceId,$size,$size);
-                    $targetLayer = imageResize($imageResourceId,$sourceProperties[0],$sourceProperties[1]);
-                    imagejpeg($targetLayer,$folderPath.$fileNewName.".".$ext);
-                    break;
-                default:
-                    echo "Invalid Image type.";
-                    exit;
-            }
         }
         $imagepath=$folderPath.$fileNewName.".".$ext;
+        $fileName = $fileNewName.".".$ext;
+        move_uploaded_file($file, './media/img/articles/'. $fileName);
     }
     Add_article($id_article, $mark, $desc, $price, $imagepath);
-}
-function imageResize($imageResourceId,$width,$height) {
-    if ($width>$height) {
-        $targetWidth =200;
-        $targetHeight =200*$height/$width;
-    }
-    else {
-        $targetWidth = 200*$width/$height;
-        $targetHeight = 200;
-    }
-
-//        $targetWidth = 200;
-//        $targetHeight = 200;
-
-
-    $targetLayer=imagecreatetruecolor($targetWidth,$targetHeight);
-    imagecopyresampled($targetLayer,$imageResourceId,0,0,0,0,$targetWidth,$targetHeight, $width,$height);
-    return $targetLayer;
 }
 function Logout() {
     require "models/model.php";
