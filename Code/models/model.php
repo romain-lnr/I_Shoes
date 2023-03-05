@@ -84,18 +84,22 @@ function DisplayArticles() {
     // décoder le flux JSON
     $obj = json_decode($data);
 
-    // accéder à l'élément approprié
-    for ($i = 0; $i < count($obj); $i++) {
-        echo $obj[$i]->article;
-        echo $obj[$i]->mark;
-        echo $obj[$i]->description;
-        echo $obj[$i]->price;
-
-        $img_article = $obj[$i]->image;
-        echo "<img src=$img_article height='200' width='200'>";
+    // accéder à l'élément approprié ?>
+    <div id="articles">
+    <?php for ($i = 0; $i < count($obj); $i++) {
+        $img_article = $obj[$i]->image; ?>
+                <div id="tableau">
+                    <img src=<?=$img_article?> height='200' width='200'><br>
+                    <?php echo $obj[$i]->article;?><br>
+                    <?php echo $obj[$i]->mark;?><br>
+                    <?php echo $obj[$i]->description;?><br>
+                    <?php echo $obj[$i]->price;?>
+                </div>
+                <?php
     }
-}
-function Login_out() {
+} ?>
+</div>
+<?php function Login_out() {
     $_SESSION['logged'] = false;
     header("Location:index.php");
 }

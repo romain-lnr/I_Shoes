@@ -16,9 +16,8 @@
 	<div class="topnav">
             <a href="login.php"><img src="../media/img/login.png" height="25"><br>login</a>
             <a href="../index.php?action=login"><img src="../media/img/basket.png" height="25"><br>Basket</a>
-            <img src="../media/img/logo.png" height="65">
-            <input type="search" placeholder="search" id="search" name="search" required>
-            <input type="submit" value="search">
+            <a href="../index.php?action=home"><img src="../media/img/logo.png" id="logo" height="65"></a>
+            <?php // A mettre sur la searchbar sur la page home ?>
     </div>
         <div class="slideshow-container">
 
@@ -51,55 +50,20 @@
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
         </div>
-    <div id="content">
-        <div class="row">
-            <div class="col-sm-3">
-                <div class="case">
-                    Ici un article
-                    a
-                    a
-                    a
-                    a
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="case">
-                    Ici un article
-                    a
-                    a
-                    a
-                    a
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="case">
-                    Ici un article
-                    a
-                    a
-                    a
-                    a
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="case">
-                    Ici un article
-                    a
-                    a
-                    a
-                    a
-                </div>
-            </div>
-        </div>
-    </div>
-        <?php } else {
+        <?php
+        require "../models/model.php";
+        DisplayArticles();
+            } else {
             ?>
     <div class="topnav">
         <a href="../index.php?action=logout">logout</a>
         <a href="#about" style="height: 10px"><?php echo $_SESSION['id_user']?></a>
         <a href="../index.php?action=login"><img src="../media/img/basket.png" height="25"><br>Basket</a>
         <img src="../media/img/logo.png" height="65">
-        <input type="search" placeholder="search" id="search" name="search" required>
-        <input type="submit" value="search">
+        <form action="/Code/index.php?action=logged" method="POST">
+            <input type="search" placeholder="search" id="search" name="search" required>
+            <input type="submit" value="search">
+        </form>
     </div>
         <div class="slideshow-container">
 
@@ -132,47 +96,10 @@
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
         </div>
-        <div id="content">
-            <div class="row">
-                <div class="col-sm-3">
-                    <div class="case">
-                        Ici un article
-                        a
-                        a
-                        a
-                        a
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="case">
-                        Ici un article
-                        a
-                        a
-                        a
-                        a
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="case">
-                        Ici un article
-                        a
-                        a
-                        a
-                        a
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="case">
-                        Ici un article
-                        a
-                        a
-                        a
-                        a
-                    </div>
-                </div>
-            </div>
-        </div>
-    <?php } ?>
+        <?php
+        require "../models/model.php";
+        DisplayArticles();
+        } ?>
     <script>
         let slideIndex = 1;
         showSlides(slideIndex);

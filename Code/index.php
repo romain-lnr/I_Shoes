@@ -5,6 +5,9 @@ require "controllers/navigation.php";
 if (isset($_GET['action'])) {
     $action = $_GET['action'];
     switch ($action) {
+        case 'home' :
+            Home_page();
+            break;
         case 'login' :
             Login();
             break;
@@ -24,10 +27,10 @@ if (isset($_GET['action'])) {
             New_Article();
             break;
         default :
-            Home_page();
+            Default_page();
     }
 }
 else {
-    Home_page();
+    Default_page();
 }
 ?>

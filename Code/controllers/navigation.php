@@ -1,7 +1,9 @@
 <?php
 
 function Home_page() {
-    $_GET['action'] = "home";
+    header("Location:views/Home.php");
+}
+function Default_page() {
     header("Location:views/main.php");
 }
 function Login() {

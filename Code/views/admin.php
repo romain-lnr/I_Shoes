@@ -12,6 +12,7 @@ session_start()
     <div class="topnav">
         <a href="../index.php?action=logout">logout</a>
         <a href="#about" style="height: 10px"><?php echo $_SESSION['id_user']?></a>
+        <a href="TDC_admin.php"><img src="../media/img/TDC_admin.png" height="25"><br>TDC</a>
         <img src="../media/img/logo.png" height="65">
     </div>
     <?php
