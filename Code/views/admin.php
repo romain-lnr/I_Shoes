@@ -17,7 +17,22 @@ session_start()
     </div>
     <?php
     require "../models/model.php";
-    DisplayArticles();
-    ?>
+    DisplayArticles(); ?>
+    <div id="content">
+        <div class="row">
+            <?php for ($i = 0; $i < $_SESSION['nb_articles']; $i++) { ?>
+                <div class="col-sm-6">
+                    <div class="case">
+                        <div id="image_article"><img src="<?=$_SESSION['img_article'][$i]?>" height="80" width="250"></div>
+                        <hr>
+                        <div id="nom_article"><?=$_SESSION['nom_article'][$i]?></div>
+                        <div id="mark_article"><?=$_SESSION['mark_article'][$i]?></div>
+                        <div id="desc_article"><?=$_SESSION['desc_article'][$i]?></div>
+                        <div id="price_article"><?=$_SESSION['price_article'][$i]?></div>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
 </body>
 </html>

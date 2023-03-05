@@ -1,7 +1,7 @@
 <?php
 
 function Home_page() {
-    header("Location:views/Home.php");
+    header("Location:views/home.php");
 }
 function Default_page() {
     header("Location:views/main.php");

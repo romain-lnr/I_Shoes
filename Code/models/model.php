@@ -19,7 +19,7 @@ function Test_login($id_user, $password) {
                     header("Location:views/admin.php");
                 } else {
                     $_SESSION['adminLogged'] = false;
-                    header("Location:views/main.php");
+                    header("Location:views/home.php");
                 }
                 return;
             } else header("Location:views/login.php?erreur=2");
@@ -83,23 +83,18 @@ function DisplayArticles() {
 
     // décoder le flux JSON
     $obj = json_decode($data);
+    $_SESSION['nb_articles'] = count($obj);
 
-    // accéder à l'élément approprié ?>
-    <div id="articles">
-    <?php for ($i = 0; $i < count($obj); $i++) {
-        $img_article = $obj[$i]->image; ?>
-                <div id="tableau">
-                    <img src=<?=$img_article?> height='200' width='200'><br>
-                    <?php echo $obj[$i]->article;?><br>
-                    <?php echo $obj[$i]->mark;?><br>
-                    <?php echo $obj[$i]->description;?><br>
-                    <?php echo $obj[$i]->price;?>
-                </div>
-                <?php
+    // accéder à l'élément approprié
+     for ($i = 0; $i < $_SESSION['nb_articles']; $i++) {
+        $_SESSION['img_article'][$i] = $obj[$i]->image;
+        $_SESSION['nom_article'][$i] = $obj[$i]->article;
+        $_SESSION['mark_article'][$i] = $obj[$i]->mark;
+        $_SESSION['desc_article'][$i] = $obj[$i]->description;
+        $_SESSION['price_article'][$i] = $obj[$i]->price;
     }
-} ?>
-</div>
-<?php function Login_out() {
+}
+function Login_out() {
     $_SESSION['logged'] = false;
     header("Location:index.php");
 }

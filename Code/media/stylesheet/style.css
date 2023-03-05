@@ -9,7 +9,7 @@ body{
 }
 /* Logo css */
 #logo {
-    margin-right: 100px;
+    margin-right: 520px;
 }
 /* Bordered form */
 #container form {
@@ -187,15 +187,17 @@ img {vertical-align: middle;}
     background-color: orange;
     border: solid 3px dimgrey;
 }
-#articles {
-    text-align: center;
-    display: flex;
-}
 /* Media-querries */
 @media screen and (max-width: 1500px) {
     #search {
         width: 100px;
         margin-left: 10px;
+    }
+}
+/* Logo media-querries */
+@media screen and (min-width: 1800px) {
+    #logo {
+        margin-right: 1640px;
     }
 }
 
