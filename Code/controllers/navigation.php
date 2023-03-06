@@ -1,6 +1,8 @@
 <?php
 
 function Home_page() {
+    require "models/model.php";
+    DisplayArticles();
     header("Location:views/home.php");
 }
 function Default_page() {
@@ -11,6 +13,7 @@ function Login() {
 }
 function Check_login() {
     require "models/model.php";
+    DisplayArticles();
         if(isset($_POST['insert'])) {
         // récupérer les valeurs
         $id_user = $_POST['id_user'];
@@ -38,6 +41,7 @@ function New_Article() {
         $mark = $_POST['mark'];
         $desc = $_POST['desc'];
         $price = $_POST['price'];
+        $stock_number = NULL;
 
         if(is_array($_FILES)) {
             $file = $_FILES['img_article']['tmp_name'];
@@ -50,7 +54,18 @@ function New_Article() {
         $fileName = $fileNewName.".".$ext;
         move_uploaded_file($file, './media/img/articles/'. $fileName);
     }
-    Add_article($id_article, $mark, $desc, $price, $imagepath);
+    Add_article($id_article, $mark, $desc, $price, $stock_number, $imagepath);
+}
+function Update_articles() {
+    require "models/model.php";
+
+    if(isset($_POST['insert'])) {
+        for ($i = 0; $i < $_SESSION['nb_articles']; $i++) {
+            $stock[$i] = $_POST["stock_number_".strval($i)];
+            $_SESSION['stock_number'][$i] = $stock[$i];
+            Add_article($_SESSION['nom_article'][$i], $_SESSION['mark_article'][$i], $_SESSION['desc_article'][$i], $_SESSION['price_article'][$i], $_SESSION['stock_number'][$i], $_SESSION['img_article'][$i]);
+        }
+    }
 }
 function Logout() {
     require "models/model.php";

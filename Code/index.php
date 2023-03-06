@@ -26,7 +26,11 @@ if (isset($_GET['action'])) {
         case 'article' :
             New_Article();
             break;
+        case 'update_articles' :
+            Update_articles();
+            break;
         default :
+            // Faire une page lost() !
             Default_page();
     }
 }

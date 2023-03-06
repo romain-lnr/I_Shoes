@@ -20,21 +20,19 @@ session_start();
                 <input type="search" placeholder="search" id="search" name="search" required>
                 <input type="submit" value="search">
             </form>
-            <?php // A mettre sur la searchbar sur la page home
-            require "../models/model.php";
-            DisplayArticles();?>
+            <?php // A mettre sur la searchbar sur la page home?>
     </div>
         <div id="content">
             <div class="row">
                 <?php for ($i = 0; $i < $_SESSION['nb_articles']; $i++) { ?>
                 <div class="col-sm-6">
                     <div class="case">
-                        <div id="image_article"><img src="<?=$_SESSION['img_article'][$i]?>" height="80" width="250"></div>
+                        <div id="image_article_case"><img src="<?=$_SESSION['img_article'][$i]?>" id="image_article"></div>
                         <hr>
-                        <div id="nom_article"><?=$_SESSION['nom_article'][$i]?></div>
-                        <div id="mark_article"><?=$_SESSION['mark_article'][$i]?></div>
+                        <div id="nom_article"><?="<h2>".$_SESSION['nom_article'][$i]."</h2>"?></div>
+                        <div id="mark_article"><?="<h4>".$_SESSION['mark_article'][$i]."</h4>"?></div>
                         <div id="desc_article"><?=$_SESSION['desc_article'][$i]?></div>
-                        <div id="price_article"><?=$_SESSION['price_article'][$i]?></div>
+                        <div id="price_article"><?=$_SESSION['price_article'][$i]." CHF"?></div>
                     </div>
                 </div>
                         <?php } ?>
@@ -51,20 +49,17 @@ session_start();
             <input type="submit" value="search">
         </form>
     </div>
-        <?php
-        require "../models/model.php";
-        DisplayArticles(); ?>
     <div id="content">
         <div class="row">
             <?php for ($i = 0; $i < $_SESSION['nb_articles']; $i++) { ?>
-                <div class="col-sm-6">
+                <div class="col-sm-3">
                     <div class="case">
-                        <div id="image_article"><img src="<?=$_SESSION['img_article'][$i]?>" height="80" width="250"></div>
+                        <div id="image_article_case"><img src="<?=$_SESSION['img_article'][$i]?>" id="image_article"></div>
                         <hr>
-                        <div id="nom_article"><?=$_SESSION['nom_article'][$i]?></div>
-                        <div id="mark_article"><?=$_SESSION['mark_article'][$i]?></div>
+                        <div id="nom_article"><?="<h2>".$_SESSION['nom_article'][$i]."</h2>"?></div>
+                        <div id="mark_article"><?="<h4>".$_SESSION['mark_article'][$i]."</h4>"?></div>
                         <div id="desc_article"><?=$_SESSION['desc_article'][$i]?></div>
-                        <div id="price_article"><?=$_SESSION['price_article'][$i]?></div>
+                        <div id="price_article"><?=$_SESSION['price_article'][$i]." CHF"?></div>
                     </div>
                 </div>
             <?php } ?>

@@ -52,7 +52,7 @@ function Insert_user($id_user, $prenom, $nom, $email, $password) {
         file_put_contents('data/dataUsers.json', $json);
     }
 }
-function Add_article($id_article, $mark, $desc, $price, $imagepath) {
+function Add_article($id_article, $mark, $desc, $price, $stock_number, $imagepath) {
     if(isset($_POST['insert'])){
 
         // Load the file
@@ -62,9 +62,12 @@ function Add_article($id_article, $mark, $desc, $price, $imagepath) {
         // Decode the JSON data into a PHP array.
         $json = json_decode($contents, true);
         $article = array_search($id_article, array_column( $json, 'article' ) );
-        if ($article !== False) header("Location:views/TDC_admin.php?erreur=1");
+        if ($article !== False) {
+            $json[$article] = array("article" => $id_article, "mark" => $mark, "description" => $desc, "price" => $price, "stock" => $stock_number, "image" => $imagepath);
+            header("Location:views/admin.php");
+        }
         else {
-            $json[] = array("article" => $id_article, "mark" => $mark, "description" => $desc, "price" => $price, "image" => $imagepath);
+            $json[] = array("article" => $id_article, "mark" => $mark, "description" => $desc, "price" => $price, "stock" => $stock_number, "image" => $imagepath);
             header("Location:views/admin.php");
         }
 
@@ -78,7 +81,7 @@ function Add_article($id_article, $mark, $desc, $price, $imagepath) {
 function DisplayArticles() {
 
     // Load the file
-    $JSONfile = '../data/dataArticles.json';
+    $JSONfile = 'data/dataArticles.json';
     $data = file_get_contents($JSONfile);
 
     // décoder le flux JSON
@@ -92,6 +95,7 @@ function DisplayArticles() {
         $_SESSION['mark_article'][$i] = $obj[$i]->mark;
         $_SESSION['desc_article'][$i] = $obj[$i]->description;
         $_SESSION['price_article'][$i] = $obj[$i]->price;
+        $_SESSION['stock_number'][$i] = NULL;
     }
 }
 function Login_out() {

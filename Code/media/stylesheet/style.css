@@ -9,7 +9,7 @@ body{
 }
 /* Logo css */
 #logo {
-    margin-right: 520px;
+    margin-right: 320px;
 }
 /* Bordered form */
 #container form {
@@ -181,11 +181,22 @@ img {vertical-align: middle;}
     from {opacity: .4}
     to {opacity: 1}
 }
-
 /* Change the case statements */
 .case {
-    background-color: orange;
+    background-color: wheat;
     border: solid 3px dimgrey;
+    width: 200px;
+}
+#image_article {
+height: 200px;
+    width: 194px;
+}
+#submit_case {
+    float: left;
+}
+#number_case {
+    float: right;
+    width: 50px;
 }
 /* Media-querries */
 @media screen and (max-width: 1500px) {
