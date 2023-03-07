@@ -7,18 +7,28 @@
 </head>
 <body>
 <div id="container">
-    <form action="../index.php?action=articles" method="POST">
+    <form action="../index.php?action=article" method="POST" enctype="multipart/form-data">
         <div class="form-group">
             <h1>Table de création</h1>
-            <label><b>Nom d'article</b></label>
-            <input type="text" class="form-control" placeholder="Entrer le nom de l'article" name="id_article" required>
-            <label><b>Nom de la marque</b></label>
-            <input type="text" class="form-control" placeholder="Entrer le nom de la marque de l'article" name="mark" required>
-            <label><b>Description</b></label>
-            <input type="text" class="form-control" placeholder="Entrer une sobre description de l'article" name="desc" required>
-            <label><b>Prix</b></label>
-            <input type="text" class="form-control" placeholder="Entrer le prix à établir" name="price" required>
+            <label for="id_article"><b>Nom d'article</b></label>
+            <input type="text" class="form-control" placeholder="Entrer le nom de l'article" name="id_article" maxlength="20" required>
+            <label for="mark"><b>Nom de la marque</b></label>
+            <input type="text" class="form-control" placeholder="Entrer le nom de la marque de l'article" name="mark" maxlength="20" required>
+            <label for="desc"><b>Description</b></label>
+            <input type="text" class="form-control" placeholder="Entrer une sobre description de l'article" name="desc" maxlength="200" required>
+            <label for="price"><b>Prix</b></label>
+            <input type="text" class="form-control" placeholder="Entrer le prix à établir" name="price" maxlength="2" required>
+            <label for="img_article"><b>Image de l'article</b></label>
+            <input type="file" class="form-control" placeholder="Entrer une image pour l'article" name="img_article" required>
             <input type="submit" name="insert" value='AJOUTER' >
+
+            <?php
+            if(isset($_GET['erreur'])){
+                $err = $_GET['erreur'];
+                if($err==1)
+                    echo "<p style='color:red'>Votre article n'est pas unique</p>";
+            }
+            ?>
         </div>
     </form>
 </div>

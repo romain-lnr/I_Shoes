@@ -7,6 +7,10 @@ body{
     margin:0 auto;
     margin-top:5%;
 }
+/* Logo css */
+#logo {
+    margin-right: 320px;
+}
 /* Bordered form */
 #container form {
     width:100%;
@@ -48,41 +52,41 @@ body{
     border: 1px solid #364cbf;
 }
 #container a:link {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 #container a:visited {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 #container a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 #container a:active {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: cadetblue;
-  overflow: hidden;
+    background-color: cadetblue;
+    overflow: hidden;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
-  float: right;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 5px 5px;
-  text-decoration: none;
-  font-size: 16px;
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 5px 5px;
+    text-decoration: none;
+    font-size: 16px;
 }
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: lightblue;
-  color: white;
+    background-color: lightblue;
+    color: white;
 }
 
 /* Change the search bar on accueil page*/
@@ -177,18 +181,34 @@ img {vertical-align: middle;}
     from {opacity: .4}
     to {opacity: 1}
 }
-
 /* Change the case statements */
 .case {
-    background-color: orange;
+    background-color: wheat;
     border: solid 3px dimgrey;
+    width: 200px;
 }
-
+#image_article {
+height: 200px;
+    width: 194px;
+}
+#submit_case {
+    float: left;
+}
+#number_case {
+    float: right;
+    width: 50px;
+}
 /* Media-querries */
 @media screen and (max-width: 1500px) {
     #search {
         width: 100px;
         margin-left: 10px;
+    }
+}
+/* Logo media-querries */
+@media screen and (min-width: 1800px) {
+    #logo {
+        margin-right: 1640px;
     }
 }
 
