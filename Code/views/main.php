@@ -19,23 +19,24 @@
             <a href="../index.php?action=home"><img src="../media/img/logo.png" id="logo" height="65"></a>
             <?php // A mettre sur la searchbar sur la page home ?>
     </div>
+        <br><br>
         <div class="slideshow-container">
 
             <div class="mySlides fadeSlide">
                 <div class="numbertext">1 / 3</div>
-                <img src="../media/img/bg-1.jpg" style="width:100%" height="225">
+                <img src="../media/img/bg-1.jpg" style="width:100%" height="350">
                 <div class="text">Caption Text</div>
             </div>
 
             <div class="mySlides fadeSlide">
                 <div class="numbertext">2 / 3</div>
-                <img src="../media/img/bg-2.jpg" style="width:100%" height="225">
+                <img src="../media/img/bg-2.jpg" style="width:100%" height="350">
                 <div class="text">Caption Two</div>
             </div>
 
             <div class="mySlides fadeSlide">
                 <div class="numbertext">3 / 3</div>
-                <img src="../media/img/bg-3.jpg" style="width:100%" height="225">
+                <img src="../media/img/bg-3.jpg" style="width:100%" height="350">
                 <div class="text">Caption Three</div>
             </div>
 
@@ -51,6 +52,9 @@
             <span class="dot" onclick="currentSlide(3)"></span>
         </div>
     <?php } ?>
+    <footer>
+        <?php // Mettre le footer ici ?>
+    </footer>
     <script src="../media/scripts/slider.js">
     </script>
     </body>
