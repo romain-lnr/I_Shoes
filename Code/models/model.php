@@ -90,12 +90,12 @@ function DisplayArticles() {
 
     // accéder à l'élément approprié
      for ($i = 0; $i < $_SESSION['nb_articles']; $i++) {
-        $_SESSION['img_article'][$i] = $obj[$i]->image;
         $_SESSION['nom_article'][$i] = $obj[$i]->article;
         $_SESSION['mark_article'][$i] = $obj[$i]->mark;
         $_SESSION['desc_article'][$i] = $obj[$i]->description;
         $_SESSION['price_article'][$i] = $obj[$i]->price;
-        $_SESSION['stock_number'][$i] = NULL;
+        $_SESSION['stock_number'][$i] = $obj[$i]->stock;
+         $_SESSION['img_article'][$i] = $obj[$i]->image;
     }
 }
 function Login_out() {

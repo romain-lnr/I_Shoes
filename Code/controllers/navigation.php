@@ -41,7 +41,7 @@ function New_Article() {
         $mark = $_POST['mark'];
         $desc = $_POST['desc'];
         $price = $_POST['price'];
-        $stock_number = NULL;
+        $stock_number = 0;
 
         if(is_array($_FILES)) {
             $file = $_FILES['img_article']['tmp_name'];

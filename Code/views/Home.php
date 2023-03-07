@@ -20,12 +20,12 @@ session_start();
                 <input type="search" placeholder="search" id="search" name="search" required>
                 <input type="submit" value="search">
             </form>
-            <?php // A mettre sur la searchbar sur la page home?>
     </div>
+        <br>
         <div id="content">
             <div class="row">
                 <?php for ($i = 0; $i < $_SESSION['nb_articles']; $i++) { ?>
-                <div class="col-sm-6">
+                <div class="col-sm-3">
                     <div class="case">
                         <div id="image_article_case"><img src="<?=$_SESSION['img_article'][$i]?>" id="image_article"></div>
                         <hr>

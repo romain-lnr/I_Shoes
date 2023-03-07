@@ -183,8 +183,8 @@ img {vertical-align: middle;}
 }
 /* Change the case statements */
 .case {
-    background-color: wheat;
-    border: solid 3px dimgrey;
+    background-color: #8FC88F;
+    border: outset darkslategrey;
     width: 200px;
 }
 #image_article {

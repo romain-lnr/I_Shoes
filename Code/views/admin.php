@@ -32,7 +32,7 @@ session_start()
                             <div id="mark_article"><?="<h4>".$_SESSION['mark_article'][$i]."</h4>"?></div>
                             <div id="desc_article"><?=$_SESSION['desc_article'][$i]?></div>
                             <div id="price_article"><?=$_SESSION['price_article'][$i]." CHF"?></div>
-                            <div id="stock"><h3>Stock : </h3><input name="<?=$stock_number[$i]?>" type="text" value="<?=$_SESSION['stock_number'][$i]?>" style="background-color: #8F8F8F;" id="<?=$stock_number[$i]?>"></div>
+                            <div id="stock"><h3>Stock : </h3><input name="<?=$stock_number[$i]?>" type="text" value="<?=$_SESSION['stock_number'][$i]?>" style="background-color: #8F8F8F;" id="<?=$stock_number[$i]?>" readonly></div>
                             <div id="submit_case"><input type="button" onclick="document.querySelector('#<?=$stock_number[$i]?>').value = document.querySelector('#<?=$number[$i]?>').value" id=<?=$button[$i]?> value="Submit"></div>
                             <input type="number" id="<?=$number[$i]?>">
                         </div>
