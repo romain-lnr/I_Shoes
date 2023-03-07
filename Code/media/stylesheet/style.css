@@ -1,5 +1,5 @@
 body{
-    background: aliceblue !important;
+    background: snow !important;
     font-family: Arial;
 }
 #container{
@@ -91,8 +91,6 @@ body{
 
 /* Change the search bar on accueil page*/
 #search {
-    margin-top: 15px;
-    margin-left: 200px;
     width: 900px;
 }
 
@@ -183,12 +181,12 @@ img {vertical-align: middle;}
 }
 /* Change the case statements */
 .case {
-    background-color: #8FC88F;
+    background-color: #8F8FC0;
     border: outset darkslategrey;
-    width: 200px;
+    width: 400px;
 }
 #image_article {
-height: 200px;
+    height: 300px;
     width: 194px;
 }
 #submit_case {

@@ -24,16 +24,16 @@ session_start()
                     <?php $stock_number[$i] = "stock_number_".strval($i);
                     $button[$i] = "button_".strval($i);
                     $number[$i] = "number_".strval($i);?>
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                         <div class="case">
-                            <div id="image_article_case"><img src="<?=$_SESSION['img_article'][$i]?>" id="image_article"></div>
+                            <div id="image_article_case"><img style="border-radius: 100%" src="<?=$_SESSION['img_article'][$i]?>" id="image_article"></div>
                             <hr>
                             <div id="nom_article"><?="<h2>".$_SESSION['nom_article'][$i]."</h2>"?></div>
                             <div id="mark_article"><?="<h4>".$_SESSION['mark_article'][$i]."</h4>"?></div>
                             <div id="desc_article"><?=$_SESSION['desc_article'][$i]?></div>
                             <div id="price_article"><?=$_SESSION['price_article'][$i]." CHF"?></div>
                             <div id="stock"><h3>Stock : </h3><input name="<?=$stock_number[$i]?>" type="text" value="<?=$_SESSION['stock_number'][$i]?>" style="background-color: #8F8F8F;" id="<?=$stock_number[$i]?>" readonly></div>
-                            <div id="submit_case"><input type="button" onclick="document.querySelector('#<?=$stock_number[$i]?>').value = document.querySelector('#<?=$number[$i]?>').value" id=<?=$button[$i]?> value="Submit"></div>
+                            <div id="submit_case" style="float: left;"><input type="button" onclick="document.querySelector('#<?=$stock_number[$i]?>').value = document.querySelector('#<?=$number[$i]?>').value" id=<?=$button[$i]?> value="Submit"></div>
                             <input type="number" id="<?=$number[$i]?>">
                         </div>
                     </div>

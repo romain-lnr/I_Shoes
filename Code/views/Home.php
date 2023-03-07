@@ -16,10 +16,8 @@ session_start();
             <a href="login.php"><img src="../media/img/login.png" height="25"><br>login</a>
             <a href="../index.php?action=login"><img src="../media/img/basket.png" height="25"><br>Basket</a>
             <img src="../media/img/logo.png" id=logo height="65">
-            <form action="/Code/index.php?action=logged" method="POST">
-                <input type="search" placeholder="search" id="search" name="search" required>
-                <input type="submit" value="search">
-            </form>
+            <input type="search" placeholder="search" id="search" name="search" required>
+            <input type="submit" value="search">
     </div>
         <br>
         <div id="content">
@@ -27,7 +25,7 @@ session_start();
                 <?php for ($i = 0; $i < $_SESSION['nb_articles']; $i++) { ?>
                 <div class="col-sm-3">
                     <div class="case">
-                        <div id="image_article_case"><img src="<?=$_SESSION['img_article'][$i]?>" id="image_article"></div>
+                        <div id="image_article_case"><img style="border-radius: 100%;" src="<?=$_SESSION['img_article'][$i]?>" id="image_article"></div>
                         <hr>
                         <div id="nom_article"><?="<h2>".$_SESSION['nom_article'][$i]."</h2>"?></div>
                         <div id="mark_article"><?="<h4>".$_SESSION['mark_article'][$i]."</h4>"?></div>
@@ -44,17 +42,16 @@ session_start();
         <a href="#about" style="height: 10px"><?php echo $_SESSION['id_user']?></a>
         <a href="../index.php?action=login"><img src="../media/img/basket.png" height="25"><br>Basket</a>
         <img src="../media/img/logo.png" height="65">
-        <form action="/Code/index.php?action=logged" method="POST">
-            <input type="search" placeholder="search" id="search" name="search" required>
-            <input type="submit" value="search">
-        </form>
+        <input type="search" placeholder="search" id="search" name="search" required>
+        <input type="submit" value="search">
     </div>
+        <br>
     <div id="content">
         <div class="row">
             <?php for ($i = 0; $i < $_SESSION['nb_articles']; $i++) { ?>
                 <div class="col-sm-3">
                     <div class="case">
-                        <div id="image_article_case"><img src="<?=$_SESSION['img_article'][$i]?>" id="image_article"></div>
+                        <div id="image_article_case"><img style="border-radius: 50%;" src="<?=$_SESSION['img_article'][$i]?>" id="image_article"></div>
                         <hr>
                         <div id="nom_article"><?="<h2>".$_SESSION['nom_article'][$i]."</h2>"?></div>
                         <div id="mark_article"><?="<h4>".$_SESSION['mark_article'][$i]."</h4>"?></div>
