@@ -12,32 +12,32 @@ session_start();
     <body>
     <?php
     if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']) { ?>
-	<div class="topnav">
-            <a href="login.php"><img src="../media/img/login.png" height="25"><br>login</a>
-            <a href="../index.php?action=login"><img src="../media/img/basket.png" height="25"><br>Basket</a>
-            <img src="../media/img/logo.png" id=logo height="65">
-            <input type="search" placeholder="search" id="search" name="search" required>
-            <input type="submit" value="search">
+    <div class="topnav">
+        <a href="login.php"><img src="../media/img/login.png" height="25"><br>login</a>
+        <a href="../index.php?action=login"><img src="../media/img/basket.png" height="25"><br>Basket</a>
+        <img src="../media/img/logo.png" height="65">
+        <input type="search" placeholder="search" id="search" name="search" required>
+        <input type="submit" value="search">
     </div>
-        <br>
-        <div id="content">
-            <div class="row">
-                <?php for ($i = 0; $i < $_SESSION['nb_articles']; $i++) { ?>
-                    <div class="col-sm-3">
-                        <div class="case">
-                            <div id="image_article_case"><img src="<?=$_SESSION['img_article'][$i]?>" id="image_article"></div>
-                            <hr>
-                            <div class="body_case">
-                                <div id="nom_article"><?="<h2>".$_SESSION['nom_article'][$i]."</h2>"?></div>
-                                <div id="mark_article"><?="<h4>".$_SESSION['mark_article'][$i]."</h4>"?></div>
-                                <div id="desc_article"><?=$_SESSION['desc_article'][$i]?></div>
-                                <div id="price_article"><?=$_SESSION['price_article'][$i]." CHF"?></div>
-                            </div>
+    <br>
+    <div id="content">
+        <div class="row">
+            <?php for ($i = 0; $i < $_SESSION['nb_articles']; $i++) { ?>
+                <div class="col-sm-3">
+                    <div class="case">
+                        <div id="image_article_case"><img src="<?=$_SESSION['img_article'][$i]?>" id="image_article"></div>
+                        <hr>
+                        <div class="body_case">
+                            <div id="nom_article"><?="<h2>".$_SESSION['nom_article'][$i]."</h2>"?></div>
+                            <div id="mark_article"><?="<h4>".$_SESSION['mark_article'][$i]."</h4>"?></div>
+                            <div id="desc_article"><?=$_SESSION['desc_article'][$i]?></div>
+                            <div id="price_article"><?=$_SESSION['price_article'][$i]." CHF"?></div>
                         </div>
                     </div>
-                        <?php } ?>
-            </div>
+                </div>
+            <?php } ?>
         </div>
+    </div>
         <?php } else { ?>
     <div class="topnav">
         <a href="../index.php?action=logout">logout</a>

@@ -24,19 +24,19 @@
 
             <div class="mySlides fadeSlide">
                 <div class="numbertext">1 / 3</div>
-                <img src="../media/img/bg-1.jpg" style="width:100%" height="350">
+                <img src="../media/img/bg-1.jpg" style="width:100%" height="700">
                 <div class="text">Caption Text</div>
             </div>
 
             <div class="mySlides fadeSlide">
                 <div class="numbertext">2 / 3</div>
-                <img src="../media/img/bg-2.jpg" style="width:100%" height="350">
+                <img src="../media/img/bg-2.jpg" style="width:100%" height="700">
                 <div class="text">Caption Two</div>
             </div>
 
             <div class="mySlides fadeSlide">
                 <div class="numbertext">3 / 3</div>
-                <img src="../media/img/bg-3.jpg" style="width:100%" height="350">
+                <img src="../media/img/bg-3.jpg" style="width:100%" height="700">
                 <div class="text">Caption Three</div>
             </div>
 
@@ -52,7 +52,33 @@
         </div>
     <?php } ?>
     <footer>
-        <?php // Mettre le footer ici ?>
+        <div id="contrainer">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div id="footer_proj">
+                        <h3>Notre projet</h3>
+                        <p>Notre projet se base sur un site e-commerce de vente de chaussures. L'équipe est composé d'un web master, d'un responsable développeur et d'un garçon faisant des dessins.</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div id="footer_desc">
+                        <h3>Descriptif du projet</h3>
+                        <p>Ce projet est, comme dit, un avant-goût d'un site e-commerce où le concept est la vente de chaussures. Vous trouverez ici nos articles les plus fameux ainsi que les derniers ajouts de nos services.</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div id="footer_contact">
+                        <h3>Contact du service</h3>
+                        <h6>Téléphone :</h6>
+                        <p>+41 67 827 65 24</p>
+                        <h6>Email :</h6>
+                        <p><a href="#">i_shoes.contact@gmail.com</a></p>
+                        <h6>Adresse :</h6>
+                        <p>14 Rue de la Réunion<br>1450 Ste-Croix, Vaud Suisse</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
     <script src="../media/scripts/slider.js">
     </script>

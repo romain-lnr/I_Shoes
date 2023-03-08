@@ -35,7 +35,7 @@ if (isset($_GET['action'])) {
     }
 }
 else {
-    if ((isset($_SESSION['logged'])) || $_SESSION['logged']) Home_page();
+    if ((isset($_SESSION['logged'])) && $_SESSION['logged']) Home_page();
     else Default_page();
 }
 ?>

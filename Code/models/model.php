@@ -74,6 +74,7 @@ function Add_article($id_article, $mark, $desc, $price, $stock_number, $imagepat
 
         // Save the file.
         file_put_contents('data/dataArticles.json', $json);
+        DisplayArticles();
         header("Location:views/admin.php");
     }
 }

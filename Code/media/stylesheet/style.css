@@ -193,6 +193,14 @@ img {vertical-align: middle;}
     padding: 20px;
     margin-bottom: 20px;
 }
+footer {
+    background-color: cadetblue;
+    color: white;
+    padding: 30px;
+}
+#footer_contact {
+    margin-left: 50px;
+}
 #image_article {
     height: 300px;
     width: 100%;
