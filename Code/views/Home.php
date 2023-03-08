@@ -23,16 +23,18 @@ session_start();
         <div id="content">
             <div class="row">
                 <?php for ($i = 0; $i < $_SESSION['nb_articles']; $i++) { ?>
-                <div class="col-sm-3">
-                    <div class="case">
-                        <div id="image_article_case"><img style="border-radius: 100%;" src="<?=$_SESSION['img_article'][$i]?>" id="image_article"></div>
-                        <hr>
-                        <div id="nom_article"><?="<h2>".$_SESSION['nom_article'][$i]."</h2>"?></div>
-                        <div id="mark_article"><?="<h4>".$_SESSION['mark_article'][$i]."</h4>"?></div>
-                        <div id="desc_article"><?=$_SESSION['desc_article'][$i]?></div>
-                        <div id="price_article"><?=$_SESSION['price_article'][$i]." CHF"?></div>
+                    <div class="col-sm-3">
+                        <div class="case">
+                            <div id="image_article_case"><img src="<?=$_SESSION['img_article'][$i]?>" id="image_article"></div>
+                            <hr>
+                            <div class="body_case">
+                                <div id="nom_article"><?="<h2>".$_SESSION['nom_article'][$i]."</h2>"?></div>
+                                <div id="mark_article"><?="<h4>".$_SESSION['mark_article'][$i]."</h4>"?></div>
+                                <div id="desc_article"><?=$_SESSION['desc_article'][$i]?></div>
+                                <div id="price_article"><?=$_SESSION['price_article'][$i]." CHF"?></div>
+                            </div>
+                        </div>
                     </div>
-                </div>
                         <?php } ?>
             </div>
         </div>
@@ -51,12 +53,14 @@ session_start();
             <?php for ($i = 0; $i < $_SESSION['nb_articles']; $i++) { ?>
                 <div class="col-sm-3">
                     <div class="case">
-                        <div id="image_article_case"><img style="border-radius: 50%;" src="<?=$_SESSION['img_article'][$i]?>" id="image_article"></div>
+                        <div id="image_article_case"><img src="<?=$_SESSION['img_article'][$i]?>" id="image_article"></div>
                         <hr>
-                        <div id="nom_article"><?="<h2>".$_SESSION['nom_article'][$i]."</h2>"?></div>
-                        <div id="mark_article"><?="<h4>".$_SESSION['mark_article'][$i]."</h4>"?></div>
-                        <div id="desc_article"><?=$_SESSION['desc_article'][$i]?></div>
-                        <div id="price_article"><?=$_SESSION['price_article'][$i]." CHF"?></div>
+                        <div class="body_case">
+                            <div id="nom_article"><?="<h2>".$_SESSION['nom_article'][$i]."</h2>"?></div>
+                            <div id="mark_article"><?="<h4>".$_SESSION['mark_article'][$i]."</h4>"?></div>
+                            <div id="desc_article"><?=$_SESSION['desc_article'][$i]?></div>
+                            <div id="price_article"><?=$_SESSION['price_article'][$i]." CHF"?></div>
+                        </div>
                     </div>
                 </div>
             <?php } ?>

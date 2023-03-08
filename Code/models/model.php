@@ -64,11 +64,9 @@ function Add_article($id_article, $mark, $desc, $price, $stock_number, $imagepat
         $article = array_search($id_article, array_column( $json, 'article' ) );
         if ($article !== False) {
             $json[$article] = array("article" => $id_article, "mark" => $mark, "description" => $desc, "price" => $price, "stock" => $stock_number, "image" => $imagepath);
-            header("Location:views/admin.php");
         }
         else {
             $json[] = array("article" => $id_article, "mark" => $mark, "description" => $desc, "price" => $price, "stock" => $stock_number, "image" => $imagepath);
-            header("Location:views/admin.php");
         }
 
         // Encode the array back into a JSON string.
@@ -76,6 +74,7 @@ function Add_article($id_article, $mark, $desc, $price, $stock_number, $imagepat
 
         // Save the file.
         file_put_contents('data/dataArticles.json', $json);
+        header("Location:views/admin.php");
     }
 }
 function DisplayArticles() {
