@@ -11,6 +11,9 @@ if (isset($_GET['action'])) {
         case 'login' :
             Login();
             break;
+        case 'register' :
+            Register();
+            break;
         case 'logged' :
             Check_login();
             break;

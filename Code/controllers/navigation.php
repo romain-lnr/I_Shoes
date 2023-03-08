@@ -11,6 +11,9 @@ function Default_page() {
 function Login() {
     header("Location:views/login.php");
 }
+function Register() {
+    header("Location:views/new_user.php");
+}
 function Check_login() {
     require "models/model.php";
     DisplayArticles();
