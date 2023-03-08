@@ -68,8 +68,8 @@ function Update_articles() {
     }
 }
 function Logout() {
-    require "models/model.php";
-    Login_out();
+    $_SESSION['logged'] = false;
+    header("Location:index.php");
 }
 function Basket() {
     header("Location:views/basket.php");

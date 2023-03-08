@@ -27,30 +27,28 @@ function Test_login($id_user, $password) {
     }
 }
 function Insert_user($id_user, $prenom, $nom, $email, $password) {
-    if(isset($_POST['insert'])){
 
-        // Load the file
-        $JSONfile = 'data/dataUsers.json';
-        $contents = file_get_contents($JSONfile);
+    // Load the file
+    $JSONfile = 'data/dataUsers.json';
+    $contents = file_get_contents($JSONfile);
 
-        // HASH Password
-        $passhash = password_hash($password, PASSWORD_DEFAULT);
+    // HASH Password
+    $passhash = password_hash($password, PASSWORD_DEFAULT);
 
-        // Decode the JSON data into a PHP array.
-        $json = json_decode($contents, true);
-        $user = array_search($id_user, array_column( $json, 'username' ) );
-        if ($user !== False) header("Location:views/new_user.php?erreur=1");
-        else {
-            $json[] = array("username" => $id_user, "firstname" => $prenom, "name" => $nom, "Email" => $email, "password" => $passhash);
-            header("Location:views/login.php");
-        }
-
-        // Encode the array back into a JSON string.
-        $json = json_encode($json);
-
-        // Save the file.
-        file_put_contents('data/dataUsers.json', $json);
+    // Decode the JSON data into a PHP array.
+    $json = json_decode($contents, true);
+    $user = array_search($id_user, array_column( $json, 'username' ) );
+    if ($user !== False) header("Location:views/new_user.php?erreur=1");
+    else {
+        $json[] = array("username" => $id_user, "firstname" => $prenom, "name" => $nom, "Email" => $email, "password" => $passhash);
+        header("Location:views/login.php");
     }
+
+    // Encode the array back into a JSON string.
+    $json = json_encode($json);
+
+    // Save the file.
+    file_put_contents('data/dataUsers.json', $json);
 }
 function Add_article($id_article, $mark, $desc, $price, $stock_number, $imagepath) {
     if(isset($_POST['insert'])){
@@ -97,8 +95,4 @@ function DisplayArticles() {
         $_SESSION['stock_number'][$i] = $obj[$i]->stock;
          $_SESSION['img_article'][$i] = $obj[$i]->image;
     }
-}
-function Login_out() {
-    $_SESSION['logged'] = false;
-    header("Location:index.php");
 }

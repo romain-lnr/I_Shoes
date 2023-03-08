@@ -13,7 +13,7 @@ session_start();
     <?php
     if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']) { ?>
     <div class="topnav">
-        <a href="login.php"><img src="../media/img/login.png" height="25"><br>login</a>
+        <a href="../index.php?action=login"><img src="../media/img/login.png" height="25"><br>login</a>
         <a href="../index.php?action=login"><img src="../media/img/basket.png" height="25"><br>Basket</a>
         <img src="../media/img/logo.png" height="65">
         <input type="search" placeholder="search" id="search" name="search" required>
