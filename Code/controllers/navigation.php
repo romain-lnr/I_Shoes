@@ -5,6 +5,9 @@ function Home_page() {
     DisplayArticles();
     header("Location:views/home.php");
 }
+function Admin_page() {
+    header("Location:views/admin.php");
+}
 function Default_page() {
     header("Location:views/main.php");
 }
@@ -52,6 +55,21 @@ function New_Article() {
             $fileNewName = $id_article;
             $folderPath = "../media/img/articles/";
             $ext = pathinfo($_FILES['img_article']['name'], PATHINFO_EXTENSION);
+            $imageType = $sourceProperties[2];
+        }
+        switch ($imageType) {
+            case IMAGETYPE_PNG:
+                // It's OK
+                break;
+            case IMAGETYPE_GIF:
+                // It's OK
+                break;
+            case IMAGETYPE_JPEG:
+                // It's OK
+                break;
+            default:
+                header("Location:views/TDC_admin.php?erreur=2");
+                return;
         }
         $imagepath=$folderPath.$fileNewName.".".$ext;
         $fileName = $fileNewName.".".$ext;
@@ -69,6 +87,9 @@ function Update_articles() {
             Add_article($_SESSION['nom_article'][$i], $_SESSION['mark_article'][$i], $_SESSION['desc_article'][$i], $_SESSION['price_article'][$i], $_SESSION['stock_number'][$i], $_SESSION['img_article'][$i]);
         }
     }
+}
+function Show() {
+    header("Location:views/show_article.php");
 }
 function Logout() {
     $_SESSION['logged'] = false;

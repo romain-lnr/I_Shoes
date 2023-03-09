@@ -1,0 +1,75 @@
+<?php
+session_start()
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../media/stylesheet/style.css" media="screen" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <div class="topnav">
+        <a href="../index.php?action=logout">logout</a>
+        <a href="#about" style="height: 10px"><?php echo $_SESSION['id_user']?></a>
+        <a href="TDC_admin.php"><img src="../media/img/TDC_admin.png" height="25"><br>TDC</a>
+        <img src="../media/img/logo.png" height="65">
+    </div>
+    <br>
+    <?php
+    require "../models/model.php";
+    DisplayArticles();?>
+        <div id="content">
+            <div class="row">
+                <?php for ($i = 0; $i < $_SESSION['nb_articles']; $i++) { ?>
+                    <?php $stock_number[$i] = "stock_number_".strval($i);
+                    $submit[$i] = "submit_".strval($i);
+                    $number[$i] = "number_".strval($i);?>
+                    <div class="col-sm-4">
+                        <div class="case">
+                            <div id="image_article"><img src="<?=$_SESSION['img_article'][$i]?>" height="80" width="250"></div>
+                            <hr>
+                            <div id="nom_article"><?=$_SESSION['nom_article'][$i]?></div>
+                            <div id="mark_article"><?=$_SESSION['mark_article'][$i]?></div>
+                            <div id="desc_article"><?=$_SESSION['desc_article'][$i]?></div>
+                            <div id="price_article"><?=$_SESSION['price_article'][$i]?></div>
+                            <div id="stock"><h3>Stock : <i id="<?=$stock_number[$i]?>"></i></h3></div>
+                            <div id="submit_case"><input type="submit" id=<?=$submit[$i]?> value="Submit"></div>
+                            <input type="number" id="<?=$number[$i]?>">
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+    <script>
+    var nbMax = <?=strval($_SESSION['nb_articles'])-1?>;
+
+        while (nbMax > 0) {
+            alert(nbMax);
+            var template_submit = "#submit_" + nbMax;
+            var template_stock_number = "#stock_number_" + nbMax;
+            var template_number = "#number_" + nbMax;
+
+            var submit = document.querySelector(template_submit);
+            //Ajoute l'événement sur le click du bouton charger. Ces variables vont permettre de lire les informations liée aux boutons, ceux sont des écouteurs d'evenements.
+            submit.addEventListener("click", Number_change);
+
+            function Number_change() {document.querySelector(template_stock_number).innerText = document.querySelector(template_number).value;}
+            nbMax--;
+        }
+        while (nbMax < 5) {
+            alert(nbMax);
+            var template_submit = "#submit_" + nbMax;
+            var template_stock_number = "#stock_number_" + nbMax;
+            var template_number = "#number_" + nbMax;
+
+            var submit = document.querySelector(template_submit);
+            //Ajoute l'événement sur le click du bouton charger. Ces variables vont permettre de lire les informations liée aux boutons, ceux sont des écouteurs d'evenements.
+            submit.addEventListener("click", Number_change);
+
+            function Number_change() {document.querySelector(template_stock_number).innerText = document.querySelector(template_number).value;}
+            nbMax++;
+        }
+    </script>
+</body>
+</html>

@@ -13,22 +13,23 @@ session_start();
     <?php
     if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']) { ?>
     <div class="topnav">
-        <a href="../index.php?action=login"><img src="../media/img/login.png" height="25"><br>login</a>
-        <a href="../index.php?action=login"><img src="../media/img/basket.png" height="25"><br>Basket</a>
-        <img src="../media/img/logo.png" height="65">
-        <input type="search" placeholder="search" id="search" name="search" required>
-        <input type="submit" value="search">
+        <a href="../index.php?action=login"><img src="../media/img/login.png" height="50"><br>login</a>
+        <a href="../index.php?action=login"><img src="../media/img/basket.png" height="50"><br>Basket</a>
+        <img src="../media/img/logo.png" height="90">
     </div>
     <br>
     <?php require "gabarit.php";
             } else { ?>
     <div class="topnav">
-        <a href="../index.php?action=logout">logout</a>
-        <a href="#about" style="height: 10px"><?php echo $_SESSION['id_user']?></a>
-        <a href="../index.php?action=login"><img src="../media/img/basket.png" height="25"><br>Basket</a>
-        <img src="../media/img/logo.png" height="65">
-        <input type="search" placeholder="search" id="search" name="search" required>
-        <input type="submit" value="search">
+        <div class="tab">
+            <a href="../index.php?action=logout">logout</a>
+            <a href="#" style="height: 10px"><?php echo $_SESSION['id_user']?></a>
+            <a href="../index.php?action=login"><img src="../media/img/basket.png" height="50"><br>Basket</a>
+            <?php if (isset($_SESSION['admin_logged']) && $_SESSION['admin_logged']) { ?>
+                <a href="../index.php?action=admin_request"><img src="../media/img/admin.png" height="50"><br>Admin</a>
+            <?php } ?>
+            <img src="../media/img/logo.png" height="90">
+        </div>
     </div>
         <br>
         <?php require "gabarit.php";

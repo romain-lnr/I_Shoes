@@ -12,9 +12,9 @@ session_start()
     <div class="topnav">
         <a href="../index.php?action=logout">logout</a>
         <a href="#about" style="height: 10px"><?php echo $_SESSION['id_user']?></a>
-        <a href="TDC_admin.php"><img src="../media/img/TDC_admin.png" height="25"><br>TDC</a>
-        <a href="../index.php?action=home"><img src="../media/img/home.png" height="25"><br>Home</a>
-        <img src="../media/img/logo.png" height="65">
+        <a href="TDC_admin.php"><img src="../media/img/TDC_admin.png" height="50"><br>TDC</a>
+        <a href="../index.php?action=home"><img src="../media/img/home.png" height="50"><br>Home</a>
+        <img src="../media/img/logo.png" height="90">
     </div>
     <br>
     <form action="../index.php?action=update_articles" method="POST">
@@ -29,10 +29,9 @@ session_start()
                         <div id="image_article_case"><img src="<?=$_SESSION['img_article'][$i]?>" id="image_article"></div>
                         <hr>
                         <div class="body_case">
-                            <div id="nom_article"><?="<h2>".$_SESSION['nom_article'][$i]."</h2>"?></div>
-                            <div id="mark_article"><?="<h4>".$_SESSION['mark_article'][$i]."</h4>"?></div>
-                            <div id="desc_article"><?=$_SESSION['desc_article'][$i]?></div>
-                            <div id="price_article"><?=$_SESSION['price_article'][$i]." CHF"?></div>
+                            <div id="nom_article"><?="<em>".$_SESSION['nom_article'][$i]."</em>"?></div>
+                            <div id="mark_article"><?="<em>".$_SESSION['mark_article'][$i]."</em>"?></div>
+                            <div id="price_article"><?="<em>".$_SESSION['price_article'][$i]." CHF"."</em>"?></div><br><br>
                             <div id="stock"><h3>Stock : </h3><input name="<?=$stock_number[$i]?>" type="number" class="form-control" value="<?=$_SESSION['stock_number'][$i]?>" style="background-color: #8F8F8F;" id="<?=$stock_number[$i]?>" readonly></div>
                             <input type="number" class="form-control" id="<?=$number[$i]?>">
                             <div id="submit_case"><input type="button" class="btn btn-info" onclick="document.querySelector('#<?=$stock_number[$i]?>').value = document.querySelector('#<?=$number[$i]?>').value" id=<?=$button[$i]?> value="Submit"></div>

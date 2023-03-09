@@ -15,10 +15,10 @@ function Test_login($id_user, $password) {
                 $_SESSION['id_user'] = $obj[$i]->username;
                 $_SESSION['logged'] = true;
                 if ($id_user == "admin" && $password == "admin") {
-                    $_SESSION['adminLogged'] = true;
+                    $_SESSION['admin_logged'] = true;
                     header("Location:views/admin.php");
                 } else {
-                    $_SESSION['adminLogged'] = false;
+                    $_SESSION['admin_logged'] = false;
                     header("Location:views/home.php");
                 }
                 return;

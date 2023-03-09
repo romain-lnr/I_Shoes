@@ -17,6 +17,9 @@ if (isset($_GET['action'])) {
         case 'logged' :
             Check_login();
             break;
+        case 'admin_request' :
+            Admin_page();
+            break;
         case 'logout' :
             Logout();
             break;
@@ -41,4 +44,10 @@ else {
     if ((isset($_SESSION['logged'])) && $_SESSION['logged']) Home_page();
     else Default_page();
 }
+if (isset($_GET['receive'])) {
+    $receive = $_GET['receive'];
+    $_SESSION['request_article'] = $receive;
+    Show();
+}
+
 ?>
