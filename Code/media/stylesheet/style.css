@@ -224,6 +224,7 @@ footer {
     border: 2px solid cadetblue;
     text-align: justify;
     padding-left: 30px;
+    font-size: 30px;
 }
 #submit_case {
     float: left;

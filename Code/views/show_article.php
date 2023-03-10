@@ -11,7 +11,7 @@ session_start();
 <body>
 <div id="content">
     <div class="row">
-        <div class="col-sm-9">
+        <div class="col-sm-3">
             <div class="case">
                 <div id="image_article_case"><img src="<?=$_SESSION['img_article'][$_SESSION['request_article']]?>" id="image_article"></div>
                 <hr>
@@ -22,7 +22,7 @@ session_start();
                 </div>
             </div>
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-9">
             <p><div id="desc_article"><?=$_SESSION['desc_article'][$_SESSION['request_article']]?></div></p>
         </div>
     </div>
