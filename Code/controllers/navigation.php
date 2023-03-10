@@ -3,19 +3,19 @@
 function Home_page() {
     require "models/model.php";
     DisplayArticles();
-    header("Location:views/home.php");
+    require("views/home.php");
 }
 function Admin_page() {
-    header("Location:views/admin.php");
+    require("views/admin.php");
 }
 function Default_page() {
-    header("Location:views/main.php");
+    require("views/main.php");
 }
 function Login() {
-    header("Location:views/login.php");
+    require("views/login.php");
 }
 function Register() {
-    header("Location:views/new_user.php");
+    require("views/new_user.php");
 }
 function Check_login() {
     require "models/model.php";
@@ -68,7 +68,7 @@ function New_Article() {
                 // It's OK
                 break;
             default:
-                header("Location:views/TDC_admin.php?erreur=2");
+                require("views/TDC_admin.php?erreur=2");
                 return;
         }
         $imagepath=$folderPath.$fileNewName.".".$ext;
@@ -89,13 +89,13 @@ function Update_articles() {
     }
 }
 function Show() {
-    header("Location:views/show_article.php");
+    require("views/show_article.php");
 }
 function Logout() {
     $_SESSION['logged'] = false;
-    header("Location:index.php");
+    require("index.php");
 }
 function Basket() {
-    header("Location:views/basket.php");
+    require("views/basket.php");
 }
 
