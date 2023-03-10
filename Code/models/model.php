@@ -16,14 +16,14 @@ function Test_login($id_user, $password) {
                 $_SESSION['logged'] = true;
                 if ($id_user == "admin" && $password == "admin") {
                     $_SESSION['admin_logged'] = true;
-                    require("views/admin.php");
+                    header("Location:views/admin.php");
                 } else {
                     $_SESSION['admin_logged'] = false;
-                    require("views/home.php");
+                    header("Location:views/home.php");
                 }
                 return;
-            } else require("views/login.php?erreur=2");
-        } else require("views/login.php?erreur=1");
+            } else header("Location:views/login.php?erreur=2");
+        } else header("Location:views/login.php?erreur=1");
     }
 }
 function Insert_user($id_user, $prenom, $nom, $email, $password) {
@@ -38,10 +38,10 @@ function Insert_user($id_user, $prenom, $nom, $email, $password) {
     // Decode the JSON data into a PHP array.
     $json = json_decode($contents, true);
     $user = array_search($id_user, array_column( $json, 'username' ) );
-    if ($user !== False) require("views/new_user.php?erreur=1");
+    if ($user !== False) header("Location:views/new_user.php?erreur=1");
     else {
         $json[] = array("username" => $id_user, "firstname" => $prenom, "name" => $nom, "Email" => $email, "password" => $passhash);
-        require("views/login.php");
+        header("Location:views/login.php");
     }
 
     // Encode the array back into a JSON string.
@@ -73,7 +73,7 @@ function Add_article($id_article, $mark, $desc, $price, $stock_number, $imagepat
         // Save the file.
         file_put_contents('data/dataArticles.json', $json);
         DisplayArticles();
-        require("views/admin.php");
+        header("Location:views/admin.php");
     }
 }
 function DisplayArticles() {
