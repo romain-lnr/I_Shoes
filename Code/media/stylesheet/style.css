@@ -1,7 +1,10 @@
-body{
-    background: snow !important;
+body {
+    background: cadetblue !important;
     font-family: Arial;
-    min-width: 600px;
+    min-width: 400px;
+}
+#main {
+    background: snow !important;
 }
 #container{
     width:400px;
@@ -10,7 +13,7 @@ body{
 }
 /* Logo css */
 #logo {
-    margin-right: 320px;
+    float: left;
 }
 /* Bordered form */
 #container form {

@@ -6,11 +6,11 @@
         <link rel="stylesheet" href="../media/stylesheet/style.css" media="screen" type="text/css" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     </head>
-    <body>
+    <body id="main">
 	<div class="topnav">
         <a href="index.php?action=login"><img src="../media/img/login.png" height="50"><br>login</a>
         <a href="index.php?action=login"><img src="../media/img/basket.png" height="50"><br>Basket</a>
-        <a href="index.php?action=home"><img src="../media/img/logo.png" id="logo" height="90"></a>
+        <a href="index.php?action=home" id="logo"><img src="../media/img/logo.png" height="90"></a>
     </div>
         <br><br>
         <div class="slideshow-container">
