@@ -119,7 +119,7 @@ function DisplayArticles() {
 function Show_article($id) {
 
     // Load the file
-    $JSONfile = 'C:\Users\romai\Romain\GitHub DATA\I_Shoes\Code\data\dataArticles.json';
+    $JSONfile = 'data/dataArticles.json';
     $data = file_get_contents($JSONfile);
 
     // décoder le flux JSON
