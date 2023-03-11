@@ -8,15 +8,16 @@
 <body>
     <div id="content">
         <div class="row">
-            <?php for ($i = 0; $i < $_SESSION['nb_articles']; $i++) { ?>
+            <?php
+            for ($i = 0; $i < $nb_article; $i++) { ?>
                 <div class="col-sm-3">
                     <div class="case" onclick="UseArticle(<?=strval($i)?>)">
-                        <div id="image_article_case"><img src="<?=$_SESSION['img_article'][$i]?>" id="image_article"></div>
+                        <div id="image_article_case"><img src="<?=$img_article[$i]?>" id="image_article"></div>
                         <hr>
                         <div class="body_case">
-                            <div id="nom_article"><?="<em>".$_SESSION['nom_article'][$i]."</em>"?></div>
-                            <div id="mark_article"><?="<em>".$_SESSION['mark_article'][$i]."</em>"?></div>
-                            <div id="price_article"><?="<em>".$_SESSION['price_article'][$i]." CHF"."</em>"?></div>
+                            <div id="nom_article"><?="<em>".$name_article[$i]."</em>"?></div>
+                            <div id="mark_article"><?="<em>".$mark_article[$i]."</em>"?></div>
+                            <div id="price_article"><?="<em>".$price_article[$i]." CHF"."</em>"?></div>
                         </div>
                     </div>
                 </div>
@@ -24,8 +25,8 @@
         </div>
     </div>
 <script>
-    function UseArticle(number) {
-     window.location="../index.php?receive=" + number;
+    function UseArticle(id) {
+     window.location="index.php?receive=" + id;
     }
 </script>
 </body>

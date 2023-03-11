@@ -7,7 +7,7 @@
     </head>
   <body>
     <div id="container">
-        <form action="../index.php?action=insert_user" method="POST" enctype="multipart/form-data">
+        <form action="index.php?action=insert_user" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <h1>Nouvel Utilisateur</h1>
                 <label for="id_user"><b>Pseudo</b></label>

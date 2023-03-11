@@ -2,14 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55021f64-2d06-4d8e-b522-ff5d1ee43f4e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/views/home.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/navigation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/dataArticles.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataArticles.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/dataUsers.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataUsers.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Documentation/CDC/Documentation I Shoes.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Documentation/CDC/Documentation I Shoes.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Documentation/Journal_de_travail/Sacha Jaccard/Journal de travail Sacha.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Documentation/Journal_de_travail/Sacha Jaccard/Journal de travail Sacha.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Documentation/Maquettes/I Shoes Wireframe.bmpr" beforeDir="false" afterPath="$PROJECT_DIR$/../Documentation/Maquettes/I Shoes Wireframe.bmpr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Documentation/Maquettes/Wireframe.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../Documentation/Maquettes/Wireframe.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/Alex Margot.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/EEVVAANNNN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/Excel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/FEUR.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/GPT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/Guillaume.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/JPPSPSPPP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/Sacha.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/Shoes_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/Shoes_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/Sven.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/TaGrandMaman.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/bb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/bk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/efs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/gju.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/guzgu.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/hgv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/i.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/iuzg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/jkbbj.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/q.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/retest.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/shop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/t.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/test.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/tt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/un.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/uz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/uzgj.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/ztf.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/zu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/Home.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/TDC_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/TDC_admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/gabarit.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/gabarit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/new_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/new_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/show_article.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/show_article.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,16 +72,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "N:/PERSO/ELEVE/SC/INFO/si-c2a/Sacha.JACCARD/ICT-151/.idea/ICT-151.iml",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;N:/PERSO/ELEVE/SC/INFO/si-c2a/Sacha.JACCARD/ICT-151/.idea/ICT-151.iml&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -62,6 +102,11 @@
       <workItem from="1678282030153" duration="1632000" />
       <workItem from="1678283746111" duration="364000" />
       <workItem from="1678284121997" duration="764000" />
+      <workItem from="1678482803858" duration="5723000" />
+      <workItem from="1678534577101" duration="6446000" />
+      <workItem from="1678550025278" duration="3255000" />
+      <workItem from="1678553334289" duration="287000" />
+      <workItem from="1678553688072" duration="8832000" />
     </task>
     <servers />
   </component>

@@ -1,25 +1,23 @@
 <?php
-
+function Default_page() {
+    require "views/main.php";
+}
 function Home_page() {
     require "models/model.php";
     DisplayArticles();
-    require("views/home.php");
 }
 function Admin_page() {
-    require("views/admin.php");
-}
-function Default_page() {
-    require("views/main.php");
+    require "models/model.php";
+    DisplayArticles();
 }
 function Login() {
-    require("views/login.php");
+    require "views/login.php";
 }
 function Register() {
-    require("views/new_user.php");
+    require "views/new_user.php";
 }
 function Check_login() {
     require "models/model.php";
-    DisplayArticles();
         if(isset($_POST['insert'])) {
         // récupérer les valeurs
         $id_user = $_POST['id_user'];
@@ -68,7 +66,7 @@ function New_Article() {
                 // It's OK
                 break;
             default:
-                require("views/TDC_admin.php?erreur=2");
+                header("Location:views/TDC_admin.php?erreur=2");
                 return;
         }
         $imagepath=$folderPath.$fileNewName.".".$ext;
@@ -76,26 +74,26 @@ function New_Article() {
         move_uploaded_file($file, './media/img/articles/'. $fileName);
     }
     Add_article($id_article, $mark, $desc, $price, $stock_number, $imagepath);
+    header("Location:index.php?action=admin");
+}
+function Create_article() {
+    require "views/TDC_admin.php";
 }
 function Update_articles() {
-    require "models/model.php";
-
     if(isset($_POST['insert'])) {
-        for ($i = 0; $i < $_SESSION['nb_articles']; $i++) {
-            $stock[$i] = $_POST["stock_number_".strval($i)];
-            $_SESSION['stock_number'][$i] = $stock[$i];
-            Add_article($_SESSION['nom_article'][$i], $_SESSION['mark_article'][$i], $_SESSION['desc_article'][$i], $_SESSION['price_article'][$i], $_SESSION['stock_number'][$i], $_SESSION['img_article'][$i]);
-        }
+        require "models/model.php";
+        DisplayArticles();
     }
 }
-function Show() {
-    require("views/show_article.php");
+function Show($id) {
+    require "models/model.php";
+    Show_article($id);
 }
 function Logout() {
     $_SESSION['logged'] = false;
-    require("index.php");
+    header("Location:index.php");
 }
 function Basket() {
-    require("views/basket.php");
+    header("Location:views/basket.php");
 }
 

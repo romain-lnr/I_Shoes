@@ -8,9 +8,9 @@
     </head>
     <body>
 	<div class="topnav">
-        <a href="login.php"><img src="../media/img/login.png" height="50"><br>login</a>
-        <a href="../index.php?action=login"><img src="../media/img/basket.png" height="50"><br>Basket</a>
-        <a href="../index.php?action=home"><img src="../media/img/logo.png" id="logo" height="90"></a>
+        <a href="index.php?action=login"><img src="../media/img/login.png" height="50"><br>login</a>
+        <a href="index.php?action=login"><img src="../media/img/basket.png" height="50"><br>Basket</a>
+        <a href="index.php?action=home"><img src="../media/img/logo.png" id="logo" height="90"></a>
     </div>
         <br><br>
         <div class="slideshow-container">

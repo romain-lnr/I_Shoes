@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,17 +10,17 @@ session_start();
     <div class="row">
         <div class="col-sm-3">
             <div class="case">
-                <div id="image_article_case"><img src="<?=$_SESSION['img_article'][$_SESSION['request_article']]?>" id="image_article"></div>
+                <div id="image_article_case"><img src="<?=$img_article?>" id="image_article"></div>
                 <hr>
                 <div class="body_case">
-                    <div id="nom_article"><?="<em>".$_SESSION['nom_article'][$_SESSION['request_article']]."</em>"?></div>
-                    <div id="mark_article"><?="<em>".$_SESSION['mark_article'][$_SESSION['request_article']]."</em>"?></div>
-                    <div id="price_article"><?="<em>".$_SESSION['price_article'][$_SESSION['request_article']]." CHF"."</em>"?></div>
+                    <div id="nom_article"><?="<em>".$name_article."</em>"?></div>
+                    <div id="mark_article"><?="<em>".$mark_article."</em>"?></div>
+                    <div id="price_article"><?="<em>".$price_article." CHF"."</em>"?></div>
                 </div>
             </div>
         </div>
         <div class="col-sm-9">
-            <p><div id="desc_article"><?=$_SESSION['desc_article'][$_SESSION['request_article']]?></div></p>
+            <p><div id="desc_article"><?=$desc_article?></div></p>
         </div>
     </div>
 </div>

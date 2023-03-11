@@ -7,7 +7,7 @@
 </head>
 <body>
 <div id="container">
-    <form action="../index.php?action=article" method="POST" enctype="multipart/form-data">
+    <form action="index.php?action=create_article" method="POST" enctype="multipart/form-data">
         <div class="form-group">
             <h1>Table de création</h1>
             <label for="id_article"><b>Nom d'article</b></label>

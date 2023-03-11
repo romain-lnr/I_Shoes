@@ -17,8 +17,11 @@ if (isset($_GET['action'])) {
         case 'logged' :
             Check_login();
             break;
-        case 'admin_request' :
+        case 'admin' :
             Admin_page();
+            break;
+        case 'TDC' :
+            Create_article();
             break;
         case 'logout' :
             Logout();
@@ -29,7 +32,7 @@ if (isset($_GET['action'])) {
         case 'basket' :
             Basket();
             break;
-        case 'article' :
+        case 'create_article' :
             New_Article();
             break;
         case 'update_articles' :
@@ -41,13 +44,13 @@ if (isset($_GET['action'])) {
     }
 }
 else {
-    if ((isset($_SESSION['logged'])) && $_SESSION['logged']) Home_page();
-    else Default_page();
-}
-if (isset($_GET['receive'])) {
-    $receive = $_GET['receive'];
-    $_SESSION['request_article'] = $receive;
-    Show();
+    if (isset($_GET['receive'])) {
+        $id = $_GET['receive'];
+        Show($id);
+    } else {
+        if ((isset($_SESSION['logged'])) && $_SESSION['logged']) Home_page();
+        else Default_page();
+    }
 }
 
 ?>

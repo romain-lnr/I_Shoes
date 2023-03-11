@@ -1,9 +1,3 @@
-<?php
-session_start();
-session_unset();
-session_destroy();
-?>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,7 +7,7 @@ session_destroy();
     </head>
     <body>
         <div id="container">
-            <form action="../index.php?action=logged" method="POST">
+            <form action="index.php?action=logged" method="POST">
                 <div class="form-group">
                     <h1>Connexion</h1>
                     <label><b>Nom d'utilisateur</b></label>
@@ -22,8 +16,8 @@ session_destroy();
                     <input type="password" class="form-control" placeholder="Entrer le mot de passe" name="password" required>
                     <input type="submit" name="insert" value='LOGIN' >
                 </div>
-                <a href="../index.php?action=register" style="float: right;"><b>Nouvel Utilisateur</b></a>
-                <a href="../index.php?action=home" style="float: left;"><b>Retour</b></a>
+                <a href="index.php?action=register" style="float: right;"><b>Nouvel Utilisateur</b></a>
+                <a href="index.php?action=home" style="float: left;"><b>Retour</b></a>
 		    <?php
                 if(isset($_GET['erreur'])){
                     $err = $_GET['erreur'];
