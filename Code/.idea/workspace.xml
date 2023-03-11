@@ -2,54 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55021f64-2d06-4d8e-b522-ff5d1ee43f4e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/views/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/navigation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataArticles.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataArticles.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataUsers.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataUsers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/Alex Margot.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/EEVVAANNNN.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/Excel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/FEUR.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/GPT.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/Guillaume.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/JPPSPSPPP.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/Sacha.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/Shoes_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/Shoes_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/Sven.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/TaGrandMaman.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/a.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/bb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/bk.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/efs.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/gju.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/guzgu.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/hgv.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/i.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/iuzg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/jkbbj.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/q.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/retest.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/shop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/t.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/test.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/tt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/un.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/uz.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/uzgj.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/ztf.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/img/articles/zu.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/models/model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/Home.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/TDC_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/TDC_admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/gabarit.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/gabarit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/new_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/new_user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/show_article.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/show_article.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +59,7 @@
       <workItem from="1678534577101" duration="6446000" />
       <workItem from="1678550025278" duration="3255000" />
       <workItem from="1678553334289" duration="287000" />
-      <workItem from="1678553688072" duration="8832000" />
+      <workItem from="1678553688072" duration="9394000" />
     </task>
     <servers />
   </component>

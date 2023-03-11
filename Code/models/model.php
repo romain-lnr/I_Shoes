@@ -78,7 +78,7 @@ function Add_article($id_article, $mark, $desc, $price, $stock_number, $imagepat
 function DisplayArticles() {
 
     // Load the file
-    $JSONfile = 'C:\Users\romai\Romain\GitHub DATA\I_Shoes\Code\data\dataArticles.json';
+    $JSONfile = 'data/dataArticles.json';
     $data = file_get_contents($JSONfile);
 
     // décoder le flux JSON
