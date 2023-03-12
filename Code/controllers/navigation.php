@@ -66,7 +66,7 @@ function New_Article() {
                 // It's OK
                 break;
             default:
-                header("Location:../views/TDC_admin.php?erreur=2");
+                header("Location:index.php?error=ext_article");
                 return;
         }
         $imagepath=$folderPath.$fileNewName.".".$ext;
@@ -95,7 +95,7 @@ function Basket() {
 function Add($id) {
     if (isset($_SESSION['id_user']) && $_SESSION['id_user']) $id_user = $_SESSION['id_user'];
     else {
-        header("Location:views/login.php?erreur=3");
+        header("Location:index.php?error=not_login");
         return;
     }
     require "models/model.php";

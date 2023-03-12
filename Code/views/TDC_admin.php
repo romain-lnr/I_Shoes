@@ -1,11 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../media/stylesheet/style.css" media="screen" type="text/css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-</head>
-<body>
+<?php
+/**
+ * Created by Romain Lenoir.
+ * Date: 12.03.2023
+ * Desc: TDC_admin page for create an article -- ONLY for admin
+ */
+
+// tampon de flux stocké en mémoire
+$title="IShoes - TDC_admin page";
+ob_start();
+?>
 <div id="container">
     <form action="index.php?action=create_article" method="POST" enctype="multipart/form-data">
         <div class="form-group">
@@ -23,14 +26,13 @@
             <input type="submit" name="insert" value='AJOUTER' >
 
             <?php
-            if(isset($_GET['erreur'])){
-                $err = $_GET['erreur'];
-                if($err==1)
-                    echo "<p style='color:red'>Votre article n'est pas unique</p>";
-                if($err==2)
-                    echo "<p style='color:red'>Votre extension de fichier cible n'est pas appropriée</p>";
+            if(isset($_GET['error'])){
+                $error = $_GET['error'];
+                if($error == "ext_article") echo "<p style='color:red'>Votre extension de fichier cible n'est pas appropriée</p>";
             }
             ?>
         </div>
     </form>
 </div>
+<?php $content = ob_get_clean();
+require "layout_form.php";

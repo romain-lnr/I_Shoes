@@ -1,11 +1,14 @@
-<!DOCTYPE html>
-<html>
-    <head>
-       <meta charset="utf-8">
-       <link rel="stylesheet" href="../media/stylesheet/style.css" media="screen" type="text/css" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    </head>
-    <body>
+<?php
+/**
+ * Created by Romain Lenoir.
+ * Date: 12.03.2023
+ * Desc: Login page for log in to an account.
+ */
+
+// tampon de flux stocké en mémoire
+$title="IShoes - login page";
+ob_start();
+?>
         <div id="container">
             <form action="index.php?action=logged" method="POST">
                 <div class="form-group">
@@ -20,13 +23,14 @@
                 <a href="index.php?action=home" style="float: left;"><b>Retour</b></a>
 
 		    <?php
-                if(isset($_GET['erreur'])){
-                    $err = $_GET['erreur'];
-                    if($err == 1 || $err == 2) echo "<br><p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
-                    if($err == 3) echo "<br><p style='color:red'>Veuillez vous connectez</p>";
+                if(isset($_GET['error'])){
+                    $error = $_GET['error'];
+                    if($error == "user_not_correct") echo "<br><p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
+                    if($error == "password_not_correct") echo "<br><p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
+                    if($error == "not_login") echo "<br><p style='color:red'>Veuillez vous connectez</p>";
                 }
                 ?>
             </form>
         </div>
-    </body>
-</html>
+<?php $content = ob_get_clean();
+require "layout_form.php"; ?>

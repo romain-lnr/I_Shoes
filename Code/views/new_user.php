@@ -1,11 +1,14 @@
-<!DOCTYPE html>
-<html>
-    <head>
-       <meta charset="utf-8">
-       <link rel="stylesheet" href="../media/stylesheet/style.css" media="screen" type="text/css" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    </head>
-  <body>
+<?php
+/**
+ * Created by Romain Lenoir.
+ * Date: 12.03.2023
+ * Desc: new_user page for create an account.
+ */
+
+// tampon de flux stocké en mémoire
+$title="IShoes - new_user page";
+ob_start();
+?>
     <div id="container">
         <form action="index.php?action=insert_user" method="POST" enctype="multipart/form-data">
             <div class="form-group">
@@ -22,14 +25,13 @@
                 <input type="password" class="form-control" placeholder="Entrer le mot de passe" maxlength="25" name="password" required>
                 <input type="submit" name="insert" value="ENREGISTRER">
             </div>
+        </form>
         <?php
-        if(isset($_GET['erreur'])){
-            $err = $_GET['erreur'];
-            if($err==1)
-                echo "<p style='color:red'>Votre utilisateur n'est pas unique</p>";
+        if(isset($_GET['error'])){
+            $error = $_GET['error'];
+            if($error == "user_not_unique") echo "<p style='color:red'>Votre utilisateur n'est pas unique</p>";
         }
-            ?>
-    </form>
+        ?>
     </div>
-  </body>
-</html>
+<?php $content = ob_get_clean();
+require "layout_form.php";

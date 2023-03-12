@@ -22,8 +22,8 @@ function Test_login($id_user, $password) {
                     header("Location:index.php?action=home");
                 }
                 return;
-            } else header("Location:views/login.php?erreur=2");
-        } else header("Location:views/login.php?erreur=1");
+            } else header("Location:index.php?error=password_not_correct");
+        } else header("Location:index.php?error=user_not_correct");
     }
 }
 function Insert_user($id_user, $prenom, $nom, $email, $password) {
@@ -39,7 +39,7 @@ function Insert_user($id_user, $prenom, $nom, $email, $password) {
     $json = json_decode($contents, true);
     $user = array_search($id_user, array_column( $json, 'username' ) );
     if ($user !== False) {
-        header("Location:views/new_user.php?erreur=1");
+        header("Location:index.php?error=user_not_unique");
         return;
     }
     else {
@@ -151,5 +151,5 @@ function AddBasket($id_user, $id) {
 
     // Save the file.
     file_put_contents('data/dataBasket.json', $json);
-
+    header("Location:index.php?action=home");
 }

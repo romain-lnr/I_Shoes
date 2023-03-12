@@ -1,17 +1,20 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../media/stylesheet/style.css" media="screen" type="text/css" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    </head>
-    <body id="snow">
+<?php
+/**
+ * Created by Romain Lenoir.
+ * Date: 12.03.2023
+ * Desc: main page for displays slider and welcome the user.
+ */
+
+// tampon de flux stocké en mémoire
+$title="IShoes - main page";
+ob_start();
+?>
 	<div class="topnav">
         <a href="index.php?action=login"><img src="../media/img/login.png" height="50"><br>login</a>
         <a href="index.php?action=login"><img src="../media/img/basket.png" height="50"><br>Basket</a>
         <a href="index.php?action=home" id="logo"><img src="../media/img/logo.png" height="90"></a>
     </div>
+    <?php $topnav = ob_get_clean(); ?>
         <br><br>
         <div class="slideshow-container">
 
@@ -43,6 +46,8 @@
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
         </div>
+    <?php ob_start();
+    $content = ob_get_clean(); ?>
     <footer>
         <div id="contrainer">
             <div class="row">
@@ -78,5 +83,5 @@
     </footer>
     <script src="../media/scripts/slider.js">
     </script>
-    </body>
-</html>
+<?php $footer = ob_get_clean();
+require "layout.php"; ?>

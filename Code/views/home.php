@@ -1,22 +1,25 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../media/stylesheet/style.css" media="screen" type="text/css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-</head>
-<body id="snow">
 <?php
-if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']) { ?>
+/**
+ * Created by Romain Lenoir.
+ * Date: 12.03.2023
+ * Desc: Home page for see all articles in the JSON file.
+ */
+
+// tampon de flux stocké en mémoire
+$title="IShoes - home page";
+?>
+<?php
+if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']) {
+    ob_start(); ?>
     <div class="topnav">
         <a href="index.php?action=login"><img src="../media/img/login.png" height="50"><br>login</a>
         <a href="index.php?action=login"><img src="../media/img/basket.png" height="50"><br>Basket</a>
         <img src="../media/img/logo.png" height="90">
     </div>
     <br>
-    <?php require "gabarit.php";
-} else { ?>
+    <?php $topnav = ob_get_clean();
+} else {
+    ob_start(); ?>
     <div class="topnav">
         <a href="index.php?action=logout">logout</a>
         <a href="#" style="height: 10px"><?php echo $_SESSION['id_user']?></a>
@@ -27,9 +30,34 @@ if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']) { ?>
         <img src="../media/img/logo.png" height="90">
     </div>
     <br>
-    <?php require "gabarit.php";
-} ?>
+    <?php $topnav = ob_get_clean();
+}   ob_start();?>
+    <div id="content">
+        <div class="row">
+            <?php
+            for ($i = 0; $i < $nb_article; $i++) { ?>
+                <div class="col-sm-3">
+                    <div class="case" onclick="UseArticle(<?=strval($i)?>)">
+                        <div id="image_article_case"><img src="<?=$img_article[$i]?>" id="image_article"></div>
+                        <hr>
+                        <div class="body_case">
+                            <div id="nom_article"><?="<em>".$name_article[$i]."</em>"?></div>
+                            <div id="mark_article"><?="<em>".$mark_article[$i]."</em>"?></div>
+                            <div id="price_article"><?="<em>".$price_article[$i]." CHF"."</em>"?></div>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+    <script>
+        function UseArticle(id) {
+            window.location="index.php?receive_home=" + id;
+        }
+    </script>
+    <?php $content = ob_get_clean(); ?>
 <br><br>
+<?php ob_start(); ?>
 <footer>
     <div id="contrainer">
         <div class="row">
@@ -63,5 +91,5 @@ if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']) { ?>
         </div>
     </div>
 </footer>
-</body>
-</html>
+<?php $footer = ob_get_clean();
+require "layout.php";

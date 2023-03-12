@@ -6,7 +6,7 @@ body {
 #snow {
     background: snow !important;
 }
-#container{
+#container {
     width:400px;
     margin: 0 auto;
     margin-top:5%;
@@ -197,12 +197,14 @@ img {vertical-align: middle;}
     padding: 20px;
 }
 .case_desc {
-    width: 500px;
+    width: 480px;
+    height: 700px;
 }
 .case p {
+    word-wrap: break-word;
     text-align: justify;
     padding-left: 30px;
-    font-size: 30px;
+    font-size: 20px;
 }
 .body_case {
     padding: 5px;
