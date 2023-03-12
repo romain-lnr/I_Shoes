@@ -18,12 +18,13 @@
                 </div>
                 <a href="index.php?action=register" style="float: right;"><b>Nouvel Utilisateur</b></a>
                 <a href="index.php?action=home" style="float: left;"><b>Retour</b></a>
+
 		    <?php
                 if(isset($_GET['erreur'])){
                     $err = $_GET['erreur'];
                     if($err == 1 || $err == 2) echo "<br><p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
+                    if($err == 3) echo "<br><p style='color:red'>Veuillez vous connectez</p>";
                 }
-
                 ?>
             </form>
         </div>

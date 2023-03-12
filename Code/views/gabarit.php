@@ -26,7 +26,7 @@
     </div>
 <script>
     function UseArticle(id) {
-     window.location="index.php?receive=" + id;
+     window.location="index.php?receive_gabarit=" + id;
     }
 </script>
 </body>

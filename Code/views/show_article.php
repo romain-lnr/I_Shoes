@@ -19,10 +19,20 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-9">
-            <p><div id="desc_article"><?=$desc_article?></div></p>
+        <div class="col-sm-8">
+            <div class="case case_desc">
+                <div><p><?=$desc_article?></p></div>
+                <div id="container">
+                    <input type="submit" name="insert" id="insert" value="Ajouter au panier" onclick="UseID(<?=$id?>)">
+                </div>
+            </div>
         </div>
     </div>
 </div>
+<script>
+    function UseID(id) {
+        window.location="index.php?receive_Show_article=" + id;
+    }
+</script>
 </body>
 </html>

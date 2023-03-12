@@ -135,3 +135,21 @@ function Show_article($id) {
 
     require "views/show_article.php";
 }
+function AddBasket($id_user, $id) {
+    // Load the file
+    $JSONfile = 'data/dataBasket.json';
+    $contents = file_get_contents($JSONfile);
+
+    // Decode the JSON data into a PHP array.
+    $json = json_decode($contents, true);
+
+    // Write in JSON
+    $json[] = array("username" => $id_user, "id_article" => $id);
+
+    // Encode the array back into a JSON string.
+    $json = json_encode($json);
+
+    // Save the file.
+    file_put_contents('data/dataBasket.json', $json);
+
+}

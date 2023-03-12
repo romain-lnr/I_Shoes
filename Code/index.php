@@ -29,14 +29,14 @@ if (isset($_GET['action'])) {
         case 'insert_user' :
             Account();
             break;
-        case 'basket' :
-            Basket();
-            break;
         case 'create_article' :
             New_Article();
             break;
         case 'update_articles' :
             Update_articles();
+            break;
+        case 'basket' :
+            Basket();
             break;
         default :
             // Faire une page lost() !
@@ -44,9 +44,13 @@ if (isset($_GET['action'])) {
     }
 }
 else {
-    if (isset($_GET['receive'])) {
-        $id = $_GET['receive'];
+    if (isset($_GET['receive_gabarit'])) {
+        $id = $_GET['receive_gabarit'];
         Show($id);
+    }
+    else if (isset($_GET['receive_Show_article'])) {
+        $id = $_GET['receive_Show_article'];
+        Add($id);
     } else {
         if ((isset($_SESSION['logged'])) && $_SESSION['logged']) Home_page();
         else Default_page();

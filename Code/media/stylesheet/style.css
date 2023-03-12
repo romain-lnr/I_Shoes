@@ -193,9 +193,16 @@ img {vertical-align: middle;}
     overflow: hidden;
     box-shadow: 0 2px 20px rgba(0,0,0,0.8);
     border-radius: 20px;
-    margin-bottom: 10px;
     margin: 30px;
     padding: 20px;
+}
+.case_desc {
+    width: 500px;
+}
+.case p {
+    text-align: justify;
+    padding-left: 30px;
+    font-size: 30px;
 }
 .body_case {
     padding: 5px;
@@ -222,13 +229,6 @@ footer {
     float: right;
     font-size: 40px;
 }
-#desc_article {
-    border-radius: 10%;
-    border: 2px solid cadetblue;
-    text-align: justify;
-    padding-left: 30px;
-    font-size: 30px;
-}
 #submit_case {
     float: left;
 }
@@ -243,10 +243,23 @@ footer {
         margin-left: 10px;
     }
 }
-/* Logo media-querries */
+/* Large screen */
 @media screen and (min-width: 1800px) {
     #logo {
         margin-right: 1640px;
+    }
+    .case_desc .case {
+        margin-left: 430px;
+    }
+}
+@media screen and (max-width: 1700px) {
+    .case_desc {
+        margin-top: 600px;
+    }
+}
+@media screen and (max-width: 575px) {
+    .case_desc {
+        margin: 2px;
     }
 }
 

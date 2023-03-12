@@ -66,7 +66,7 @@ function New_Article() {
                 // It's OK
                 break;
             default:
-                header("Location:views/TDC_admin.php?erreur=2");
+                header("Location:../views/TDC_admin.php?erreur=2");
                 return;
         }
         $imagepath=$folderPath.$fileNewName.".".$ext;
@@ -89,11 +89,20 @@ function Show($id) {
     require "models/model.php";
     Show_article($id);
 }
+function Basket() {
+    header("Location:views/basket.php");
+}
+function Add($id) {
+    if (isset($_SESSION['id_user']) && $_SESSION['id_user']) $id_user = $_SESSION['id_user'];
+    else {
+        header("Location:views/login.php?erreur=3");
+        return;
+    }
+    require "models/model.php";
+    AddBasket($id_user, $id);
+}
 function Logout() {
     $_SESSION['logged'] = false;
     header("Location:index.php");
-}
-function Basket() {
-    header("Location:views/basket.php");
 }
 
