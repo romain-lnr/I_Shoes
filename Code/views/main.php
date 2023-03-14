@@ -47,7 +47,8 @@ ob_start();
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
         </div>
-    <?php $content = ob_get_clean(); ?>
+    <?php $content = ob_get_clean();
+    ob_start();?>
     <footer>
         <div id="contrainer">
             <div class="row">
