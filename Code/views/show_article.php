@@ -60,8 +60,9 @@ ob_start();
         window.location="index.php?receive_Show_article=" + id;
     }
 </script>
-<?php $content = ob_get_clean();
-ob_start(); ?>
+    <?php $content = ob_get_clean();
+    ob_start(); ?>
+    <br>
     <footer>
         <div id="contrainer">
             <div class="row">
