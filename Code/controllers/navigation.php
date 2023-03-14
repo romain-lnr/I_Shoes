@@ -95,16 +95,17 @@ function Show($id) {
     Show_article($id);
 }
 function Basket() {
-    header("Location:views/basket.php");
+    require "models/model.php";
+    DisplayBasket();
 }
-function Add($id) {
+function Add($id, $value) {
     if (isset($_SESSION['id_user']) && $_SESSION['id_user']) $id_user = $_SESSION['id_user'];
     else {
         header("Location:index.php?error=not_login");
         return;
     }
     require "models/model.php";
-    AddBasket($id_user, $id);
+    AddBasket($id_user, $id, $value);
 }
 function Logout() {
     $_SESSION['logged'] = false;

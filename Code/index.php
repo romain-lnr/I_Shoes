@@ -51,6 +51,9 @@ else {
             case 'ext_article':
                 require "views/TDC_admin.php";
                 break;
+            case 'not_even_stock':
+                Home_page();
+                break;
             case 'not_login':
                 require "views/login.php";
                 break;
@@ -69,9 +72,10 @@ else {
         $id = $_GET['receive_home'];
         Show($id);
     }
-    else if (isset($_GET['receive_Show_article'])) {
-        $id = $_GET['receive_Show_article'];
-        Add($id);
+    else if (isset($_GET['receive_show_article'])) {
+        $id = $_GET['receive_show_article'];
+        $value = $_POST['value'];
+        Add($id, $value);
     } else {
         if ((isset($_SESSION['logged'])) && $_SESSION['logged']) Home_page();
         else Default_page();

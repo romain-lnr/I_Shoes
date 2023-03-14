@@ -23,7 +23,7 @@ if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']) {
     <div class="topnav">
         <a href="index.php?action=logout">logout</a>
         <a href="#" style="height: 10px"><?php echo $_SESSION['id_user']?></a>
-        <a href="index.php?action=login"><img src="../media/img/basket.png" height="50"><br>Basket</a>
+        <a href="index.php?action=basket"><img src="../media/img/basket.png" height="50"><br>Basket</a>
         <?php if (isset($_SESSION['admin_logged']) && $_SESSION['admin_logged']) { ?>
             <a href="index.php?action=admin"><img src="../media/img/admin.png" height="50"><br>Admin</a>
         <?php } ?>
@@ -49,6 +49,10 @@ if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']) {
                 </div>
             <?php } ?>
         </div>
+        <?php if(isset($_GET['error'])) {
+            $error = $_GET['error'];
+            if ($error == "not_even_stock") echo "<br><p style='color:red'>Pas assez de stock</p>";
+        }?>
     </div>
     <script>
         function UseArticle(id) {

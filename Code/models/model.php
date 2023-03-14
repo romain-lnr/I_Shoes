@@ -111,10 +111,19 @@ function DisplayArticles() {
                     $stock[$i] = $_POST["stock_number_".strval($i)];
                     Add_article($name_article[$i], $mark_article[$i], $desc_article[$i], $price_article[$i], $stock[$i], $img_article[$i]);
                 }
-                header("Location:index.php?action=admin");
+                header("Location:index.php?action=home");
                 break;
         }
     }
+    if (isset($_GET['error'])) {
+        $error = $_GET['error'];
+
+        switch ($error) {
+            case 'not_even_stock':
+                require "views/home.php";
+        }
+    }
+
 }
 function Show_article($id) {
 
@@ -135,7 +144,7 @@ function Show_article($id) {
 
     require "views/show_article.php";
 }
-function AddBasket($id_user, $id) {
+function AddBasket($id_user, $id, $value) {
     // Load the file
     $JSONfile = 'data/dataBasket.json';
     $contents = file_get_contents($JSONfile);
@@ -143,8 +152,21 @@ function AddBasket($id_user, $id) {
     // Decode the JSON data into a PHP array.
     $json = json_decode($contents, true);
 
-    // Write in JSON
-    $json[] = array("username" => $id_user, "id_article" => $id);
+    $boolValue = test_value($id, $value);
+
+    if ($boolValue) {
+        // Write in JSON
+        $json[] = array("username" => $id_user, "id_article" => $id, "value" => $value);
+        $basket = array_search($id_user, array_column($json, 'username'));
+        if ($basket !== False) {
+            $json[$basket] = array("username" => $id_user, "id_article" => $id, "value" => $value);
+        } else {
+            $json[] = array("username" => $id_user, "id_article" => $id, "value" => $value);
+        }
+    } else {
+        header("Location:index.php?error=not_even_stock");
+        return;
+    }
 
     // Encode the array back into a JSON string.
     $json = json_encode($json);
@@ -152,4 +174,64 @@ function AddBasket($id_user, $id) {
     // Save the file.
     file_put_contents('data/dataBasket.json', $json);
     header("Location:index.php?action=home");
+}
+function test_value($id, $value) {
+    $JSONfile = 'data/dataArticles.json';
+    $data = file_get_contents($JSONfile);
+    $obj = json_decode($data);
+
+    if ($obj[$id]->stock >= $value && $value >= 1) {
+        $new_value = $obj[$id]->stock -= $value;
+        $img_article = $obj[$id]->image;
+        $name_article = $obj[$id]->article;
+        $mark_article = $obj[$id]->mark;
+        $desc_article = $obj[$id]->description;
+        $price_article = $obj[$id]->price;
+        Add_article($name_article, $mark_article, $desc_article, $price_article, $new_value, $img_article);
+        return true;
+    }
+    else return false;
+}
+function DisplayBasket() {
+
+    // Load the file
+    $JSONfile = 'data/dataBasket.json';
+    $data = file_get_contents($JSONfile);
+
+    // DECODE JSON flow
+    $obj = json_decode($data);
+    $nb_article = count($obj);
+    $tab = 0;
+
+    // access the appropriate element
+    for ($i = 0; $i < $nb_article; $i++) {
+        // Load the file
+        $JSONfile = 'data/dataBasket.json';
+        $data = file_get_contents($JSONfile);
+
+        // DECODE JSON flow
+        $obj = json_decode($data);
+
+        if ($obj[$i]->username == $_SESSION['id_user']) {
+            $id = $obj[$i]->id_article;
+            $value[$tab] = $obj[$i]->value;
+            // Load the file
+            $JSONfile = 'data/dataArticles.json';
+            $data = file_get_contents($JSONfile);
+
+            // DECODE JSON flow
+            $obj = json_decode($data);
+
+            // access the appropriate element
+            $img_article[$tab] = $obj[$id]->image;
+            $name_article[$tab] = $obj[$id]->article;
+            $mark_article[$tab] = $obj[$id]->mark;
+            $desc_article[$tab] = $obj[$id]->description;
+            $price_article[$tab] = $obj[$id]->price;
+            $stock_article[$tab] = $obj[$id]->stock;
+
+            $tab++;
+        }
+    }
+    require "views/basket.php";
 }

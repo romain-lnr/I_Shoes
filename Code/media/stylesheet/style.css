@@ -210,6 +210,14 @@ img {vertical-align: middle;}
     padding: 5px;
     margin-bottom: 20px;
 }
+.basket {
+    background-color: #8F8F8F;
+}
+#tab_basket {
+    border: 1px solid;
+    border-collapse: collapse;
+    width: 100%;
+}
 footer {
     background-color: cadetblue;
     color: white;

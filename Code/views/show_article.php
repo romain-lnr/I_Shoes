@@ -23,7 +23,7 @@ ob_start();
     <div class="topnav">
         <a href="index.php?action=logout">logout</a>
         <a href="#" style="height: 10px"><?php echo $_SESSION['id_user']?></a>
-        <a href="index.php?action=login"><img src="../media/img/basket.png" height="50"><br>Basket</a>
+        <a href="index.php?action=basket"><img src="../media/img/basket.png" height="50"><br>Basket</a>
         <?php if (isset($_SESSION['admin_logged']) && $_SESSION['admin_logged']) { ?>
             <a href="index.php?action=admin"><img src="../media/img/admin.png" height="50"><br>Admin</a>
         <?php } ?>
@@ -32,34 +32,32 @@ ob_start();
     <br>
     <?php $topnav = ob_get_clean();
 }   ob_start();?>
-<div id="content">
-    <div class="row">
-        <div class="col-sm-3">
-            <div class="case">
-                <div id="image_article_case"><img src="<?=$img_article?>" id="image_article"></div>
-                <hr>
-                <div class="body_case">
-                    <div id="nom_article"><?="<em>".$name_article."</em>"?></div>
-                    <div id="mark_article"><?="<em>".$mark_article."</em>"?></div>
-                    <div id="price_article"><?="<em>".$price_article." CHF"."</em>"?></div>
+    <div id="content">
+        <form action="index.php?receive_show_article=<?=strval($id)?>" method="POST">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="case">
+                    <div id="image_article_case"><img src="<?=$img_article?>" id="image_article"></div>
+                    <hr>
+                    <div class="body_case">
+                        <div id="nom_article"><?="<em>".$name_article."</em>"?></div>
+                        <div id="mark_article"><?="<em>".$mark_article."</em>"?></div>
+                        <div id="price_article"><?="<em>".$price_article." CHF"."</em>"?></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="case case_desc">
+                    <p><?=$desc_article?></p>
+                    <div id="container">
+                        <input type="submit" class="form-control" name="insert" id="insert" value="Ajouter au panier">
+                        <input type="number" name="value" class="form-control" placeholder="value">
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-sm-8">
-            <div class="case case_desc">
-                <p><?=$desc_article?></p>
-                <div id="container">
-                    <input type="submit" name="insert" id="insert" value="Ajouter au panier" onclick="UseID(<?=$id?>)">
-                </div>
-            </div>
-        </div>
+      </form>
     </div>
-</div>
-<script>
-    function UseID(id) {
-        window.location="index.php?receive_Show_article=" + id;
-    }
-</script>
     <?php $content = ob_get_clean();
     ob_start(); ?>
     <br>

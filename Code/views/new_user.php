@@ -23,7 +23,7 @@ ob_start();
                 <input type="email" class="form-control" placeholder="Entrer l'email" name="email" maxlength="30" required>
                 <label for="password"><b>Mot de passe</b></label>
                 <input type="password" class="form-control" placeholder="Entrer le mot de passe" maxlength="25" name="password" required>
-                <input type="submit" name="insert" value="ENREGISTRER">
+                <input type="submit" class="form-control" name="insert" value="ENREGISTRER">
             </div>
         </form>
         <?php

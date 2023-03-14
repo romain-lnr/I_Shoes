@@ -17,7 +17,7 @@ ob_start();
                     <input type="text" class="form-control" placeholder="Entrer le nom d'utilisateur" name="id_user" required>
                     <label><b>Mot de passe</b></label>
                     <input type="password" class="form-control" placeholder="Entrer le mot de passe" name="password" required>
-                    <input type="submit" name="insert" value='LOGIN' >
+                    <input type="submit" class="form-control" name="insert" value='LOGIN' >
                 </div>
                 <a href="index.php?action=register" style="float: right;"><b>Nouvel Utilisateur</b></a>
                 <a href="index.php?action=home" style="float: left;"><b>Retour</b></a>

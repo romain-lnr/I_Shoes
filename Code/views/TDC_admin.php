@@ -23,7 +23,7 @@ ob_start();
             <input type="number" class="form-control" placeholder="Entrer le prix à établir" name="price" maxlength="2" required>
             <label for="img_article"><b>Image de l'article</b></label>
             <input type="file" class="form-control" placeholder="Entrer une image pour l'article" name="img_article" required>
-            <input type="submit" name="insert" value='AJOUTER' >
+            <input type="submit" class="form-control" name="insert" value='AJOUTER' >
 
             <?php
             if(isset($_GET['error'])){
