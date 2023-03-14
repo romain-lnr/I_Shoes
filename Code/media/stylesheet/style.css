@@ -1,7 +1,7 @@
 body {
     background: cadetblue !important;
     font-family: Arial;
-    min-width: 400px;
+    min-width: 200px;
 }
 #snow {
     background: snow !important;
@@ -193,7 +193,7 @@ img {vertical-align: middle;}
     overflow: hidden;
     box-shadow: 0 2px 20px rgba(0,0,0,0.8);
     border-radius: 20px;
-    margin: 30px;
+    margin: 42px;
     padding: 20px;
 }
 .case_desc {
@@ -239,12 +239,7 @@ footer {
     width: 50px;
 }
 /* Media-querries */
-@media screen and (max-width: 1500px) {
-    #search {
-        width: 100px;
-        margin-left: 10px;
-    }
-}
+
 /* Large screen */
 @media screen and (min-width: 1800px) {
     #logo {
@@ -259,6 +254,8 @@ footer {
         margin-top: 600px;
     }
 }
+
+/* Mini screen */
 @media screen and (max-width: 575px) {
     .case_desc {
         margin: 2px;
