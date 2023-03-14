@@ -189,11 +189,11 @@ img {vertical-align: middle;}
 /* Change the case statements */
 .case {
     background-color: #8F8FC0;
-    width: 400px;
+    width: 375px;
     overflow: hidden;
     box-shadow: 0 2px 20px rgba(0,0,0,0.8);
     border-radius: 20px;
-    margin: 42px;
+    margin: 55px;
     padding: 20px;
 }
 .case_desc {
@@ -251,7 +251,7 @@ footer {
 }
 @media screen and (max-width: 1700px) {
     .case_desc {
-        margin-top: 600px;
+        margin-top: 650px;
     }
 }
 
