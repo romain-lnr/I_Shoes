@@ -14,7 +14,8 @@ ob_start();
         <a href="index.php?action=login"><img src="../media/img/basket.png" height="50"><br>Basket</a>
         <a href="index.php?action=home" id="logo"><img src="../media/img/logo.png" height="90"></a>
     </div>
-    <?php $topnav = ob_get_clean(); ?>
+    <?php $topnav = ob_get_clean();
+    ob_start();?>
         <br><br>
         <div class="slideshow-container">
 
@@ -46,7 +47,6 @@ ob_start();
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
         </div>
-    <?php ob_start();
     $content = ob_get_clean(); ?>
     <footer>
         <div id="contrainer">
