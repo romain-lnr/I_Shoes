@@ -5,10 +5,10 @@ function Test_login($id_user, $password) {
     $JSONfile = 'data/dataUsers.json';
     $data = file_get_contents($JSONfile);
 
-    // décoder le flux JSON
+    // DECODE JSON flow
     $obj = json_decode($data);
 
-    // accéder à l'élément approprié
+    // access the appropriate element
     for ($i = 0; $i < count($obj); $i++) {
         if ($obj[$i]->username == $id_user) {
             if (password_verify($password, $obj[$i]->password)) {
@@ -81,11 +81,11 @@ function DisplayArticles() {
     $JSONfile = 'data/dataArticles.json';
     $data = file_get_contents($JSONfile);
 
-    // décoder le flux JSON
+    // DECODE JSON flow
     $obj = json_decode($data);
     $nb_article = count($obj);
 
-    // accéder à l'élément approprié
+    // access the appropriate element
      for ($i = 0; $i < $nb_article; $i++) {
         $img_article[$i] = $obj[$i]->image;
         $name_article[$i] = $obj[$i]->article;
@@ -122,10 +122,10 @@ function Show_article($id) {
     $JSONfile = 'data/dataArticles.json';
     $data = file_get_contents($JSONfile);
 
-    // décoder le flux JSON
+    // DECODE JSON flux
     $obj = json_decode($data);
 
-    // accéder à l'élément approprié
+    // access the appropriate element
     $img_article = $obj[$id]->image;
     $name_article = $obj[$id]->article;
     $mark_article = $obj[$id]->mark;

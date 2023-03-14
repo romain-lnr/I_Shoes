@@ -1,3 +1,8 @@
+<?php /**
+ * Created by Romain Lenoir.
+ * Date: 12.03.2023
+ * Desc: layout page for the template of page on the website.
+ */ ?>
 <!DOCTYPE html>
 <html>
 <head>

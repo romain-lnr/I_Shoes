@@ -1,3 +1,8 @@
+<?php /**
+* Created by Romain Lenoir.
+* Date: 12.03.2023
+* Desc: layout_form page for the template of forms on the website.
+*/ ?>
 <!DOCTYPE html>
 <html>
 <head>

@@ -19,7 +19,8 @@ function Register() {
 function Check_login() {
     require "models/model.php";
         if(isset($_POST['insert'])) {
-        // récupérer les valeurs
+
+        // Retrieves values
         $id_user = $_POST['id_user'];
         $password = $_POST['password'];
         }
@@ -29,6 +30,8 @@ function Account() {
     require "models/model.php";
 
     if(isset($_POST['insert'])) {
+
+        // Retrieves values
         $id_user = $_POST['id_user'];
         $prenom = $_POST['prenom'];
         $nom = $_POST['nom'];
@@ -41,6 +44,8 @@ function New_Article() {
     require "models/model.php";
 
     if(isset($_POST['insert'])) {
+
+        // Retrieves values
         $id_article = $_POST['id_article'];
         $mark = $_POST['mark'];
         $desc = $_POST['desc'];
