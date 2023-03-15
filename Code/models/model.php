@@ -144,7 +144,7 @@ function Show_article($id) {
 
     require "views/show_article.php";
 }
-function AddBasket($id_user, $id, $value) {
+function AddBasket($id_user, $id, $number) {
     // Load the file
     $JSONfile = 'data/dataBasket.json';
     $contents = file_get_contents($JSONfile);
@@ -152,16 +152,17 @@ function AddBasket($id_user, $id, $value) {
     // Decode the JSON data into a PHP array.
     $json = json_decode($contents, true);
 
-    $boolValue = test_value($id, $value);
+    $boolValue = test_value($id, $number);
 
     if ($boolValue) {
         // Write in JSON
-        $json[] = array("username" => $id_user, "id_article" => $id, "value" => $value);
-        $basket = array_search($id_user, array_column($json, 'username'));
-        if ($basket !== False) {
-            $json[$basket] = array("username" => $id_user, "id_article" => $id, "value" => $value);
+        $user_basket = array_search($id_user, array_column($json, 'username'));
+        $id_basket = array_search($id_user, array_column($json, 'id_article'));
+
+        if ($user_basket && $id_basket !== False) {
+            $json[$user_basket] = array("username" => $id_user, "id_article" => $id, "number" => $number);
         } else {
-            $json[] = array("username" => $id_user, "id_article" => $id, "value" => $value);
+            $json[] = array("username" => $id_user, "id_article" => $id, "number" => $number);
         }
     } else {
         header("Location:index.php?error=not_even_stock");
@@ -175,22 +176,72 @@ function AddBasket($id_user, $id, $value) {
     file_put_contents('data/dataBasket.json', $json);
     header("Location:index.php?action=home");
 }
-function test_value($id, $value) {
+function test_value($id, $number) {
     $JSONfile = 'data/dataArticles.json';
     $data = file_get_contents($JSONfile);
     $obj = json_decode($data);
 
-    if ($obj[$id]->stock >= $value && $value >= 1) {
-        $new_value = $obj[$id]->stock -= $value;
-        $img_article = $obj[$id]->image;
-        $name_article = $obj[$id]->article;
-        $mark_article = $obj[$id]->mark;
-        $desc_article = $obj[$id]->description;
-        $price_article = $obj[$id]->price;
-        Add_article($name_article, $mark_article, $desc_article, $price_article, $new_value, $img_article);
-        return true;
-    }
+    if ($obj[$id]->stock >= $number && $number >= 1) return true;
     else return false;
+}
+function AddPurchaseToJSON() {
+
+    // Load the file
+    $JSONfile = 'data/dataBasket.json';
+    $data = file_get_contents($JSONfile);
+
+    // DECODE JSON flow
+    $obj = json_decode($data);
+    $nb_article = count($obj);
+
+    for ($i = 0; $i < $nb_article; $i++) {
+        $id_user[$i] = $obj[$i]->username;
+        $id_article[$i] = $obj[$i]->id_article;
+        $number[$i] = $obj[$i]->number;
+    }
+    // Load the file
+    $JSONfile = 'data/dataPurchases.json';
+    $contents = file_get_contents($JSONfile);
+
+    // Decode the JSON data into a PHP array.
+    $json = json_decode($contents, true);
+
+    for ($i = 0; $i < $nb_article; $i++) {
+
+        // Write in JSON
+        $user_basket = array_search($id_user, array_column($json, 'username'));
+        $id_basket = array_search($id_user, array_column($json, 'id_article'));
+
+        if ($user_basket && $id_basket !== False) {
+            if ($_SESSION['id_user'] == $id_user[$i]) $json[$user_basket] = array("username" => $id_user[$i], "id_article" => $id_article[$i], "number" => $number[$i]);
+        } else {
+            if ($_SESSION['id_user'] == $id_user[$i]) $json[] = array("username" => $id_user[$i], "id_article" => $id_article[$i], "number" => $number[$i]);
+        }
+    }
+
+    // Encode the array back into a JSON string.
+    $json = json_encode($json);
+
+    // Save the file.
+    file_put_contents('data/dataPurchases.json', $json);
+
+    // Faire pointer sur la page d'achat
+    header("Location:index.php?action=home");
+}
+function HistoricModel() {
+
+    // Load the file
+    $JSONfile = 'data/dataPurchases.json';
+    $data = file_get_contents($JSONfile);
+
+    // DECODE JSON flow
+    $obj = json_decode($data);
+    $nb_article = count($obj);
+
+    for ($i = 0; $i < $nb_article; $i++) {
+        $msg[$i] = "L'utilisateur {".$obj[$i]->username. "} a acheté l'article numéro ".$obj[$i]->id_article. ", ". $obj[$i]->number. " fois";
+    }
+    require "views/historic.php";
 }
 function DisplayBasket() {
 
@@ -214,7 +265,7 @@ function DisplayBasket() {
 
         if ($obj[$i]->username == $_SESSION['id_user']) {
             $id = $obj[$i]->id_article;
-            $value[$tab] = $obj[$i]->value;
+            $number[$tab] = $obj[$i]->number;
             // Load the file
             $JSONfile = 'data/dataArticles.json';
             $data = file_get_contents($JSONfile);

@@ -10,6 +10,14 @@ function Admin_page() {
     require "models/model.php";
     DisplayArticles();
 }
+function Historic() {
+    require "models/model.php";
+    HistoricModel();
+}
+function AddPurchase() {
+    require "models/model.php";
+    AddPurchaseToJSON();
+}
 function Login() {
     require "views/login.php";
 }

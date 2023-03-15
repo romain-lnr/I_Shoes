@@ -12,7 +12,10 @@ ob_start();?>
         <a href="index.php?action=logout">logout</a>
         <a href="#about" style="height: 10px"><?php echo $_SESSION['id_user']?></a>
         <a href="index.php?action=TDC"><img src="../media/img/TDC_admin.png" height="50"><br>TDC</a>
+        <a href="index.php?action=historic"><img src="../media/img/historique.png" height="50"><br>Historic</a>
         <a href="index.php?action=home"><img src="../media/img/home.png" height="50"><br>Home</a>
+        <ion-icon name="stats-chart-outline"></ion-icon>
+
         <img src="../media/img/logo.png" height="90">
     </div>
 <?php $topnav = ob_get_clean(); ?>

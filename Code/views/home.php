@@ -5,7 +5,6 @@
  * Desc: Home page for see all articles in the JSON file.
  */
 
-// tampon de flux stocké en mémoire
 $title="IShoes - home page";
 ?>
 <?php

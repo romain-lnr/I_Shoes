@@ -1,17 +1,16 @@
 <?php
 /**
  * Created by Romain Lenoir.
- * Date: 12.03.2023
- * Desc: The basket page for see all purchases of the currently logged user.
+ * Date: 15.03.2023
+ * Desc: historic page for show the historic of users -- ONLY for admin
  */
 
-// tampon de flux stocké en mémoire
-$title="IShoes - basket page";
-ob_start(); ?>
+$title="IShoes - historic page";
+    ob_start(); ?>
     <div class="topnav">
         <a href="index.php?action=logout">logout</a>
         <a href="#" style="height: 10px"><?php echo $_SESSION['id_user']?></a>
-        <a href="index.php?action=home"><img src="../media/img/home.png" height="50"><br>Home</a>
+        <a href="index.php?action=basket"><img src="../media/img/basket.png" height="50"><br>Basket</a>
         <?php if (isset($_SESSION['admin_logged']) && $_SESSION['admin_logged']) { ?>
             <a href="index.php?action=admin"><img src="../media/img/admin.png" height="50"><br>Admin</a>
         <?php } ?>
@@ -20,37 +19,12 @@ ob_start(); ?>
     <br>
     <?php $topnav = ob_get_clean();
     ob_start();
-    for ($i = 0; $i < $tab; $i++) { ?>
-        <div id="content">
-            <div class="row">
-                <div class="col-sm-3">
-                    <div class="case basket">
-                        <div id="image_article_case"><img src="<?=$img_article[$i]?>" id="image_article"></div>
-                        <hr>
-                        <div class="body_case">
-                            <div id="nom_article"><?="<em>".$name_article[$i]."</em>"?></div>
-                            <div id="mark_article"><?="<em>".$mark_article[$i]."</em>"?></div>
-                            <div id="price_article"><?="<em>".$price_article[$i]." CHF"."</em>"?></div>
-                            <br>
-                            <div id="value_article"><?="<em>"."X".$number[$i]."</em>"?></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-8">
-                    <div class="case case_desc basket">
-                        <p><?=$desc_article[$i]?></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <?php } ?>
-    <div id="container">
-        <a href="index.php?action=purchase"><input type="submit" name="insert" id="insert" value="Passer en caisse"></a>
-    </div>
-        <?php $content = ob_get_clean();
-        ob_start(); ?>
-        <br>
-          <footer>
+    for ($i = 0; $i < $nb_article; $i++) {
+        echo "<h1>".$msg[$i]."</h1>";
+    }
+    $content = ob_get_clean();
+    ob_start(); ?>
+    <footer>
         <div id="contrainer">
             <div class="row">
                 <div class="col-sm-3">
@@ -83,8 +57,6 @@ ob_start(); ?>
             </div>
         </div>
     </footer>
-    <script src="../media/scripts/slider.js">
-    </script>
-    <?php $footer = ob_get_clean();
-    require "layout.php"; ?>
+<?php $footer = ob_get_clean();
+require "layout.php";
 

@@ -23,6 +23,12 @@ if (isset($_GET['action'])) {
         case 'TDC' :
             Create_article();
             break;
+        case 'purchase' :
+            AddPurchase();
+            break;
+        case 'historic' :
+            Historic();
+            break;
         case 'logout' :
             Logout();
             break;
