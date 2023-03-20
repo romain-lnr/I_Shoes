@@ -209,14 +209,15 @@ function AddPurchaseToJSON() {
     for ($i = 0; $i < $nb_article; $i++) {
 
         // Write in JSON
-        $user_basket = array_search($id_user, array_column($json, 'username'));
-        $id_basket = array_search($id_user, array_column($json, 'id_article'));
+        $user_basket[$i] = array_search($id_user, array_column($json, 'username'));
+        $id_basket[$i] = array_search($id_user, array_column($json, 'id_article'));
 
-        if ($user_basket && $id_basket !== False) {
+        if ($user_basket[$i] && $id_basket[$i] !== False) {
             if ($_SESSION['id_user'] == $id_user[$i]) $json[$user_basket] = array("username" => $id_user[$i], "id_article" => $id_article[$i], "number" => $number[$i]);
         } else {
             if ($_SESSION['id_user'] == $id_user[$i]) $json[] = array("username" => $id_user[$i], "id_article" => $id_article[$i], "number" => $number[$i]);
         }
+        if ($_SESSION['id_user'] == $id_user[$i]) RemoveLineInJSON($id_user[$i], $id_article[$i], $number[$i]);
     }
 
     // Encode the array back into a JSON string.
@@ -227,6 +228,21 @@ function AddPurchaseToJSON() {
 
     // Faire pointer sur la page d'achat
     header("Location:index.php?action=home");
+}
+function RemoveLineInJSON($id_user, $id_article, $number) {
+
+    // Load the file
+    $JSONfile = 'data/dataBasket.json';
+    $data = file_get_contents($JSONfile);
+
+    // DECODE JSON flow
+    $obj = json_decode($data);
+
+    foreach ($obj as $key => $value) {
+        if (in_array('a', $value)) {
+            unset($obj[$key]);
+        }
+    }
 }
 function HistoricModel() {
 
