@@ -8,8 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230320-154615-3M6LZHY.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230320-154615-3M6LZHY.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230320-155312-3M6LZHY.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230320-155312-3M6LZHY.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataBasket.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataBasket.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataPurchases.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataPurchases.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/model.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +79,7 @@
       <workItem from="1679144685094" duration="863000" />
       <workItem from="1679296292533" duration="915000" />
       <workItem from="1679322407446" duration="1816000" />
-      <workItem from="1679385742640" duration="1464000" />
+      <workItem from="1679385742640" duration="323000" />
     </task>
     <servers />
   </component>

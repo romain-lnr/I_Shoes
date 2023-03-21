@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55021f64-2d06-4d8e-b522-ff5d1ee43f4e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230320-154558-3M6LZHY.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230320-154558-3M6LZHY.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230320-154559-3M6LZHY.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230320-154559-3M6LZHY.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230320-154602-3M6LZHY.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230320-154602-3M6LZHY.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230320-154615-3M6LZHY.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230320-154615-3M6LZHY.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230320-155312-3M6LZHY.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230320-155312-3M6LZHY.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/dataBasket.sync-conflict-20230321-074722-3M6LZHY.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/dataBasket.sync-conflict-20230321-075632-3M6LZHY.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/dataBasket.sync-conflict-20230321-075853-3M6LZHY.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/dataBasket.sync-conflict-20230321-080103-3M6LZHY.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/model.sync-conflict-20230321-074342-3M6LZHY.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/model.sync-conflict-20230321-074852-3M6LZHY.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/model.sync-conflict-20230321-075504-3M6LZHY.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/model.sync-conflict-20230321-075712-3M6LZHY.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/model.sync-conflict-20230321-080104-3M6LZHY.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/model.sync-conflict-20230321-080733-3M6LZHY.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/model.sync-conflict-20230321-081546-3M6LZHY.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230320-154558-3M6LZHY.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/dataBasket.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataBasket.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataPurchases.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataPurchases.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/model.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,13 +34,16 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectId" id="2LeQDVLCqU6LrNaLMvXbXPT0cZy" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
@@ -81,7 +90,8 @@
       <workItem from="1679144685094" duration="863000" />
       <workItem from="1679296292533" duration="915000" />
       <workItem from="1679322407446" duration="1816000" />
-      <workItem from="1679385742640" duration="1464000" />
+      <workItem from="1679327398572" duration="9000" />
+      <workItem from="1679380827329" duration="2215000" />
     </task>
     <servers />
   </component>
@@ -98,5 +108,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

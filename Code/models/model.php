@@ -217,7 +217,7 @@ function AddPurchaseToJSON() {
         } else {
             if ($_SESSION['id_user'] == $id_user[$i]) $json[] = array("username" => $id_user[$i], "id_article" => $id_article[$i], "number" => $number[$i]);
         }
-        if ($_SESSION['id_user'] == $id_user[$i]) RemoveLineInJSON($id_user[$i], $id_article[$i], $number[$i]);
+        if ($_SESSION['id_user'] == $id_user[$i]) RemoveLineInJSON($i);
     }
 
     // Encode the array back into a JSON string.
@@ -229,7 +229,7 @@ function AddPurchaseToJSON() {
     // Faire pointer sur la page d'achat
     header("Location:index.php?action=home");
 }
-function RemoveLineInJSON($id_user, $id_article, $number) {
+function RemoveLineInJSON($id) {
 
     // Load the file
     $JSONfile = 'data/dataBasket.json';
@@ -238,11 +238,9 @@ function RemoveLineInJSON($id_user, $id_article, $number) {
     // DECODE JSON flow
     $obj = json_decode($data);
 
-    foreach ($obj as $key => $value) {
-        if (in_array('a', $value)) {
-            unset($obj[$key]);
-        }
-    }
+    array_splice($obj, $id);
+    $json = json_encode($obj);
+    file_put_contents('data/dataBasket.json', $json);
 }
 function HistoricModel() {
 
