@@ -111,9 +111,7 @@ function Basket() {
     DisplayBasket();
 }
 function Add($id, $value) {
-    if (isset($_SESSION['id_user']) && $_SESSION['id_user']) {
-        $id_user = $_SESSION['id_user'];
-    }
+    if (isset($_SESSION['id_user']) && $_SESSION['id_user']) $id_user = $_SESSION['id_user'];
     else {
         header("Location:index.php?error=not_login");
         return;
