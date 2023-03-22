@@ -8,6 +8,7 @@ body {
 }
 #container {
     width:400px;
+    width:400px;
     margin: 0 auto;
     margin-top:5%;
 }
@@ -73,6 +74,7 @@ body {
 
 /* Add a black background color to the top navigation */
 .topnav {
+    width: 100%;
     background-color: cadetblue;
     overflow: hidden;
 }
@@ -94,13 +96,6 @@ body {
     background-color: lightblue;
     color: white;
 }
-
-/* Change the search bar on accueil page*/
-#search {
-    width: 900px;
-    margin-left: 100px;
-}
-
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
@@ -245,6 +240,10 @@ footer {
 #number_case {
     float: right;
     width: 50px;
+}
+#thanks {
+    text-align: center;
+    color: green;
 }
 /* Media-querries */
 

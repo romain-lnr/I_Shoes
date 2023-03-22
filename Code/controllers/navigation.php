@@ -6,6 +6,10 @@ function Home_page() {
     require "models/model.php";
     DisplayArticles();
 }
+function Purchase() {
+    require "models/model.php";
+    DisplayPurchase();
+}
 function Admin_page() {
     require "models/model.php";
     DisplayArticles();

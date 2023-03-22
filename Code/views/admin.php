@@ -10,7 +10,7 @@ $title="IShoes - admin page";
 ob_start();?>
     <div class="topnav">
         <a href="index.php?action=logout">logout</a>
-        <a href="#about" style="height: 10px"><?php echo $_SESSION['id_user']?></a>
+        <a href="#user" style="height: 10px"><?php echo $_SESSION['id_user']?></a>
         <a href="index.php?action=TDC"><img src="../media/img/TDC_admin.png" height="50"><br>TDC</a>
         <a href="index.php?action=historic"><img src="../media/img/historique.png" height="50"><br>Historic</a>
         <a href="index.php?action=home"><img src="../media/img/home.png" height="50"><br>Home</a>

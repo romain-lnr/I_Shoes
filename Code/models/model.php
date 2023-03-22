@@ -198,6 +198,7 @@ function AddPurchaseToJSON() {
         $id_user[$i] = $obj[$i]->username;
         $id_article[$i] = $obj[$i]->id_article;
         $number[$i] = $obj[$i]->number;
+        $flag[$i] = false;
     }
     // Load the file
     $JSONfile = 'data/dataPurchases.json';
@@ -213,9 +214,9 @@ function AddPurchaseToJSON() {
         $id_basket[$i] = array_search($id_user, array_column($json, 'id_article'));
 
         if ($user_basket[$i] && $id_basket[$i] !== False) {
-            if ($_SESSION['id_user'] == $id_user[$i]) $json[$user_basket] = array("username" => $id_user[$i], "id_article" => $id_article[$i], "number" => $number[$i]);
+            if ($_SESSION['id_user'] == $id_user[$i]) $json[$user_basket] = array("username" => $id_user[$i], "id_article" => $id_article[$i], "number" => $number[$i], "flag" => $flag[$i]);
         } else {
-            if ($_SESSION['id_user'] == $id_user[$i]) $json[] = array("username" => $id_user[$i], "id_article" => $id_article[$i], "number" => $number[$i]);
+            if ($_SESSION['id_user'] == $id_user[$i]) $json[] = array("username" => $id_user[$i], "id_article" => $id_article[$i], "number" => $number[$i], "flag" => $flag[$i]);
         }
         if ($_SESSION['id_user'] == $id_user[$i]) RemoveLineInJSON($i);
     }
@@ -226,8 +227,7 @@ function AddPurchaseToJSON() {
     // Save the file.
     file_put_contents('data/dataPurchases.json', $json);
 
-    // Faire pointer sur la page d'achat
-    header("Location:index.php?action=home");
+    header("Location:index.php?action=purchase_articles");
 }
 function RemoveLineInJSON($id) {
 
@@ -258,6 +258,22 @@ function HistoricModel() {
     require "views/historic.php";
 }
 function DisplayBasket() {
+
+    /* Initialize object for null for than the user cannot have any error */
+
+    // Load the file
+    $JSONfile = 'data/dataBasket.json';
+    $data = file_get_contents($JSONfile);
+
+    // Decode the JSON data into a PHP array.
+    $json = json_decode($data, true);
+    $json[0] = array("username" => null, "id_article" => null, "number" => null);
+
+    // Encode the array back into a JSON string.
+    $json = json_encode($json);
+
+    // Save the file.
+    file_put_contents('data/dataBasket.json', $json);
 
     // Load the file
     $JSONfile = 'data/dataBasket.json';
@@ -299,4 +315,74 @@ function DisplayBasket() {
         }
     }
     require "views/basket.php";
+}
+function DisplayPurchase() {
+
+    // Load the file
+    $JSONfile = 'data/dataPurchases.json';
+    $data = file_get_contents($JSONfile);
+
+    // DECODE JSON flow
+    $obj = json_decode($data);
+    $nb_purchase = count($obj);
+    $tab = 0;
+
+    $id_user = $_SESSION['id_user'];
+
+    for ($i = 0; $i < $nb_purchase; $i++) {
+
+        // Load the file
+        $JSONfile = 'data/dataPurchases.json';
+        $data = file_get_contents($JSONfile);
+
+        // DECODE JSON flow
+        $obj = json_decode($data);
+        $flag[$tab] = $obj[$i]->flag;
+        if ($obj[$i]->username == $id_user) {
+
+            $id = $obj[$i]->id_article;
+            $number[$tab] = $obj[$i]->number;
+
+            // Load the file
+            $JSONfile = 'data/dataArticles.json';
+            $data = file_get_contents($JSONfile);
+
+            // DECODE JSON flow
+            $obj = json_decode($data);
+
+            // access the appropriate element
+            $img_article[$tab] = $obj[$id]->image;
+            $name_article[$tab] = $obj[$id]->article;
+            $mark_article[$tab] = $obj[$id]->mark;
+            $desc_article[$tab] = $obj[$id]->description;
+            $price_article[$tab] = $obj[$id]->price;
+            $stock_article[$tab] = $obj[$id]->stock;
+
+            $tab++;
+        }
+    }
+    require "views/purchase.php";
+    FlagPurchase($id_user);
+}
+function FlagPurchase($id_user)
+{
+
+    // Load the file
+    $JSONfile = 'data/dataPurchases.json';
+    $data = file_get_contents($JSONfile);
+
+    // DECODE JSON flow
+    $obj = json_decode($data);
+    $nb_purchase = count($obj);
+
+    for ($i = 0; $i < $nb_purchase; $i++) {
+        if ($obj[$i]->username == $id_user) {
+            $obj[$i]->flag = true;
+        }
+    }
+    // Encode the array back into a JSON string.
+    $json = json_encode($obj);
+
+    // Save the file.
+    file_put_contents('data/dataPurchases.json', $json);
 }

@@ -44,6 +44,9 @@ if (isset($_GET['action'])) {
         case 'basket' :
             Basket();
             break;
+        case 'purchase_articles' :
+            Purchase();
+            break;
         default :
             // Faire une page lost() !
             Default_page();

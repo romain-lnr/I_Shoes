@@ -22,7 +22,7 @@ ob_start();
     ob_start(); ?>
     <div class="topnav">
         <a href="index.php?action=logout">logout</a>
-        <a href="#" style="height: 10px"><?php echo $_SESSION['id_user']?></a>
+        <a href="#user" style="height: 10px"><?php echo $_SESSION['id_user']?></a>
         <a href="index.php?action=basket"><img src="../media/img/basket.png" height="50"><br>Basket</a>
         <?php if (isset($_SESSION['admin_logged']) && $_SESSION['admin_logged']) { ?>
             <a href="index.php?action=admin"><img src="../media/img/admin.png" height="50"><br>Admin</a>
