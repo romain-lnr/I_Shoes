@@ -119,6 +119,11 @@ function Add($id, $value) {
     require "models/model.php";
     AddBasket($id_user, $id, $value);
 }
+function Flag() {
+    require "models/model.php";
+    FlagPurchase();
+    header("Location:index.php?action=home");
+}
 function Logout() {
     $_SESSION['logged'] = false;
     header("Location:index.php");

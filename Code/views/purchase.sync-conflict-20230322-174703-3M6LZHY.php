@@ -46,9 +46,6 @@ ob_start(); ?>
             <?php } ?>
         </div>
     </div>
-<div id="container">
-    <a href="index.php?action=flag_refresh"><input type="submit" name="insert" id="insert" value="Revenir sur la page d'accueil"></a>
-</div>
 <?php $content = ob_get_clean();
 ob_start(); ?>
 <br>

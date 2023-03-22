@@ -47,6 +47,9 @@ if (isset($_GET['action'])) {
         case 'purchase_articles' :
             Purchase();
             break;
+        case 'flag_refresh' :
+            Flag();
+            break;
         default :
             // Faire une page lost() !
             Default_page();

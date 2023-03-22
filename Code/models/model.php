@@ -362,9 +362,8 @@ function DisplayPurchase() {
         }
     }
     require "views/purchase.php";
-    FlagPurchase($id_user);
 }
-function FlagPurchase($id_user)
+function FlagPurchase()
 {
 
     // Load the file
@@ -374,6 +373,7 @@ function FlagPurchase($id_user)
     // DECODE JSON flow
     $obj = json_decode($data);
     $nb_purchase = count($obj);
+    $id_user = $_SESSION['id_user'];
 
     for ($i = 0; $i < $nb_purchase; $i++) {
         if ($obj[$i]->username == $id_user) {
