@@ -14,13 +14,13 @@ ob_start();
         <div class="form-group">
             <h1>Table de création</h1>
             <label for="id_article"><b>Nom d'article</b></label>
-            <input type="text" class="form-control" placeholder="Entrer le nom de l'article" name="id_article" maxlength="20" required>
+            <input type="text" class="form-control" placeholder="Entrer le nom de l'article" name="id_article" maxlength="50" required>
             <label for="mark"><b>Nom de la marque</b></label>
             <input type="text" class="form-control" placeholder="Entrer le nom de la marque de l'article" name="mark" maxlength="20" required>
             <label for="desc"><b>Description</b></label>
-            <input type="text" class="form-control" placeholder="Entrer une sobre description de l'article" name="desc" maxlength="1500" required>
+            <input type="text" class="form-control" placeholder="Entrer une sobre description de l'article" name="desc" maxlength="300" required>
             <label for="price"><b>Prix</b></label>
-            <input type="number" class="form-control" placeholder="Entrer le prix à établir" name="price" maxlength="2" required>
+            <input type="number" class="form-control" placeholder="Entrer le prix à établir" name="price" maxlength="6" required>
             <label for="img_article"><b>Image de l'article</b></label>
             <input type="file" class="form-control" placeholder="Entrer une image pour l'article" name="img_article" required>
             <input type="submit" class="form-control" name="insert" value='AJOUTER' >
