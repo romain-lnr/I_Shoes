@@ -4,7 +4,6 @@ function Test_login($id_user, $password) {
     // Load the file
     $JSONfile = 'data/dataUsers.json';
     $data = file_get_contents($JSONfile);
-
     // DECODE JSON flow
     $obj = json_decode($data);
 
@@ -38,7 +37,7 @@ function Insert_user($id_user, $prenom, $nom, $email, $password) {
     // Decode the JSON data into a PHP array.
     $json = json_decode($contents, true);
     $user = array_search($id_user, array_column( $json, 'username' ) );
-    if ($user !== False) {
+    if ($user !== false) {
         header("Location:index.php?error=user_not_unique");
         return;
     }
@@ -48,10 +47,10 @@ function Insert_user($id_user, $prenom, $nom, $email, $password) {
     }
 
     // Encode the array back into a JSON string.
-    $json = json_encode($json);
+    $encode = json_encode($json);
 
     // Save the file.
-    file_put_contents('data/dataUsers.json', $json);
+    file_put_contents('data/dataUsers.json', $encode);
 }
 function Add_article($id_article, $mark, $desc, $price, $stock_number, $imagepath) {
 
@@ -62,7 +61,7 @@ function Add_article($id_article, $mark, $desc, $price, $stock_number, $imagepat
     // Decode the JSON data into a PHP array.
     $json = json_decode($contents, true);
     $article = array_search($id_article, array_column( $json, 'article' ) );
-    if ($article !== False) {
+    if ($article !== false) {
         $json[$article] = array("article" => $id_article, "mark" => $mark, "description" => $desc, "price" => $price, "stock" => $stock_number, "image" => $imagepath);
     }
     else {
@@ -70,10 +69,10 @@ function Add_article($id_article, $mark, $desc, $price, $stock_number, $imagepat
     }
 
     // Encode the array back into a JSON string.
-    $json = json_encode($json);
+    $encode = json_encode($json);
 
     // Save the file.
-    file_put_contents('data/dataArticles.json', $json);
+    file_put_contents('data/dataArticles.json', $encode);
 }
 function DisplayArticles() {
 
@@ -155,12 +154,13 @@ function AddBasket($id_user, $id, $number) {
     $boolValue = test_value($id, $number);
 
     if ($boolValue) {
+
         // Write in JSON
         $user_basket = array_search($id_user, array_column($json, 'username'));
-        $id_basket = array_search($id_user, array_column($json, 'id_article'));
+        $id_basket = array_search($id, array_column($json, 'id_article'));
 
-        if ($user_basket && $id_basket !== False) {
-            $json[$user_basket] = array("username" => $id_user, "id_article" => $id, "number" => $number);
+        if ($user_basket !== false && $id_basket !== false) {
+                $json[$id_basket] = array("username" => $id_user, "id_article" => $id, "number" => $number);
         } else {
             $json[] = array("username" => $id_user, "id_article" => $id, "number" => $number);
         }
@@ -170,10 +170,10 @@ function AddBasket($id_user, $id, $number) {
     }
 
     // Encode the array back into a JSON string.
-    $json = json_encode($json);
+    $encode = json_encode($json);
 
     // Save the file.
-    file_put_contents('data/dataBasket.json', $json);
+    file_put_contents('data/dataBasket.json', $encode);
     header("Location:index.php?action=home");
 }
 function test_value($id, $number) {
@@ -210,22 +210,15 @@ function AddPurchaseToJSON() {
     for ($i = 0; $i < $nb_article; $i++) {
 
         // Write in JSON
-        $user_basket[$i] = array_search($id_user, array_column($json, 'username'));
-        $id_basket[$i] = array_search($id_user, array_column($json, 'id_article'));
-
-        if ($user_basket[$i] && $id_basket[$i] !== False) {
-            if ($_SESSION['id_user'] == $id_user[$i]) $json[$user_basket] = array("username" => $id_user[$i], "id_article" => $id_article[$i], "number" => $number[$i], "flag" => $flag[$i]);
-        } else {
-            if ($_SESSION['id_user'] == $id_user[$i]) $json[] = array("username" => $id_user[$i], "id_article" => $id_article[$i], "number" => $number[$i], "flag" => $flag[$i]);
-        }
+        if ($_SESSION['id_user'] == $id_user[$i]) $json[] = array("username" => $id_user[$i], "id_article" => $id_article[$i], "number" => $number[$i], "flag" => $flag[$i]);
         if ($_SESSION['id_user'] == $id_user[$i]) RemoveLineInJSON($i);
     }
 
     // Encode the array back into a JSON string.
-    $json = json_encode($json);
+    $encode = json_encode($json);
 
     // Save the file.
-    file_put_contents('data/dataPurchases.json', $json);
+    file_put_contents('data/dataPurchases.json', $encode);
 
     header("Location:index.php?action=purchase_articles");
 }

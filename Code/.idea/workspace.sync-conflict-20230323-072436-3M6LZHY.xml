@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="55021f64-2d06-4d8e-b522-ff5d1ee43f4e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/data/dataBasket.sync-conflict-20230321-074722-3M6LZHY.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/dataBasket.sync-conflict-20230321-075632-3M6LZHY.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/dataBasket.sync-conflict-20230321-075853-3M6LZHY.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/dataBasket.sync-conflict-20230321-080103-3M6LZHY.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/model.sync-conflict-20230321-074342-3M6LZHY.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/model.sync-conflict-20230321-074852-3M6LZHY.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/model.sync-conflict-20230321-075504-3M6LZHY.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/model.sync-conflict-20230321-075712-3M6LZHY.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/model.sync-conflict-20230321-080104-3M6LZHY.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/model.sync-conflict-20230321-080733-3M6LZHY.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/model.sync-conflict-20230321-081546-3M6LZHY.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230320-154558-3M6LZHY.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230320-154602-3M6LZHY.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230320-154615-3M6LZHY.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230320-155312-3M6LZHY.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230321-090313-3M6LZHY.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230321-091521-3M6LZHY.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230321-092122-3M6LZHY.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230321-092813-3M6LZHY.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230321-145218-Y4B2BQQ.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230321-145844-Y4B2BQQ.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230322-172113-3M6LZHY.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230322-172115-3M6LZHY.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230322-172116-3M6LZHY.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230322-172811-3M6LZHY.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230322-174703-3M6LZHY.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230322-175402-3M6LZHY.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataBasket.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataBasket.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/navigation.sync-conflict-20230322-175723-3M6LZHY.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/purchase.sync-conflict-20230322-174703-3M6LZHY.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/purchase.sync-conflict-20230322-175723-3M6LZHY.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,20 +41,21 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectId" id="2LeQDVLCqU6LrNaLMvXbXPT0cZy" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/romai/Romain/GitHub DATA/I_Shoes/Code&quot;,
+    &quot;last_opened_file_path&quot;: &quot;Z:/GitHub DATA/I_Shoes/Code&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -90,8 +98,14 @@
       <workItem from="1679144685094" duration="863000" />
       <workItem from="1679296292533" duration="915000" />
       <workItem from="1679322407446" duration="1816000" />
-      <workItem from="1679327398572" duration="9000" />
-      <workItem from="1679380827329" duration="2215000" />
+      <workItem from="1679385742640" duration="1921000" />
+      <workItem from="1679404992238" duration="2033000" />
+      <workItem from="1679465749582" duration="842000" />
+      <workItem from="1679491706810" duration="7937000" />
+      <workItem from="1679502067719" duration="610000" />
+      <workItem from="1679503252762" duration="721000" />
+      <workItem from="1679504024361" duration="287000" />
+      <workItem from="1679513253773" duration="1671000" />
     </task>
     <servers />
   </component>
@@ -108,8 +122,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
