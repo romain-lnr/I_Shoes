@@ -243,7 +243,9 @@ function RemoveImgInJSON($id) {
     // Decode JSON flow
     $obj = json_decode($data);
 
-    unset($obj[$id]->image);
+    unlink($obj[$id]->image);
+    $json = json_encode($obj);
+    file_put_contents('data/dataArticles.json', $json);
 }
 function HistoricModel() {
 

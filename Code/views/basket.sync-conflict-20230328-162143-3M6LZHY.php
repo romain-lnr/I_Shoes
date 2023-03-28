@@ -2,58 +2,56 @@
 /**
  * Created by Romain Lenoir.
  * Date: 12.03.2023
- * Desc: The admin page for inventory management and article creation.
+ * Desc: The basket page for see all purchases of the currently logged user.
  */
 
 // tampon de flux stocké en mémoire
-$title="IShoes - admin page";
-ob_start();?>
+$title="IShoes - basket page";
+ob_start(); ?>
     <div class="topnav">
         <a href="index.php?action=logout">logout</a>
         <a href="#user" style="height: 10px"><?php echo $_SESSION['id_user']?></a>
-        <a href="index.php?action=TDC"><img src="../media/img/TDC_admin.png" height="50"><br>TDC</a>
-        <a href="index.php?action=historic"><img src="../media/img/historique.png" height="50"><br>Historic</a>
         <a href="index.php?action=home"><img src="../media/img/home.png" height="50"><br>Home</a>
-        <ion-icon name="stats-chart-outline"></ion-icon>
-
+        <?php if (isset($_SESSION['admin_logged']) && $_SESSION['admin_logged']) { ?>
+            <a href="index.php?action=admin"><img src="../media/img/admin.png" height="50"><br>Admin</a>
+        <?php } ?>
         <img src="../media/img/logo.png" height="90">
     </div>
-<?php $topnav = ob_get_clean(); ?>
     <br>
-    <?php ob_start(); ?>
-    <form action="index.php?action=update_articles" method="POST">
+    <?php $topnav = ob_get_clean();
+    ob_start();
+    for ($i = 0; $i < $tab; $i++) { ?>
         <div id="content">
             <div class="row">
-                <?php for ($i = 0; $i < $nb_article; $i++) { ?>
-                    <?php $stock_number[$i] = "stock_number_".strval($i);
-                    $button[$i] = "button_".strval($i);
-                    $number[$i] = "number_".strval($i);?>
-                    <div class="col-sm-3">
-                        <div class="case">
-                            <div id="image_article_case"><img src="<?=$img_article[$i]?>" id="image_article"></div>
-                            <hr>
-                            <div class="body_case">
-                                <div id="nom_article"><?="<em>".$name_article[$i]."</em>"?></div>
-                                <div id="mark_article"><?="<em>".$mark_article[$i]."</em>"?></div>
-                                <div id="price_article"><?="<em>".$price_article[$i]." CHF"."</em>"?></div><br><br>
-                                <div id="stock"><h3>Stock : </h3><input name="<?=$stock_number[$i]?>" type="number" class="form-control" value="<?=$stock_article[$i]?>" style="background-color: #8F8F8F;" id="<?=$stock_number[$i]?>" readonly></div>
-                                <input type="number" class="form-control" id="<?=$number[$i]?>">
-                                <div id="submit_case"><input type="button" class="btn btn-info" onclick="document.querySelector('#<?=$stock_number[$i]?>').value = document.querySelector('#<?=$number[$i]?>').value" id=<?=$button[$i]?> value="Submit"></div>
-                                <div id="remove_object" style="float: right;"><a href="index.php?receive_admin=<?=$i?>"><input type="button" class="form-control" value="Supprimer"></a></div>
-                            </div>
+                <div class="col-sm-3">
+                    <div class="case basket">
+                        <div id="image_article_case"><img src="<?=$img_article[$i]?>" id="image_article"></div>
+                        <hr>
+                        <div class="body_case">
+                            <div id="nom_article"><?="<em>".$name_article[$i]."</em>"?></div>
+                            <div id="mark_article"><?="<em>".$mark_article[$i]."</em>"?></div>
+                            <div id="price_article"><?="<em>".$price_article[$i]." CHF"."</em>"?></div>
+                            <br>
+                            <div id="value_article"><?="<em>"."X".$number[$i]."</em>"?></div>
+                            <div id="remove_object" style="float: right;"><a href="index.php?receive_admin=<?=$i?>"><input type="button" class="form-control" value="Supprimer"></a></div>
                         </div>
                     </div>
-                <?php } ?>
+                </div>
+                <div class="col-sm-8">
+                    <div class="case case_desc basket">
+                        <p><?=$desc_article[$i]?></p>
+                    </div>
+                </div>
             </div>
         </div>
+    <?php } ?>
+    <div id="container">
+        <a href="index.php?action=purchase"><input type="submit" name="insert" id="insert" value="Passer en caisse"></a>
+    </div>
+        <?php $content = ob_get_clean();
+        ob_start(); ?>
         <br>
-        <div id="container">
-            <input type="submit" name="insert" id="insert" value="Mettre à jour">
-        </div>
-    </form>
-<?php $content = ob_get_clean(); ?>
-<?php ob_start(); ?>
-    <footer>
+          <footer>
         <div id="contrainer">
             <div class="row">
                 <div class="col-sm-3">
@@ -86,5 +84,6 @@ ob_start();?>
             </div>
         </div>
     </footer>
-<?php $footer = ob_get_clean();
-require "layout.php";
+    <?php $footer = ob_get_clean();
+    require "layout.php"; ?>
+

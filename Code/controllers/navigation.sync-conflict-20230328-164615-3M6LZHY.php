@@ -125,7 +125,6 @@ function Remove_basket($id) {
     require "models/model.php";
     RemoveArrayInJSON($id, 'data/dataBasket.json');
     header("Location:index.php?action=home");
-    exit();
 }
 function Remove_article($id) {
     require "models/model.php";

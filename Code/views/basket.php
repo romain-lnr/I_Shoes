@@ -33,6 +33,7 @@ ob_start(); ?>
                             <div id="price_article"><?="<em>".$price_article[$i]." CHF"."</em>"?></div>
                             <br>
                             <div id="value_article"><?="<em>"."X".$number[$i]."</em>"?></div>
+                            <div id="remove_object"><a href="index.php?receive_basket=<?=$i?>"><input type="button" class="form-control" value="Supprimer"></a></div>
                         </div>
                     </div>
                 </div>
@@ -83,8 +84,6 @@ ob_start(); ?>
             </div>
         </div>
     </footer>
-    <script src="../media/scripts/slider.js">
-    </script>
     <?php $footer = ob_get_clean();
     require "layout.php"; ?>
 

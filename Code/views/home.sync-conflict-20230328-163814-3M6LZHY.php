@@ -2,52 +2,65 @@
 /**
  * Created by Romain Lenoir.
  * Date: 12.03.2023
- * Desc: The basket page for see all purchases of the currently logged user.
+ * Desc: Home page for see all articles in the JSON file.
  */
 
-// tampon de flux stocké en mémoire
-$title="IShoes - basket page";
-ob_start(); ?>
-<div class="topnav">
-    <a href="index.php?action=logout">logout</a>
-    <a href="#user" style="height: 10px"><?php echo $_SESSION['id_user']?></a>
-    <img src="../media/img/logo.png" height="90">
-</div>
-<br>
-<?php $topnav = ob_get_clean();
-ob_start(); ?>
-<div id="thanks">
-    <h2>Merci pour votre achat !</h2>
-    <h3>Votre commande va bientôt être expédié</h3><br>
-</div>
-<h3 style="padding-left: 55px;">Récapitulatif de la commande</h3>
+$title="IShoes - home page";
+?>
+<?php
+if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']) {
+    ob_start(); ?>
+    <div class="topnav">
+        <a href="index.php?action=login"><img src="../media/img/login.png" height="50"><br>login</a>
+        <a href="index.php?action=login"><img src="../media/img/basket.png" height="50"><br>Basket</a>
+        <img src="../media/img/logo.png" height="90">
+    </div>
+    <br>
+    <?php $topnav = ob_get_clean();
+} else {
+    ob_start(); ?>
+    <div class="topnav">
+        <a href="index.php?action=logout">logout</a>
+        <a href="#user" style="height: 10px"><?php echo $_SESSION['id_user']?></a>
+        <a href="index.php?action=basket"><img src="../media/img/basket.png" height="50"><br>Basket</a>
+        <?php if (isset($_SESSION['admin_logged']) && $_SESSION['admin_logged']) { ?>
+            <a href="index.php?action=admin"><img src="../media/img/admin.png" height="50"><br>Admin</a>
+        <?php } ?>
+        <img src="../media/img/logo.png" height="90">
+    </div>
+    <br>
+    <?php $topnav = ob_get_clean();
+}   ob_start();?>
     <div id="content">
         <div class="row">
-            <?php for ($i = 0; $i < $tab; $i++) {
-                if (!$flag[$i]) {?>
-                    <div class="col-sm-3">
-                        <div class="case basket">
-                            <div id="image_article_case"><img src="<?=$img_article[$i]?>" id="image_article"></div>
-                            <hr>
-                            <div class="body_case">
-                                <div id="nom_article"><?="<em>".$name_article[$i]."</em>"?></div>
-                                <div id="mark_article"><?="<em>".$mark_article[$i]."</em>"?></div>
-                                <div id="price_article"><?="<em>".$price_article[$i]." CHF"."</em>"?></div>
-                                <br>
-                                <div id="value_article"><?="<em>"."X".$number[$i]."</em>"?></div>
-                            </div>
+            <?php
+            for ($i = 0; $i < $nb_article; $i++) { ?>
+                <div class="col-sm-3">
+                    <div class="case" onclick="UseArticle(<?=strval($i)?>)">
+                        <div id="image_article_case"><img src="<?=$img_article[$i]?>" id="image_article"></div>
+                        <hr>
+                        <div class="body_case">
+                            <div id="nom_article"><?="<em>".$name_article[$i]."</em>"?></div>
+                            <div id="mark_article"><?="<em>".$mark_article[$i]."</em>"?></div>
+                            <div id="price_article"><?="<em>".$price_article[$i]." CHF"."</em>"?></div>
                         </div>
                     </div>
-                <?php } ?>
+                </div>
             <?php } ?>
         </div>
+        <?php if(isset($_GET['error'])) {
+            $error = $_GET['error'];
+            if ($error == "not_even_stock") echo "<br><p style='color:red'>Pas assez de stock</p>";
+        }?>
     </div>
-<div id="container">
-    <a href="index.php?action=flag_refresh"><input type="submit" name="insert" id="insert" value="Revenir sur la page d'accueil"></a>
-</div>
-<?php $content = ob_get_clean();
-ob_start(); ?>
-<br>
+    <script>
+        function UseArticle(id) {
+            window.location="index.php?receive_home=" + (id + 1);
+        }
+    </script>
+    <?php $content = ob_get_clean(); ?>
+<br><br>
+<?php ob_start(); ?>
 <footer>
     <div id="contrainer">
         <div class="row">
@@ -82,5 +95,4 @@ ob_start(); ?>
     </div>
 </footer>
 <?php $footer = ob_get_clean();
-require "layout.php"; ?>
-
+require "layout.php";

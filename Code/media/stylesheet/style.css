@@ -241,6 +241,13 @@ footer {
     float: right;
     width: 50px;
 }
+#remove_object input {
+    background-color: #c21a1a;
+    width: 100px;
+}
+#remove_object input:hover {
+    background-color: white;
+}
 #thanks {
     text-align: center;
     color: green;

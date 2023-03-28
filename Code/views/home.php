@@ -55,7 +55,7 @@ if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']) {
     </div>
     <script>
         function UseArticle(id) {
-            window.location="index.php?receive_home=" + id;
+            window.location="index.php?receive_home=" + (id);
         }
     </script>
     <?php $content = ob_get_clean(); ?>

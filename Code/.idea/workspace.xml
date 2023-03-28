@@ -5,27 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55021f64-2d06-4d8e-b522-ff5d1ee43f4e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230320-154602-3M6LZHY.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230320-154615-3M6LZHY.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230320-155312-3M6LZHY.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230321-090313-3M6LZHY.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230321-091521-3M6LZHY.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230321-092122-3M6LZHY.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230321-092813-3M6LZHY.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230321-145218-Y4B2BQQ.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230321-145844-Y4B2BQQ.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230322-172113-3M6LZHY.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230322-172115-3M6LZHY.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230322-172116-3M6LZHY.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230322-172811-3M6LZHY.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230322-174703-3M6LZHY.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230322-175402-3M6LZHY.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230323-072436-3M6LZHY.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230323-072437-3M6LZHY.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230323-072707-3M6LZHY.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230323-205021-3M6LZHY.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/navigation.sync-conflict-20230322-175723-3M6LZHY.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/navigation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/dataArticles.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataArticles.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/dataPurchases.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataPurchases.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/stylesheet/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/media/stylesheet/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/purchase.sync-conflict-20230322-174703-3M6LZHY.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/purchase.sync-conflict-20230322-175723-3M6LZHY.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/basket.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/purchase.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/purchase.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +53,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -111,7 +106,12 @@
       <workItem from="1679552645568" duration="620000" />
       <workItem from="1679579393782" duration="2007000" />
       <workItem from="1679773824564" duration="2650000" />
-      <workItem from="1679782418050" duration="393000" />
+      <workItem from="1679782418050" duration="592000" />
+      <workItem from="1679894327937" duration="516000" />
+      <workItem from="1679897088210" duration="3075000" />
+      <workItem from="1679904447299" duration="630000" />
+      <workItem from="1679908049000" duration="612000" />
+      <workItem from="1680012344379" duration="2333000" />
     </task>
     <servers />
   </component>

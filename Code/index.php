@@ -84,6 +84,14 @@ else {
         $id = $_GET['receive_home'];
         Show($id);
     }
+    else if (isset($_GET['receive_basket'])) {
+        $id = $_GET['receive_basket'] + 1;
+        Remove_basket($id);
+    }
+    else if (isset($_GET['receive_admin'])) {
+        $id = $_GET['receive_admin'];
+        Remove_article($id);
+    }
     else if (isset($_GET['receive_show_article'])) {
         $id = $_GET['receive_show_article'];
         $value = $_POST['value'];
