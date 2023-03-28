@@ -52,7 +52,7 @@ function Insert_user($id_user, $prenom, $nom, $email, $password) {
     // Save the file.
     file_put_contents('data/dataUsers.json', $encode);
 }
-function Add_article($id_article, $mark, $desc, $price, $stock_number, $imagepath) {
+function Add_article($id_article, $mark, $desc, $price, $stock_number, $imagepath, $filename) {
 
     // Load the file
     $JSONfile = 'data/dataArticles.json';
@@ -62,10 +62,10 @@ function Add_article($id_article, $mark, $desc, $price, $stock_number, $imagepat
     $json = json_decode($contents, true);
     $article = array_search($id_article, array_column( $json, 'article' ) );
     if ($article !== false) {
-        $json[$article] = array("article" => $id_article, "mark" => $mark, "description" => $desc, "price" => $price, "stock" => $stock_number, "image" => $imagepath);
+        $json[$article] = array("article" => $id_article, "mark" => $mark, "description" => $desc, "price" => $price, "stock" => $stock_number, "imagepath" => $imagepath, "image" => $filename);
     }
     else {
-        $json[] = array("article" => $id_article, "mark" => $mark, "description" => $desc, "price" => $price, "stock" => $stock_number, "image" => $imagepath);
+        $json[] = array("article" => $id_article, "mark" => $mark, "description" => $desc, "price" => $price, "stock" => $stock_number, "imagepath" => $imagepath, "image" => $filename);
     }
 
     // Encode the array back into a JSON string.
@@ -74,7 +74,7 @@ function Add_article($id_article, $mark, $desc, $price, $stock_number, $imagepat
     // Save the file.
     file_put_contents('data/dataArticles.json', $encode);
 }
-function DisplayArticles() {
+function DisplayArticles($exit) {
 
     // Load the file
     $JSONfile = 'data/dataArticles.json';
@@ -86,43 +86,28 @@ function DisplayArticles() {
 
     // access the appropriate element
      for ($i = 0; $i < $nb_article; $i++) {
-        $img_article[$i] = $obj[$i]->image;
+        $img_article[$i] = $obj[$i]->imagepath;
         $name_article[$i] = $obj[$i]->article;
         $mark_article[$i] = $obj[$i]->mark;
         $desc_article[$i] = $obj[$i]->description;
         $price_article[$i] = $obj[$i]->price;
         $stock_article[$i] = $obj[$i]->stock;
     }
-    if (isset($_GET['action'])) {
-        $action = $_GET['action'];
-        switch ($action) {
-            case 'home':
-                require "views/home.php";
-                break;
-            case 'admin':
-                require "views/admin.php";
-                break;
-            case 'create_article':
-                require "views/admin.php";
-                break;
-            case 'update_articles':
-                for ($i = 0; $i < $nb_article; $i++) {
-                    $stock[$i] = $_POST["stock_number_".strval($i)];
-                    Add_article($name_article[$i], $mark_article[$i], $desc_article[$i], $price_article[$i], $stock[$i], $img_article[$i]);
-                }
-                header("Location:index.php?action=home");
-                break;
-        }
+    switch ($exit) {
+        case 'home':
+            require "views/home.php";
+            break;
+        case 'admin':
+            require "views/admin.php";
+            break;
+        case 'update_articles':
+            for ($i = 0; $i < $nb_article; $i++) {
+                $stock[$i] = $_POST["stock_number_".strval($i)];
+                Add_article($name_article[$i], $mark_article[$i], $desc_article[$i], $price_article[$i], $stock[$i], $img_article[$i]);
+            }
+            header("Location:index.php?action=home");
+            break;
     }
-    if (isset($_GET['error'])) {
-        $error = $_GET['error'];
-
-        switch ($error) {
-            case 'not_even_stock':
-                require "views/home.php";
-        }
-    }
-
 }
 function Show_article($id) {
 
@@ -163,6 +148,7 @@ function AddBasket($id_user, $id, $number) {
                 $json[$id_basket] = array("username" => $id_user, "id_article" => $id, "number" => $number);
         } else {
             $json[] = array("username" => $id_user, "id_article" => $id, "number" => $number);
+            $_SESSION['isBasket'] = true;
         }
     } else {
         header("Location:index.php?error=not_even_stock");
@@ -229,7 +215,7 @@ function RemoveArrayInJSON($id, $path) {
 
     // Decode JSON flow
     $obj = json_decode($data);
-    array_splice($obj, $id);
+    array_splice($obj, $id, 1);
     $json = json_encode($obj);
     file_put_contents($path, $json);
 }
@@ -242,8 +228,8 @@ function RemoveImgInJSON($id) {
 
     // Decode JSON flow
     $obj = json_decode($data);
-
-    unset($obj[$id]->image);
+    $filename = $obj[$id]->image;
+    unlink("media/img/articles/".$filename);
 }
 function HistoricModel() {
 
@@ -262,21 +248,26 @@ function HistoricModel() {
 }
 function DisplayBasket() {
 
-    /* Initialize object for null for than the user cannot have any error */
+    if (!isset($_SESSION['isBasket'])) $_SESSION['isBasket'] = false;
+    if (!$_SESSION['isBasket']) {
 
-    // Load the file
-    $JSONfile = 'data/dataBasket.json';
-    $data = file_get_contents($JSONfile);
+        /* Initialize object for null for than the user cannot have any error */
 
-    // Decode the JSON data into a PHP array.
-    $json = json_decode($data, true);
-    $json[] = array("username" => null, "id_article" => null, "number" => null);
+        // Load the file
+        $JSONfile = 'data/dataBasket.json';
+        $data = file_get_contents($JSONfile);
 
-    // Encode the array back into a JSON string.
-    $encode = json_encode($json);
+        // Decode the JSON data into a PHP array.
+        $json = json_decode($data, true);
+        $json[] = array("username" => null, "id_article" => null, "number" => null);
 
-    // Save the file.
-    file_put_contents('data/dataBasket.json', $encode);
+        // Encode the array back into a JSON string.
+        $encode = json_encode($json);
+
+        // Save the file.
+        file_put_contents('data/dataBasket.json', $encode);
+        $_SESSION['isBasket'] = true;
+    }
 
     // Load the file
     $JSONfile = 'data/dataBasket.json';

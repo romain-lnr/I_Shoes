@@ -5,21 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55021f64-2d06-4d8e-b522-ff5d1ee43f4e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230323-072436-3M6LZHY.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230323-072437-3M6LZHY.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230323-072707-3M6LZHY.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20230323-205021-3M6LZHY.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/navigation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/dataArticles.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataArticles.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataPurchases.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataPurchases.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/stylesheet/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/media/stylesheet/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/basket.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/purchase.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/purchase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/dataArticles.sync-conflict-20230328-182106-3M6LZHY.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/a.sync-conflict-20230328-162813-3M6LZHY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/a.sync-conflict-20230328-173604-3M6LZHY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/a.sync-conflict-20230328-183037-3M6LZHY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/a.sync-conflict-20230328-183318-3M6LZHY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/a.sync-conflict-20230328-185807-3M6LZHY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/t.sync-conflict-20230328-183917-3M6LZHY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/trrrr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/articles/u.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +108,8 @@
       <workItem from="1679897088210" duration="3075000" />
       <workItem from="1679904447299" duration="630000" />
       <workItem from="1679908049000" duration="612000" />
-      <workItem from="1680012344379" duration="2333000" />
+      <workItem from="1680012344379" duration="2846000" />
+      <workItem from="1680017694156" duration="6345000" />
     </task>
     <servers />
   </component>

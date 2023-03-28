@@ -119,7 +119,7 @@ function Show_article($id) {
     $obj = json_decode($data);
 
     // access the appropriate element
-    $img_article = $obj[$id]->image;
+    $img_article = $obj[$id]->imagepath;
     $name_article = $obj[$id]->article;
     $mark_article = $obj[$id]->mark;
     $desc_article = $obj[$id]->description;
@@ -298,7 +298,7 @@ function DisplayBasket() {
             $obj = json_decode($data);
 
             // access the appropriate element
-            $img_article[$tab] = $obj[$id]->image;
+            $img_article[$tab] = $obj[$id]->imagepath;
             $name_article[$tab] = $obj[$id]->article;
             $mark_article[$tab] = $obj[$id]->mark;
             $desc_article[$tab] = $obj[$id]->description;
