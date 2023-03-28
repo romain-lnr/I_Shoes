@@ -74,7 +74,7 @@ function Add_article($id_article, $mark, $desc, $price, $stock_number, $imagepat
     // Save the file.
     file_put_contents('data/dataArticles.json', $encode);
 }
-function DisplayArticles($exit) {
+function DisplayArticles() {
 
     // Load the file
     $JSONfile = 'data/dataArticles.json';
@@ -93,21 +93,36 @@ function DisplayArticles($exit) {
         $price_article[$i] = $obj[$i]->price;
         $stock_article[$i] = $obj[$i]->stock;
     }
-    switch ($exit) {
-        case 'home':
-            require "views/home.php";
-            break;
-        case 'admin':
-            require "views/admin.php";
-            break;
-        case 'update_articles':
-            for ($i = 0; $i < $nb_article; $i++) {
-                $stock[$i] = $_POST["stock_number_".strval($i)];
-                Add_article($name_article[$i], $mark_article[$i], $desc_article[$i], $price_article[$i], $stock[$i], $img_article[$i]);
-            }
-            header("Location:index.php?action=home");
-            break;
+    if (isset($_GET['action'])) {
+        $action = $_GET['action'];
+        switch ($action) {
+            case 'home':
+                require "views/home.php";
+                break;
+            case 'admin':
+                require "views/admin.php";
+                break;
+            case 'create_article':
+                require "views/admin.php";
+                break;
+            case 'update_articles':
+                for ($i = 0; $i < $nb_article; $i++) {
+                    $stock[$i] = $_POST["stock_number_".strval($i)];
+                    Add_article($name_article[$i], $mark_article[$i], $desc_article[$i], $price_article[$i], $stock[$i], $img_article[$i]);
+                }
+                header("Location:index.php?action=home");
+                break;
+        }
     }
+    if (isset($_GET['error'])) {
+        $error = $_GET['error'];
+
+        switch ($error) {
+            case 'not_even_stock':
+                require "views/home.php";
+        }
+    }
+
 }
 function Show_article($id) {
 

@@ -85,7 +85,7 @@ else {
         Show($id);
     }
     else if (isset($_GET['receive_basket'])) {
-        $id = $_GET['receive_basket'];
+        $id = $_GET['receive_basket'] + 1;
         Remove_basket($id);
     }
     else if (isset($_GET['receive_admin'])) {

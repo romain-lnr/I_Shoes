@@ -243,9 +243,7 @@ function RemoveImgInJSON($id) {
     // Decode JSON flow
     $obj = json_decode($data);
 
-    unlink($obj[$id]->image);
-    $json = json_encode($obj);
-    file_put_contents('data/dataArticles.json', $json);
+    unset($obj[$id]->image);
 }
 function HistoricModel() {
 
@@ -272,13 +270,13 @@ function DisplayBasket() {
 
     // Decode the JSON data into a PHP array.
     $json = json_decode($data, true);
-    $json[0] = array("username" => null, "id_article" => null, "number" => null);
+    $json[] = array("username" => null, "id_article" => null, "number" => null);
 
     // Encode the array back into a JSON string.
-    $json = json_encode($json);
+    $encode = json_encode($json);
 
     // Save the file.
-    file_put_contents('data/dataBasket.json', $json);
+    file_put_contents('data/dataBasket.json', $encode);
 
     // Load the file
     $JSONfile = 'data/dataBasket.json';

@@ -87,10 +87,10 @@ function New_Article() {
                 return;
         }
         $imagepath=$folderPath.$fileNewName.".".$ext;
-        $filename = $fileNewName.".".$ext;
-        move_uploaded_file($file, './media/img/articles/'. $filename);
+        $fileName = $fileNewName.".".$ext;
+        move_uploaded_file($file, './media/img/articles/'. $fileName);
     }
-    Add_article($id_article, $mark, $desc, $price, $stock_number, $imagepath, $filename);
+    Add_article($id_article, $mark, $desc, $price, $stock_number, $imagepath);
     header("Location:index.php?action=admin");
 }
 function Create_article() {
@@ -131,8 +131,6 @@ function Remove_article($id) {
     require "models/model.php";
     RemoveImgInJSON($id);
     RemoveArrayInJSON($id, 'data/dataArticles.json');
-    header("Location:index.php?action=admin");
-    exit();
 }
 function Flag() {
     require "models/model.php";
