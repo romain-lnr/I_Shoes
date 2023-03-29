@@ -139,6 +139,9 @@ function Flag() {
     FlagPurchase();
     header("Location:index.php?action=home");
 }
+function Lost_page() {
+    require "views/lost.php";
+}
 function Logout() {
     $_SESSION['logged'] = false;
     session_destroy();

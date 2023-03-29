@@ -2,11 +2,11 @@
 /**
  * Created by Romain Lenoir.
  * Date: 12.03.2023
- * Desc: The basket page for see all purchases of the currently logged user.
+ * Desc: The purchase page for purchases
  */
 
 // tampon de flux stocké en mémoire
-$title="IShoes - basket page";
+$title="IShoes - purchase page";
 ob_start(); ?>
 <div class="topnav">
     <a href="index.php?action=logout">logout</a>

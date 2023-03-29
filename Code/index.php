@@ -51,8 +51,7 @@ if (isset($_GET['action'])) {
             Flag();
             break;
         default :
-            // Faire une page lost() !
-            Default_page();
+            Lost_page();
     }
 }
 else {
