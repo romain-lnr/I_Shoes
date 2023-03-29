@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55021f64-2d06-4d8e-b522-ff5d1ee43f4e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/views/lost.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/navigation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/purchase.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/purchase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Documentation/Documentation I Shoes.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Documentation/Documentation I Shoes.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Documentation/Journaux_de_travail/Romain Lenoir/Journal_de_travail_I_Shoes.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Documentation/Journaux_de_travail/Romain Lenoir/Journal_de_travail_I_Shoes.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/dataArticles.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataArticles.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/basket.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +106,7 @@
       <workItem from="1680017694156" duration="6345000" />
       <workItem from="1680024088906" duration="1674000" />
       <workItem from="1680072087561" duration="629000" />
-      <workItem from="1680092343755" duration="1645000" />
+      <workItem from="1680092343755" duration="3560000" />
     </task>
     <servers />
   </component>

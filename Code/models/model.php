@@ -86,12 +86,13 @@ function DisplayArticles($exit) {
 
     // access the appropriate element
      for ($i = 0; $i < $nb_article; $i++) {
-        $img_article[$i] = $obj[$i]->imagepath;
         $name_article[$i] = $obj[$i]->article;
         $mark_article[$i] = $obj[$i]->mark;
         $desc_article[$i] = $obj[$i]->description;
         $price_article[$i] = $obj[$i]->price;
         $stock_article[$i] = $obj[$i]->stock;
+        $imgpath_article[$i] = $obj[$i]->imagepath;
+        $img_article[$i] = $obj[$i]->image;
     }
     switch ($exit) {
         case 'home':
@@ -103,7 +104,7 @@ function DisplayArticles($exit) {
         case 'update_articles':
             for ($i = 0; $i < $nb_article; $i++) {
                 $stock[$i] = $_POST["stock_number_".strval($i)];
-                Add_article($name_article[$i], $mark_article[$i], $desc_article[$i], $price_article[$i], $stock[$i], $img_article[$i]);
+                Add_article($name_article[$i], $mark_article[$i], $desc_article[$i], $price_article[$i], $stock[$i], $imgpath_article[$i], $img_article[$i]);
             }
             header("Location:index.php?action=home");
             break;
@@ -277,9 +278,11 @@ function DisplayBasket() {
     $obj = json_decode($data);
     $nb_article = count($obj);
     $tab = 0;
+    $isArticle = false;
 
     // access the appropriate element
     for ($i = 0; $i < $nb_article; $i++) {
+
         // Load the file
         $JSONfile = 'data/dataBasket.json';
         $data = file_get_contents($JSONfile);
@@ -290,6 +293,7 @@ function DisplayBasket() {
         if ($obj[$i]->username == $_SESSION['id_user']) {
             $id = $obj[$i]->id_article;
             $number[$tab] = $obj[$i]->number;
+
             // Load the file
             $JSONfile = 'data/dataArticles.json';
             $data = file_get_contents($JSONfile);
@@ -306,6 +310,7 @@ function DisplayBasket() {
             $stock_article[$tab] = $obj[$id]->stock;
 
             $tab++;
+            $isArticle = true;
         }
     }
     require "views/basket.php";
@@ -329,7 +334,7 @@ function DisplayPurchase() {
         $JSONfile = 'data/dataPurchases.json';
         $data = file_get_contents($JSONfile);
 
-        // DECODE JSON flow
+        // Decode JSON flow
         $obj = json_decode($data);
         $flag[$tab] = $obj[$i]->flag;
         if ($obj[$i]->username == $id_user) {

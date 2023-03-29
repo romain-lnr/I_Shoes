@@ -44,10 +44,17 @@ ob_start(); ?>
                 </div>
             </div>
         </div>
-    <?php } ?>
+    <?php }
+    if ($isArticle) { ?>
     <div id="container">
         <a href="index.php?action=purchase"><input type="submit" name="insert" id="insert" value="Passer en caisse"></a>
     </div>
+    <?php } else { ?>
+        <h3 style="text-align: center">Vous n'avez pas d'article dans votre panier...</h3><br>
+    <div id="container">
+        <a href="index.php?action=home"><input type="submit" name="insert" id="insert" value="revenir sur la page d'accueil"></a>
+    </div>
+    <?php } ?>
         <?php $content = ob_get_clean();
         ob_start(); ?>
         <br>
