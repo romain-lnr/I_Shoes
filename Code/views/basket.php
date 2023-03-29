@@ -19,36 +19,36 @@ ob_start(); ?>
     </div>
     <br>
     <?php $topnav = ob_get_clean();
-    ob_start();
-    for ($i = 0; $i < $tab; $i++) { ?>
-        <div id="content">
-            <div class="row">
-                <div class="col-sm-3">
-                    <div class="case basket">
-                        <div id="image_article_case"><img src="<?=$img_article[$i]?>" id="image_article"></div>
-                        <hr>
-                        <div class="body_case">
-                            <div id="nom_article"><?="<em>".$name_article[$i]."</em>"?></div>
-                            <div id="mark_article"><?="<em>".$mark_article[$i]."</em>"?></div>
-                            <div id="price_article"><?="<em>".$price_article[$i]." CHF"."</em>"?></div>
-                            <br>
-                            <div id="value_article"><?="<em>"."X".$number[$i]."</em>"?></div>
-                            <div id="remove_object"><a href="index.php?receive_basket=<?=$i?>"><input type="button" class="form-control" value="Supprimer"></a></div>
+    ob_start(); ?>
+    <?php if ($isArticle) { ?>
+        <?php for ($i = 0; $i < $tab; $i++) { ?>
+            <div id="content">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="case basket">
+                            <div id="image_article_case"><img src="<?=$img_article[$i]?>" id="image_article"></div>
+                            <hr>
+                            <div class="body_case">
+                                <div id="nom_article"><?="<em>".$name_article[$i]."</em>"?></div>
+                                <div id="mark_article"><?="<em>".$mark_article[$i]."</em>"?></div>
+                                <div id="price_article"><?="<em>".$price_article[$i]." CHF"."</em>"?></div>
+                                <br>
+                                <div id="value_article"><?="<em>"."X".$number[$i]."</em>"?></div>
+                                <div id="remove_object"><a href="index.php?receive_basket=<?=$i?>"><input type="button" class="form-control" value="Supprimer"></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="case case_desc basket">
+                            <p><?=$desc_article[$i]?></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-8">
-                    <div class="case case_desc basket">
-                        <p><?=$desc_article[$i]?></p>
-                    </div>
-                </div>
             </div>
+        <?php } ?>
+        <div id="container">
+            <a href="index.php?action=purchase"><input type="submit" name="insert" id="insert" value="Passer en caisse"></a>
         </div>
-    <?php }
-    if ($isArticle) { ?>
-    <div id="container">
-        <a href="index.php?action=purchase"><input type="submit" name="insert" id="insert" value="Passer en caisse"></a>
-    </div>
     <?php } else { ?>
         <h3 style="text-align: center">Vous n'avez pas d'article dans votre panier...</h3><br>
     <div id="container">
