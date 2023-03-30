@@ -185,7 +185,7 @@ img {vertical-align: middle;}
 .case {
     background-color: #8F8FC0;
     width: 400px;
-    height: 700px;
+    height: 600px;
     overflow: hidden;
     box-shadow: 0 2px 20px rgba(0,0,0,0.8);
     border-radius: 20px;
@@ -193,7 +193,7 @@ img {vertical-align: middle;}
     padding: 20px;
 }
 .admin {
-    height: 850px;
+    height: 700px;
 }
 .case_desc {
     width: 480px;
@@ -228,7 +228,7 @@ footer {
     width: 100%;
 }
 #nom_article {
-    font-size: 50px;
+    font-size: 31px;
 }
 #mark_article {
     font-size: 20px;

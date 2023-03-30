@@ -21,19 +21,19 @@ ob_start();
 
             <div class="mySlides fadeSlide">
                 <div class="numbertext">1 / 3</div>
-                <img src="../media/img/bg-1.jpg" style="width:100%" height="700">
+                <img src="../media/img/articles/Air%20Jordan%20Dior.png" style="width:100%" height="700">
                 <div class="text">Caption Text</div>
             </div>
 
             <div class="mySlides fadeSlide">
                 <div class="numbertext">2 / 3</div>
-                <img src="../media/img/bg-2.jpg" style="width:100%" height="700">
+                <img src="../media/img/articles/Air%20jordan%204%20off%20white.png" style="width:100%" height="700">
                 <div class="text">Caption Two</div>
             </div>
 
             <div class="mySlides fadeSlide">
                 <div class="numbertext">3 / 3</div>
-                <img src="../media/img/bg-3.jpg" style="width:100%" height="700">
+                <img src="../media/img/articles/Air%20Jordan%20REtro%20High%20TravisScott%20CactusJack.png" style="width:100%" height="700">
                 <div class="text">Caption Three</div>
             </div>
 
