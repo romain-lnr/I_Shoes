@@ -29,17 +29,19 @@ ob_start();?>
                     $button[$i] = "button_".strval($i);
                     $number[$i] = "number_".strval($i);?>
                     <div class="col-sm-3">
-                        <div class="case">
+                        <div class="case admin">
                             <div id="image_article_case"><img src="<?=$imgpath_article[$i]?>" id="image_article"></div>
                             <hr>
                             <div class="body_case">
                                 <div id="nom_article"><?="<em>".$name_article[$i]."</em>"?></div>
                                 <div id="mark_article"><?="<em>".$mark_article[$i]."</em>"?></div>
                                 <div id="price_article"><?="<em>".$price_article[$i]." CHF"."</em>"?></div><br><br>
-                                <div id="stock"><h3>Stock : </h3><input name="<?=$stock_number[$i]?>" type="number" class="form-control" value="<?=$stock_article[$i]?>" style="background-color: #8F8F8F;" id="<?=$stock_number[$i]?>" readonly></div>
-                                <input type="number" class="form-control" id="<?=$number[$i]?>">
-                                <div id="submit_case"><input type="button" class="btn btn-info" onclick="document.querySelector('#<?=$stock_number[$i]?>').value = document.querySelector('#<?=$number[$i]?>').value" id=<?=$button[$i]?> value="Submit"></div>
-                                <div id="remove_object" style="float: right;"><a href="index.php?receive_admin=<?=$i?>"><input type="button" class="form-control" value="Supprimer"></a></div>
+                                <div class="stock">
+                                    <h3>Stock : </h3><input name="<?=$stock_number[$i]?>" type="number" class="form-control" value="<?=$stock_article[$i]?>" style="background-color: #8F8F8F;" id="<?=$stock_number[$i]?>" readonly>
+                                    <input type="number" class="form-control" id="<?=$number[$i]?>">
+                                    <div id="submit_case"><input type="button" class="btn btn-info" onclick="document.querySelector('#<?=$stock_number[$i]?>').value = document.querySelector('#<?=$number[$i]?>').value" id=<?=$button[$i]?> value="Submit"></div>
+                                    <div id="remove_object" style="float: right;"><a href="index.php?receive_admin=<?=$i?>"><input type="button" class="form-control" value="Supprimer"></a></div>
+                                </div>
                             </div>
                         </div>
                     </div>

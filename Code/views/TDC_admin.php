@@ -18,7 +18,7 @@ ob_start();
             <label for="mark"><b>Nom de la marque</b></label>
             <input type="text" class="form-control" placeholder="Entrer le nom de la marque de l'article" name="mark" maxlength="20" required>
             <label for="desc"><b>Description</b></label>
-            <input type="text" class="form-control" placeholder="Entrer une sobre description de l'article" name="desc" maxlength="300" required>
+            <input type="text" class="form-control" placeholder="Entrer une sobre description de l'article" name="desc" maxlength="500" required>
             <label for="price"><b>Prix</b></label>
             <input type="number" class="form-control" placeholder="Entrer le prix à établir" name="price" maxlength="6" required>
             <label for="img_article"><b>Image de l'article</b></label>

@@ -1,33 +1,86 @@
 <?php
+/*
+ * Default_page function
+ * Do: redirect to main page
+ *
+*/
 function Default_page() {
     require "views/main.php";
 }
+
+/*
+ * Home_page function
+ * Do: load articles for home page
+ *
+*/
 function Home_page() {
     require "models/model.php";
     DisplayArticles('home');
 }
+
+/*
+ * Purchases function
+ * Do: load purchased articles
+ *
+*/
 function Purchase() {
     require "models/model.php";
     DisplayPurchase();
 }
+
+/*
+ * Admin_page function
+ * Do: load articles for admin page
+ *
+*/
 function Admin_page() {
     require "models/model.php";
     DisplayArticles('admin');
 }
+
+/*
+ * Historic Function
+ * Do: load user historic
+ *
+*/
 function Historic() {
     require "models/model.php";
     HistoricModel();
 }
-function AddPurchase() {
+
+/*
+ * Add_purchase Function
+ * Do: write in purchase json file
+ *
+*/
+function Add_purchase() {
     require "models/model.php";
     AddPurchaseToJSON();
 }
+
+/*
+ * Login Function
+ * Do: redirect to login page
+ *
+*/
 function Login() {
     require "views/login.php";
 }
+
+/*
+ * Register Function
+ * Do: redirect to new_user page
+ *
+*/
 function Register() {
     require "views/new_user.php";
 }
+
+/*
+ * Check_login Function
+ * Do: Check the logged user
+ *
+*/
 function Check_login() {
     require "models/model.php";
         if(isset($_POST['insert'])) {
@@ -38,6 +91,12 @@ function Check_login() {
         }
     Test_login($id_user, $password);
 }
+
+/*
+ * Account Function
+ * Do: Create a new account
+ *
+*/
 function Account() {
     require "models/model.php";
 
@@ -52,7 +111,13 @@ function Account() {
     }
     Insert_user($id_user, $prenom, $nom, $email, $password);
 }
-function New_Article() {
+
+/*
+ * New_article Function
+ * Do: Create a new article
+ *
+*/
+function New_article() {
     require "models/model.php";
 
     if(isset($_POST['insert'])) {
@@ -92,24 +157,55 @@ function New_Article() {
     }
     Add_article($id_article, $mark, $desc, $price, $stock_number, $imagepath, $filename);
     header("Location:index.php?action=admin");
+    exit();
 }
+
+/*
+ * Create_article Function
+ * Do: redirect to the TDC_admin page
+ *
+*/
 function Create_article() {
     require "views/TDC_admin.php";
 }
+
+/*
+ * Update_articles Function
+ * Do: update articles
+ *
+*/
 function Update_articles() {
     if(isset($_POST['insert'])) {
         require "models/model.php";
         DisplayArticles('update_articles');
     }
 }
+
+/*
+ * Show Function
+ * Do: display the requested article to the user
+ *
+*/
 function Show($id) {
     require "models/model.php";
     Show_article($id);
 }
+
+/*
+ * Basket Function
+ * Do: load basket for basket page
+ *
+*/
 function Basket() {
     require "models/model.php";
     DisplayBasket();
 }
+
+/*
+ * Add Function
+ * Do: update the basket json file by the requested article by user
+ *
+*/
 function Add($id, $value) {
     if (isset($_SESSION['id_user']) && $_SESSION['id_user']) {
         $id_user = $_SESSION['id_user'];
@@ -119,14 +215,26 @@ function Add($id, $value) {
         return;
     }
     require "models/model.php";
-    AddBasket($id_user, $id, $value);
+    Add_basket($id_user, $id, $value);
 }
+
+/*
+ * Remove_basket Function
+ * Do: remove an article in basket if the user deletes him
+ *
+*/
 function Remove_basket($id) {
     require "models/model.php";
     RemoveArrayInJSON($id, 'data/dataBasket.json');
     header("Location:index.php?action=basket");
     exit();
 }
+
+/*
+ * Remove_article Function
+ * Do: remove an article if the admin deletes him
+ *
+*/
 function Remove_article($id) {
     require "models/model.php";
     RemoveImgInJSON($id);
@@ -134,17 +242,37 @@ function Remove_article($id) {
     header("Location:index.php?action=admin");
     exit();
 }
+
+/*
+ * Flag Function
+ * Do: reorganize the purchase confirmation page
+ *
+*/
 function Flag() {
     require "models/model.php";
     FlagPurchase();
     header("Location:index.php?action=home");
+    exit();
 }
+
+/*
+ * Flag Function
+ * Do: redirect to the lost page
+ *
+*/
 function Lost_page() {
     require "views/lost.php";
 }
+
+/*
+ * Flag Function
+ * Do: destroy sessions variable and log out the user
+ *
+*/
 function Logout() {
     $_SESSION['logged'] = false;
     session_destroy();
     header("Location:index.php");
+    exit();
 }
 

@@ -185,11 +185,15 @@ img {vertical-align: middle;}
 .case {
     background-color: #8F8FC0;
     width: 400px;
+    height: 700px;
     overflow: hidden;
     box-shadow: 0 2px 20px rgba(0,0,0,0.8);
     border-radius: 20px;
     margin: 55px;
     padding: 20px;
+}
+.admin {
+    height: 850px;
 }
 .case_desc {
     width: 480px;

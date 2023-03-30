@@ -1,4 +1,9 @@
 <?php
+/*
+ * Test_login Function
+ * Do: verify user informations in login page
+ *
+*/
 function Test_login($id_user, $password) {
 
     // Load the file
@@ -25,6 +30,12 @@ function Test_login($id_user, $password) {
         } else header("Location:index.php?error=user_not_correct");
     }
 }
+
+/*
+ * Insert_user Function
+ * Do: Create an account in dataUsers json file
+ *
+*/
 function Insert_user($id_user, $prenom, $nom, $email, $password) {
 
     // Load the file
@@ -43,15 +54,22 @@ function Insert_user($id_user, $prenom, $nom, $email, $password) {
     }
     else {
         $json[] = array("username" => $id_user, "firstname" => $prenom, "name" => $nom, "Email" => $email, "password" => $passhash);
-        header("Location:index.php?action=login");
     }
 
     // Encode the array back into a JSON string.
-    $encode = json_encode($json);
+    $encode = json_encode($json, JSON_PRETTY_PRINT);
 
     // Save the file.
     file_put_contents('data/dataUsers.json', $encode);
+    header("Location:index.php?action=login");
+    exit();
 }
+
+/*
+ * Add_article Function
+ * Do: Create or update an article in dataArticles json file
+ *
+*/
 function Add_article($id_article, $mark, $desc, $price, $stock_number, $imagepath, $filename) {
 
     // Load the file
@@ -69,11 +87,17 @@ function Add_article($id_article, $mark, $desc, $price, $stock_number, $imagepat
     }
 
     // Encode the array back into a JSON string.
-    $encode = json_encode($json);
+    $encode = json_encode($json, JSON_PRETTY_PRINT);
 
     // Save the file.
     file_put_contents('data/dataArticles.json', $encode);
 }
+
+/*
+ * Test_login Function
+ * Do: Show articles and update in home and admin page
+ *
+*/
 function DisplayArticles($exit) {
 
     // Load the file
@@ -107,9 +131,15 @@ function DisplayArticles($exit) {
                 Add_article($name_article[$i], $mark_article[$i], $desc_article[$i], $price_article[$i], $stock[$i], $imgpath_article[$i], $img_article[$i]);
             }
             header("Location:index.php?action=home");
-            break;
+            exit();
     }
 }
+
+/*
+ * Show_article Function
+ * Do: display the requested articles for the user
+ *
+*/
 function Show_article($id) {
 
     // Load the file
@@ -129,7 +159,13 @@ function Show_article($id) {
 
     require "views/show_article.php";
 }
-function AddBasket($id_user, $id, $number) {
+
+/*
+ * Add_basket Function
+ * Do: create an array when the user take an article in the basket
+ *
+*/
+function Add_basket($id_user, $id, $number) {
     // Load the file
     $JSONfile = 'data/dataBasket.json';
     $contents = file_get_contents($JSONfile);
@@ -137,7 +173,7 @@ function AddBasket($id_user, $id, $number) {
     // Decode the JSON data into a PHP array.
     $json = json_decode($contents, true);
 
-    $boolValue = test_value($id, $number);
+    $boolValue = Test_value($id, $number);
 
     if ($boolValue) {
 
@@ -156,14 +192,21 @@ function AddBasket($id_user, $id, $number) {
         return;
     }
 
-    // Encode the array back into a JSON string.
-    $encode = json_encode($json);
+    // Encode the array back into a JSON string
+    $encode = json_encode($json, JSON_PRETTY_PRINT);
 
     // Save the file.
     file_put_contents('data/dataBasket.json', $encode);
     header("Location:index.php?action=home");
+    exit();
 }
-function test_value($id, $number) {
+
+/*
+ * Test_value Function
+ * Do: return true or false if the user takes more article value than the stock of article
+ *
+*/
+function Test_value($id, $number) {
     $JSONfile = 'data/dataArticles.json';
     $data = file_get_contents($JSONfile);
     $obj = json_decode($data);
@@ -171,6 +214,12 @@ function test_value($id, $number) {
     if ($obj[$id]->stock >= $number && $number >= 1) return true;
     else return false;
 }
+
+/*
+ * AddPurchaseToJSON Function
+ * Do: create an array or arrays to the purchase page
+ *
+*/
 function AddPurchaseToJSON() {
 
     // Load the file
@@ -202,13 +251,20 @@ function AddPurchaseToJSON() {
     }
 
     // Encode the array back into a JSON string.
-    $encode = json_encode($json);
+    $encode = json_encode($json, JSON_PRETTY_PRINT);
 
     // Save the file.
     file_put_contents('data/dataPurchases.json', $encode);
 
     header("Location:index.php?action=purchase_articles");
+    exit();
 }
+
+/*
+ * RemoveArrayInJSON Function
+ * Do: remove a line in a json file
+ *
+*/
 function RemoveArrayInJSON($id, $path) {
 
     // Load the file
@@ -220,6 +276,12 @@ function RemoveArrayInJSON($id, $path) {
     $json = json_encode($obj);
     file_put_contents($path, $json);
 }
+
+/*
+ * RemoveImgInJSONFunction
+ * Do: remove an image in the articles directory
+ *
+*/
 function RemoveImgInJSON($id) {
 
     // Load the file
@@ -232,6 +294,12 @@ function RemoveImgInJSON($id) {
     $filename = $obj[$id]->image;
     unlink("media/img/articles/".$filename);
 }
+
+/*
+ * HistoricModel Function
+ * Do: create the users historic
+ *
+*/
 function HistoricModel() {
 
     // Load the file
@@ -247,28 +315,13 @@ function HistoricModel() {
     }
     require "views/historic.php";
 }
+
+/*
+ * DisplayBasket Function
+ * Do: load the basket for basket page
+ *
+*/
 function DisplayBasket() {
-
-    if (!isset($_SESSION['isBasket'])) $_SESSION['isBasket'] = false;
-    if (!$_SESSION['isBasket']) {
-
-        /* Initialize object for null for than the user cannot have any error */
-
-        // Load the file
-        $JSONfile = 'data/dataBasket.json';
-        $data = file_get_contents($JSONfile);
-
-        // Decode the JSON data into a PHP array.
-        $json = json_decode($data, true);
-        $json[] = array("username" => null, "id_article" => null, "number" => null);
-
-        // Encode the array back into a JSON string.
-        $encode = json_encode($json);
-
-        // Save the file.
-        file_put_contents('data/dataBasket.json', $encode);
-        $_SESSION['isBasket'] = true;
-    }
 
     // Load the file
     $JSONfile = 'data/dataBasket.json';
@@ -310,11 +363,18 @@ function DisplayBasket() {
             $stock_article[$tab] = $obj[$id]->stock;
 
             $tab++;
-            $isArticle = true;
+
+            if (!$isArticle) $isArticle = true;
         }
     }
     require "views/basket.php";
 }
+
+/*
+ * DisplayPurchase Function
+ * Do: load the purchased articles for purchase page
+ *
+*/
 function DisplayPurchase() {
 
     // Load the file
@@ -350,7 +410,7 @@ function DisplayPurchase() {
             $obj = json_decode($data);
 
             // access the appropriate element
-            $img_article[$tab] = $obj[$id]->image;
+            $imgpath_article[$tab] = $obj[$id]->imagepath;
             $name_article[$tab] = $obj[$id]->article;
             $mark_article[$tab] = $obj[$id]->mark;
             $desc_article[$tab] = $obj[$id]->description;
@@ -362,6 +422,12 @@ function DisplayPurchase() {
     }
     require "views/purchase.php";
 }
+
+/*
+ * FlagPurchase Function
+ * Do: Modify the column flag of dataPurchases to false to true when the user leaves the purchase page
+ *
+*/
 function FlagPurchase()
 {
 
@@ -369,7 +435,7 @@ function FlagPurchase()
     $JSONfile = 'data/dataPurchases.json';
     $data = file_get_contents($JSONfile);
 
-    // DECODE JSON flow
+    // Decode JSON flow
     $obj = json_decode($data);
     $nb_purchase = count($obj);
     $id_user = $_SESSION['id_user'];

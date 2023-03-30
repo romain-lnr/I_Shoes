@@ -27,7 +27,7 @@ ob_start(); ?>
                 if (!$flag[$i]) {?>
                     <div class="col-sm-3">
                         <div class="case basket">
-                            <div id="image_article_case"><img src="<?=$img_article[$i]?>" id="image_article"></div>
+                            <div id="image_article_case"><img src="<?=$imgpath_article[$i]?>" id="image_article"></div>
                             <hr>
                             <div class="body_case">
                                 <div id="nom_article"><?="<em>".$name_article[$i]."</em>"?></div>

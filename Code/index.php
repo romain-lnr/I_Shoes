@@ -2,6 +2,7 @@
 session_start();
 require "controllers/navigation.php";
 
+// Actions
 if (isset($_GET['action'])) {
     $action = $_GET['action'];
     switch ($action) {
@@ -24,7 +25,7 @@ if (isset($_GET['action'])) {
             Create_article();
             break;
         case 'purchase' :
-            AddPurchase();
+            Add_purchase();
             break;
         case 'historic' :
             Historic();
@@ -36,7 +37,7 @@ if (isset($_GET['action'])) {
             Account();
             break;
         case 'create_article' :
-            New_Article();
+            New_article();
             break;
         case 'update_articles' :
             Update_articles();
