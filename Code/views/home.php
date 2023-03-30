@@ -32,6 +32,10 @@ if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']) {
     <?php $topnav = ob_get_clean();
 }   ob_start();?>
     <div id="content">
+        <?php if(isset($_GET['error'])) {
+            $error = $_GET['error'];
+            if ($error == "not_even_stock") echo "<br><p style='color:red'>Pas assez de stock</p>";
+        }?>
         <div class="row">
             <?php
             for ($i = 0; $i < $nb_article; $i++) { ?>
@@ -48,10 +52,6 @@ if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']) {
                 </div>
             <?php } ?>
         </div>
-        <?php if(isset($_GET['error'])) {
-            $error = $_GET['error'];
-            if ($error == "not_even_stock") echo "<br><p style='color:red'>Pas assez de stock</p>";
-        }?>
     </div>
     <script>
         function UseArticle(id) {
