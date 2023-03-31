@@ -34,7 +34,7 @@ ob_start(); ?>
                                 <div id="price_article"><?="<em>".$price_article[$i]." CHF"."</em>"?></div>
                                 <br>
                                 <div id="value_article"><?="<em>"."X".$number[$i]."</em>"?></div>
-                                <div id="remove_object"><a href="index.php?receive_basket=<?=$i?>"><input type="button" class="form-control" value="Supprimer"></a></div>
+                                <div id="remove_object"><a href="index.php?receive_basket=<?=$i?>&value=<?=$number[$i]?>&id_article=<?=$id[$i]?>"><input type="button" class="form-control" value="Supprimer"></a></div>
                             </div>
                         </div>
                     </div>

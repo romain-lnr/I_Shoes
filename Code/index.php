@@ -86,7 +86,9 @@ else {
     }
     else if (isset($_GET['receive_basket'])) {
         $id = $_GET['receive_basket'];
-        Remove_basket($id);
+        $number = $_GET['value'];
+        $id_article = $_GET['id_article'];
+        Remove_basket($id, $number, $id_article);
     }
     else if (isset($_GET['receive_admin'])) {
         $id = $_GET['receive_admin'];

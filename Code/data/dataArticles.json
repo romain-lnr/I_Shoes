@@ -4,71 +4,71 @@
         "mark": "Nike",
         "description": "Le charme continue d'op\u00e9rer avec la Nike Air Force 1 \u201907. Cette chaussure de basketball OG revisite ses \u00e9l\u00e9ments les plus c\u00e9l\u00e8bres : les renforts cousus r\u00e9sistants, les finitions sobres et juste ce qu'il faut d'\u00e9clat pour vous faire briller.",
         "price": "120",
-        "stock": "1",
+        "stock": 1,
         "imagepath": "..\/media\/img\/articles\/Air Force 1 '07.png",
         "image": "Air Force 1 '07.png"
     },
     {
-      "article": "Yeezy FoamRunners",
-      "mark": "Adidas",
-      "description": "L'adidas Yeezy Foam RNR Onyx est dotée d'une construction en mousse ovale Onyx composée en partie d'EVA et d'algues. À la base, une assise plantaire matelassée offre confort et soutien, tandis qu'une semelle sculpturale avec de profondes bandes de roulement assure l'adhérence.",
-      "price": "200",
-      "stock": "1",
-      "imagepath": "..\/media\/img\/articles\/Yeezy FoamRunners.png",
-      "image": "Yeezy FoamRunners.png"
+        "article": "Yeezy FoamRunners",
+        "mark": "Adidas",
+        "description": "L'adidas Yeezy Foam RNR Onyx est dot\u00e9e d'une construction en mousse ovale Onyx compos\u00e9e en partie d'EVA et d'algues. \u00c0 la base, une assise plantaire matelass\u00e9e offre confort et soutien, tandis qu'une semelle sculpturale avec de profondes bandes de roulement assure l'adh\u00e9rence.",
+        "price": "200",
+        "stock": 1,
+        "imagepath": "..\/media\/img\/articles\/Yeezy FoamRunners.png",
+        "image": "Yeezy FoamRunners.png"
     },
     {
-      "article": "Yeezy boost 350 v2 Zebra",
-      "mark": "Adidas",
-      "description": "Lancée en 2017, la adidas Yeezy Boost 350 V2 Zebra est connue comme l'un des colorways les plus renommés de la gamme Yeezy. Elle présente une tige Primeknit marbrée blanche et noire avec une bande latérale blanche et un texte rouge \" SPLY-350 \". À la base, une semelle Boost rembourrée apporte confort et soutien.",
-      "price": "369",
-      "stock": "1",
-      "imagepath": "..\/media\/img\/articles\/Yeezy boost 350 v2 Zebra.png",
-      "image": "Yeezy boost 350 v2 Zebra.png"
+        "article": "Yeezy boost 350 v2 Zebra",
+        "mark": "Adidas",
+        "description": "Lanc\u00e9e en 2017, la adidas Yeezy Boost 350 V2 Zebra est connue comme l'un des colorways les plus renomm\u00e9s de la gamme Yeezy. Elle pr\u00e9sente une tige Primeknit marbr\u00e9e blanche et noire avec une bande lat\u00e9rale blanche et un texte rouge \" SPLY-350 \". \u00c0 la base, une semelle Boost rembourr\u00e9e apporte confort et soutien.",
+        "price": "369",
+        "stock": 1,
+        "imagepath": "..\/media\/img\/articles\/Yeezy boost 350 v2 Zebra.png",
+        "image": "Yeezy boost 350 v2 Zebra.png"
     },
     {
-      "article": "Jordan 1 Retro Low OG SP",
-      "mark": "Jordan",
-      "description": "Clin d'œil à la Air Jordan 1 High Travis Scott Mocha, la Air Jordan 1 Low Travis Scott Reverse Mocha offre une palette similaire de moka et de blanc cassé, mais avec des couleurs inversées. L'empeigne est composée d'une base en Durabuck moka, de superpositions en cuir blanc et de Swooshes inversés caractéristiques. Les touches de rouge sur la broderie du logo Wings au talon et l'étiquette tissée sur la languette contrastent fortement avec l'aspect neutre de la chaussure. De là, une semelle Air jaunie ajoute une touche vintage.",
-      "price": "1044",
-      "stock": "1",
-      "imagepath": "..\/media\/img\/articles\/Jordan 1 Retro Low OG SP.png",
-      "image": "Jordan 1 Retro Low OG SP.png"
+        "article": "Jordan 1 Retro Low OG SP",
+        "mark": "Jordan",
+        "description": "Clin d'\u0153il \u00e0 la Air Jordan 1 High Travis Scott Mocha, la Air Jordan 1 Low Travis Scott Reverse Mocha offre une palette similaire de moka et de blanc cass\u00e9, mais avec des couleurs invers\u00e9es. L'empeigne est compos\u00e9e d'une base en Durabuck moka, de superpositions en cuir blanc et de Swooshes invers\u00e9s caract\u00e9ristiques. Les touches de rouge sur la broderie du logo Wings au talon et l'\u00e9tiquette tiss\u00e9e sur la languette contrastent fortement avec l'aspect neutre de la chaussure. De l\u00e0, une semelle Air jaunie ajoute une touche vintage.",
+        "price": "1044",
+        "stock": 0,
+        "imagepath": "..\/media\/img\/articles\/Jordan 1 Retro Low OG SP.png",
+        "image": "Jordan 1 Retro Low OG SP.png"
     },
     {
-      "article": "Air Jordan REtro High TravisScott CactusJack",
-      "mark": "Travis Scott",
-      "description": "The first release as part of Travis Scott's monumental partnership with Nike, the Air Jordan 1 Travis Scott breaks the conventional rules of the Air Jordan 1 design. For starters, the side Swooshes are reversed, which each tailing facing the toe. Woven tongue tags are shifted and stitched to the side of the tongue instead of the top. Also, in the collar, there is a hidden stash pocket. A one-of-a-kind design fit for a one-of-a-kind artist.\n\nThe Air Jordan 1 Travis Scott features a white leather upper with Mocha suede overlays and black leather reversed Swooshes. Hits of red on the tongue slightly contrast the design's earth tones. On the heel, a debossed Cactus Jack logo adds a custom feel. From there, a yellowed midsole and matching Mocha outsole complete the design.",
-      "price": "1284",
-      "stock": "1",
-      "imagepath": "..\/media\/img\/articles\/Air Jordan REtro High TravisScott CactusJack.png",
-      "image": "Air Jordan REtro High TravisScott CactusJack.png"
+        "article": "Air Jordan REtro High TravisScott CactusJack",
+        "mark": "Travis Scott",
+        "description": "The first release as part of Travis Scott's monumental partnership with Nike, the Air Jordan 1 Travis Scott breaks the conventional rules of the Air Jordan 1 design. For starters, the side Swooshes are reversed, which each tailing facing the toe. Woven tongue tags are shifted and stitched to the side of the tongue instead of the top. Also, in the collar, there is a hidden stash pocket. A one-of-a-kind design fit for a one-of-a-kind artist.\n\nThe Air Jordan 1 Travis Scott features a white leather upper with Mocha suede overlays and black leather reversed Swooshes. Hits of red on the tongue slightly contrast the design's earth tones. On the heel, a debossed Cactus Jack logo adds a custom feel. From there, a yellowed midsole and matching Mocha outsole complete the design.",
+        "price": "1284",
+        "stock": "1",
+        "imagepath": "..\/media\/img\/articles\/Air Jordan REtro High TravisScott CactusJack.png",
+        "image": "Air Jordan REtro High TravisScott CactusJack.png"
     },
     {
-      "article": "Air Jordan purple High",
-      "mark": "Jordan",
-      "description": "Jordan Brand a ajouté un nouveau colorway à la silhouette qui a tout commencé avec la Jordan 1 Retro High Court Purple White, maintenant disponible sur StockX. Cette version reprend les mêmes éléments de design que la Chicago 1, mais en remplaçant cette fois le rouge par du Court Purple.\n\nCette Jordan 1 est composée d'une tige en cuir blanc avec des superpositions Court Purple et des détails noirs. Le logo Swoosh et Wings noir, la semelle intermédiaire blanche et la semelle extérieure Court Purple complètent le design. Ces baskets sont sorties en avril 2020 au prix de 170 $.",
-      "price": "195",
-      "stock": "1",
-      "imagepath": "..\/media\/img\/articles\/Air Jordan purple High.png",
-      "image": "Air Jordan purple High.png"
+        "article": "Air Jordan purple High",
+        "mark": "Jordan",
+        "description": "Jordan Brand a ajout\u00e9 un nouveau colorway \u00e0 la silhouette qui a tout commenc\u00e9 avec la Jordan 1 Retro High Court Purple White, maintenant disponible sur StockX. Cette version reprend les m\u00eames \u00e9l\u00e9ments de design que la Chicago 1, mais en rempla\u00e7ant cette fois le rouge par du Court Purple.\n\nCette Jordan 1 est compos\u00e9e d'une tige en cuir blanc avec des superpositions Court Purple et des d\u00e9tails noirs. Le logo Swoosh et Wings noir, la semelle interm\u00e9diaire blanche et la semelle ext\u00e9rieure Court Purple compl\u00e8tent le design. Ces baskets sont sorties en avril 2020 au prix de 170 $.",
+        "price": "195",
+        "stock": "1",
+        "imagepath": "..\/media\/img\/articles\/Air Jordan purple High.png",
+        "image": "Air Jordan purple High.png"
     },
     {
-      "article": "Air Jordan Dior",
-      "mark": "Dior",
-      "description": "Jordan Brand s'est associé à la maison de couture parisienne Dior pour entrer dans l'histoire avec la Jordan 1 Retro High Dior, désormais disponible sur StockX. C'est la première fois que Jordan collabore avec une marque de mode aussi prestigieuse que Dior, ce qui fait de cette version une référence. Cette version a été limitée à seulement 8 500 paires, chaque paire étant numérotée individuellement.\n\nCette Jordan 1 Retro High est composée d'une tige en cuir blanc et gris avec le traditionnel Swoosh imprimé du monogramme Dior. Ces chaussures sont fabriquées en Italie avec des matériaux de première qualité.",
-      "price": "6607",
-      "stock": "1",
-      "imagepath": "..\/media\/img\/articles\/Air Jordan Dior.png",
-      "image": "Air Jordan Dior.png"
+        "article": "Air Jordan Dior",
+        "mark": "Dior",
+        "description": "Jordan Brand s'est associ\u00e9 \u00e0 la maison de couture parisienne Dior pour entrer dans l'histoire avec la Jordan 1 Retro High Dior, d\u00e9sormais disponible sur StockX. C'est la premi\u00e8re fois que Jordan collabore avec une marque de mode aussi prestigieuse que Dior, ce qui fait de cette version une r\u00e9f\u00e9rence. Cette version a \u00e9t\u00e9 limit\u00e9e \u00e0 seulement 8 500 paires, chaque paire \u00e9tant num\u00e9rot\u00e9e individuellement.\n\nCette Jordan 1 Retro High est compos\u00e9e d'une tige en cuir blanc et gris avec le traditionnel Swoosh imprim\u00e9 du monogramme Dior. Ces chaussures sont fabriqu\u00e9es en Italie avec des mat\u00e9riaux de premi\u00e8re qualit\u00e9.",
+        "price": "6607",
+        "stock": "1",
+        "imagepath": "..\/media\/img\/articles\/Air Jordan Dior.png",
+        "image": "Air Jordan Dior.png"
     },
     {
-      "article": "Air jordan 4 off white",
-      "mark": "Off-White Sail (Women's)",
-      "description": "Jordan Brand and Virgil Abloh teamed up once again to release the third silhouette in their collaborative history with the women's Jordan 4 Retro Off-White Sail (W), now available on StockX. After teasing the release of the Off-White 4 with samples in his MCA exhibit and presenting them in his Off-White FW2020 Women’s Show, Virgil Abloh finally delivered what might be the most anticipated release of 2020. The Air Jordan 4 Sail features full-grain leather uppers with hits of mesh and translucent materials on the toebox and heel of the shoe. From there, hits of light blue on the tongue’s Jumpman and the outsole’s Nike Swoosh provide contrast to the sail colored sneaker. These women's sneakers released in July of 2020 and retailed for $200 USD.",
-      "price": "1512",
-      "stock": "1",
-      "imagepath": "..\/media\/img\/articles\/Air jordan 4 off white.png",
-      "image": "Air jordan 4 off white.png"
+        "article": "Air jordan 4 off white",
+        "mark": "Off-White Sail (Women's)",
+        "description": "Jordan Brand and Virgil Abloh teamed up once again to release the third silhouette in their collaborative history with the women's Jordan 4 Retro Off-White Sail (W), now available on StockX. After teasing the release of the Off-White 4 with samples in his MCA exhibit and presenting them in his Off-White FW2020 Women\u2019s Show, Virgil Abloh finally delivered what might be the most anticipated release of 2020. The Air Jordan 4 Sail features full-grain leather uppers with hits of mesh and translucent materials on the toebox and heel of the shoe. From there, hits of light blue on the tongue\u2019s Jumpman and the outsole\u2019s Nike Swoosh provide contrast to the sail colored sneaker. These women's sneakers released in July of 2020 and retailed for $200 USD.",
+        "price": "1512",
+        "stock": "1",
+        "imagepath": "..\/media\/img\/articles\/Air jordan 4 off white.png",
+        "image": "Air jordan 4 off white.png"
     }
 ]

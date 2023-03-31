@@ -220,11 +220,12 @@ function Add($id, $value) {
 
 /*
  * Remove_basket Function
- * Do: remove an article in basket if the user deletes him
+ * Do: remove an article and affect values in basket if the user deletes him
  *
 */
-function Remove_basket($id) {
+function Remove_basket($id, $number, $id_article) {
     require "models/model.php";
+    AffectValueInArray($id_article, $number);
     RemoveArrayInJSON($id, 'data/dataBasket.json');
     header("Location:index.php?action=basket");
     exit();
@@ -232,7 +233,7 @@ function Remove_basket($id) {
 
 /*
  * Remove_article Function
- * Do: remove an article if the admin deletes him
+ * Do: remove an article and images if the admin deletes him
  *
 */
 function Remove_article($id) {
@@ -256,7 +257,7 @@ function Flag() {
 }
 
 /*
- * Flag Function
+ * Lost_page Function
  * Do: redirect to the lost page
  *
 */
@@ -265,7 +266,7 @@ function Lost_page() {
 }
 
 /*
- * Flag Function
+ * Logout Function
  * Do: destroy sessions variable and log out the user
  *
 */

@@ -177,6 +177,9 @@ function Add_basket($id_user, $id, $number) {
 
     if ($boolValue) {
 
+        // Affect the value
+        AffectValueInArray($id, -$number);
+
         // Write in JSON
         $user_basket = array_search($id_user, array_column($json, 'username'));
         $id_basket = array_search($id, array_column($json, 'id_article'));
@@ -215,6 +218,26 @@ function Test_value($id, $number) {
     else return false;
 }
 
+/*
+ * AffectValueInArray Function
+ * Do: add values in dataArticles json file
+ *
+*/
+function AffectValueInArray($id, $number) {
+
+    // Load the file
+    $JSONfile = 'data/dataArticles.json';
+    $data = file_get_contents($JSONfile);
+    $obj = json_decode($data);
+
+    $obj[$id]->stock += $number;
+
+    // Encode the array back into a JSON string
+    $encode = json_encode($obj, JSON_PRETTY_PRINT);
+
+    // Save the file.
+    file_put_contents('data/dataArticles.json', $encode);
+}
 /*
  * AddPurchaseToJSON Function
  * Do: create an array or arrays to the purchase page
@@ -344,7 +367,7 @@ function DisplayBasket() {
         $obj = json_decode($data);
 
         if ($obj[$i]->username == $_SESSION['id_user']) {
-            $id = $obj[$i]->id_article;
+            $id[$i] = $obj[$i]->id_article;
             $number[$tab] = $obj[$i]->number;
 
             // Load the file
@@ -355,12 +378,12 @@ function DisplayBasket() {
             $obj = json_decode($data);
 
             // access the appropriate element
-            $img_article[$tab] = $obj[$id]->imagepath;
-            $name_article[$tab] = $obj[$id]->article;
-            $mark_article[$tab] = $obj[$id]->mark;
-            $desc_article[$tab] = $obj[$id]->description;
-            $price_article[$tab] = $obj[$id]->price;
-            $stock_article[$tab] = $obj[$id]->stock;
+            $img_article[$tab] = $obj[$id[$i]]->imagepath;
+            $name_article[$tab] = $obj[$id[$i]]->article;
+            $mark_article[$tab] = $obj[$id[$i]]->mark;
+            $desc_article[$tab] = $obj[$id[$i]]->description;
+            $price_article[$tab] = $obj[$id[$i]]->price;
+            $stock_article[$tab] = $obj[$id[$i]]->stock;
 
             $tab++;
 
