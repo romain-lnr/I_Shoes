@@ -18,7 +18,7 @@ ob_start();
                 <label for="prenom"><b>Prénom</b></label>
                 <input type="text" class="form-control" placeholder="Entrer le prénom" name="prenom" maxlength="15" required>
                 <label for="nom"><b>Nom</b></label>
-                <input type="text" class="form-control" placeholder="Entrer le nom" name="nom" maxlength="15" required>
+                <input type="text" class="form-control" placeholder="Entrer le nom" name="nom" maxlength="30" required>
                 <label for="email"><b>Email</b></label>
                 <input type="email" class="form-control" placeholder="Entrer l'email" name="email" maxlength="30" required>
                 <label for="password"><b>Mot de passe</b></label>

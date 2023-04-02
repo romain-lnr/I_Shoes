@@ -3,98 +3,28 @@
         "username": "admin",
         "firstname": "admin",
         "name": "admin",
-        "Email": "admin@gmail.com",
+        "Email": "admin@cpnv.ch",
         "password": "$2y$10$kIYN5IZvit5uaVSFGwTefecHb2s7DYQ9VFFnkPczt84avk46lG97S"
     },
     {
-        "username": "a",
-        "firstname": "a",
-        "name": "a",
-        "Email": "a@a",
-        "password": "$2y$10$dj801QZBlcm6dHQeGADt4eREzEBsg4uJINCybo5jarqxMfSRLZP8i"
+        "username": "SachaBgDu47",
+        "firstname": "Sacha",
+        "name": "Jaccard",
+        "Email": "sacha.jaccard@cpnv.ch",
+        "password": "$2y$10$ONfUNCksn.5dJ.q2JzjJKO51APztCmUf4q2n\/nvxYUOk68UphuS\/G"
     },
     {
-        "username": "Heisenberg",
-        "firstname": "Walter",
-        "name": "White",
-        "Email": "walterwhite@gmail.com",
-        "password": "$2y$10$NdX8TVoJNOLR6tBDewiV9OkvqG1OP2txelzvtLyATz9wTFI4p8w2u"
+        "username": "RomWhomp",
+        "firstname": "Romain",
+        "name": "Lenoir",
+        "Email": "romain.lenoir@cpnv.ch",
+        "password": "$2y$10$ew9LLekzjibTHnvwDT12NO1T4k0w68I4VDQTZ7ptyVEh4jtWhva2K"
     },
     {
-        "username": "tee",
-        "firstname": "tee",
-        "name": "tee",
-        "Email": "tee@tee",
-        "password": "$2y$10$.5nmxv4h.9esZhbqxeNN7.uFkBZYoUv8mT6FW0fcMLLloVpPVipmG"
-    },
-    {
-        "username": "aq",
-        "firstname": "aq",
-        "name": "aq",
-        "Email": "a@a",
-        "password": "$2y$10$alCj7hn3Xy8mOGeiVARGqO4Z6LPg3mCNgC54wpgc7tKXYqn4zWCmi"
-    },
-    {
-        "username": "qw",
-        "firstname": "qw",
-        "name": "qw",
-        "Email": "qw@q",
-        "password": "$2y$10$EHWZEooiNtUHg3ham5.oyOv\/bFadVJUnvSdtXNlVhiOu35K.JHDhK"
-    },
-    {
-        "username": "e",
-        "firstname": "e",
-        "name": "e",
-        "Email": "e@e",
-        "password": "$2y$10$vFQjFhefrUtlCXAo89CsKuLr6pdemJfQEzYgw1UUX7ozzxbe9iE.K"
-    },
-    {
-        "username": "rr",
-        "firstname": "rr",
-        "name": "rr",
-        "Email": "rr@rr",
-        "password": "$2y$10$FjKsB.C4zbtG8Lm6IAIRrO8x4ADGbLZ8QDq.3A3HTrOrtcGMbt9MK"
-    },
-    {
-        "username": "ztf",
-        "firstname": "ztftzft",
-        "name": "zjtjz",
-        "Email": "ct@w",
-        "password": "$2y$10$gYjr04JeW3kY9bJZS5cxhOwwdlpsNEoEfL8\/XG9SG7KWFp1cVDdLa"
-    },
-    {
-        "username": "aa",
-        "firstname": "aa",
-        "name": "aa",
-        "Email": "aa@aa",
-        "password": "$2y$10$vCafhkbfWG5oFdfIMup19uGpqq53xwRG6Nie67dc2Jscu9gp1d5lS"
-    },
-    {
-        "username": "tt",
-        "firstname": "tt",
-        "name": "tt",
-        "Email": "tt@rr",
-        "password": "$2y$10$5BhKfarjjvJWP4sgHPT1UerpzuCKooIm9.x.zdKcMLbuSSfbpt39O"
-    },
-    {
-        "username": "sacha",
-        "firstname": "sach",
-        "name": "ahc",
-        "Email": "sc@sc",
-        "password": "$2y$10$fWiLBWvks7H2mlBjvrYgtOvVAB\/kqUlXdSHpEqXuny.vieAIX\/Acm"
-    },
-    {
-        "username": "t",
-        "firstname": "t",
-        "name": "t",
-        "Email": "t@t",
-        "password": "$2y$10$QJA0tWTYpt7fuqvCJsfzsOoxJ7xI3YxPgaLiZ0rkH8Ey2Hu4jUuZ."
-    },
-    {
-        "username": "ad",
-        "firstname": "ad",
-        "name": "ad",
-        "Email": "a@a",
-        "password": "$2y$10$Razsp85zW4d3ypNIaviG\/eoh95owcJTGNk9edtCjK7H4e\/Lp7HOZa"
+        "username": "Alexouille",
+        "firstname": "Alex",
+        "name": "Barreira-videira",
+        "Email": "alex.barreira-videira@cpnv.ch",
+        "password": "$2y$10$HvqttCVh6y97esC7jncuTecD2k1mcySlat4e4xd635q\/A7EvdUkQq"
     }
 ]
