@@ -469,7 +469,7 @@ function FlagPurchase()
         }
     }
     // Encode the array back into a JSON string.
-    $json = json_encode($obj);
+    $json = json_encode($obj, JSON_PRETTY_PRINT);
 
     // Save the file.
     file_put_contents('data/dataPurchases.json', $json);
