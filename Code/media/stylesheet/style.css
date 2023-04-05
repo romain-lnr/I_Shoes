@@ -72,7 +72,7 @@ body {
     text-decoration: underline;
 }
 
-/* Add a black background color to the top navigation */
+/* Add a cadetblue background color to the top navigation */
 .topnav {
     width: 100%;
     background-color: cadetblue;
@@ -260,9 +260,6 @@ footer {
 
 /* Large screen */
 @media screen and (min-width: 1800px) {
-    #logo {
-        margin-right: 1640px;
-    }
     .case_desc .case {
         margin-left: 430px;
     }
