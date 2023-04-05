@@ -12,7 +12,7 @@ if (!isset($_SESSION['logged']) ||  !$_SESSION['logged']) {
     ob_start(); ?>
     <div class="topnav">
         <a href="index.php?action=login"><img src="../media/img/login.png" height="50"><br>login</a>
-        <a href="index.php?action=login"><img src="../media/img/basket.png" height="50"><br>Basket</a>
+        <a href="index.php?error=not_login"><img src="../media/img/basket.png" height="50"><br>Basket</a>
         <img src="../media/img/logo.png" height="90">
     </div>
     <br>
