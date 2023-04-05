@@ -18,7 +18,7 @@ ob_start(); ?>
 ob_start(); ?>
 <div id="thanks">
     <h2>Merci pour votre achat !</h2>
-    <h3>Votre commande va bientôt être expédié</h3><br>
+    <h3>Votre commande va bientôt être expédiée</h3><br>
 </div>
 <h3 style="padding-left: 55px;">Récapitulatif de la commande : </h3>
     <div id="content">
