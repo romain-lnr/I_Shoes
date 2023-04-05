@@ -12,7 +12,7 @@ ob_start();
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<div class="topnav">
         <a href="index.php?action=login"><img src="../media/img/login.png" height="50"><br>login</a>
-        <a href="index.php?action=not_login"><img src="../media/img/basket.png" height="50"><br>Basket</a>
+        <a href="index.php?error=not_login"><img src="../media/img/basket.png" height="50"><br>Basket</a>
         <a href="index.php?action=home" id="logo"><img src="../media/img/logo.png" height="90"></a>
     </div>
     <?php $topnav = ob_get_clean();
