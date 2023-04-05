@@ -27,7 +27,7 @@ ob_start();
                     $error = $_GET['error'];
                     if($error == "user_not_correct") echo "<br><p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
                     if($error == "password_not_correct") echo "<br><p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
-                    if($error == "not_login") echo "<br><p style='color:red'>Veuillez vous connectez</p>";
+                    if($error == "not_login") echo "<br><p style='color:red'>Veuillez vous connecter</p>";
                 }
                 ?>
             </form>
