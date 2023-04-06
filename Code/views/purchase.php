@@ -9,8 +9,6 @@
 $title="IShoes - purchase page";
 ob_start(); ?>
 <div class="topnav">
-    <a href="index.php?action=logout">logout</a>
-    <a href="#user" style="height: 10px"><?php echo $_SESSION['id_user']?></a>
     <img src="../media/img/logo.png" height="90">
 </div>
 <br>

@@ -7,8 +7,9 @@
     <list default="true" id="55021f64-2d06-4d8e-b522-ff5d1ee43f4e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/dataArticles.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataArticles.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataBasket.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataBasket.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/dataPurchases.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataPurchases.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/purchase.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/purchase.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,6 +131,7 @@
       <workItem from="1680711353626" duration="396000" />
       <workItem from="1680783836121" duration="799000" />
       <workItem from="1680786117872" duration="1070000" />
+      <workItem from="1680789938534" duration="2221000" />
     </task>
     <servers />
   </component>
