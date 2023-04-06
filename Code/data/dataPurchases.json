@@ -4,5 +4,11 @@
         "id_article": "1",
         "number": "1",
         "flag": true
+    },
+    {
+        "username": "admin",
+        "id_article": "0",
+        "number": 9,
+        "flag": true
     }
 ]
