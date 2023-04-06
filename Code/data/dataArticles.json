@@ -4,7 +4,7 @@
         "mark": "Nike",
         "description": "Le charme continue d'op\u00e9rer avec la Nike Air Force 1 \u201907. Cette chaussure de basketball OG revisite ses \u00e9l\u00e9ments les plus c\u00e9l\u00e8bres : les renforts cousus r\u00e9sistants, les finitions sobres et juste ce qu'il faut d'\u00e9clat pour vous faire briller.",
         "price": "120",
-        "stock": 73,
+        "stock": 63,
         "imagepath": "..\/media\/img\/articles\/Air Force 1 '07.png",
         "image": "Air Force 1 '07.png"
     },
@@ -13,7 +13,7 @@
         "mark": "Adidas",
         "description": "L'adidas Yeezy Foam RNR Onyx est dot\u00e9e d'une construction en mousse ovale Onyx compos\u00e9e en partie d'EVA et d'algues. \u00c0 la base, une assise plantaire matelass\u00e9e offre confort et soutien, tandis qu'une semelle sculpturale avec de profondes bandes de roulement assure l'adh\u00e9rence.",
         "price": "200",
-        "stock": 84,
+        "stock": 79,
         "imagepath": "..\/media\/img\/articles\/Yeezy FoamRunners.png",
         "image": "Yeezy FoamRunners.png"
     },
