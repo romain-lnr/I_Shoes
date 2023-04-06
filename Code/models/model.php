@@ -181,7 +181,16 @@ function Add_basket($id_user, $id, $number) {
         AffectValueInArray($id, -$number);
 
         // Write in JSON
-        $json[] = array("username" => $id_user, "id_article" => $id, "number" => $number);
+        $user_basket = array_search($id_user, array_column($json, 'username'));
+        $id_basket = array_search($id, array_column($json, 'id_article'));
+
+        if ($user_basket !== false && $id_basket !== false) {
+            $json[$id_basket] = array("username" => $id_user, "id_article" => $id, "number" => $_SESSION['value'][$id] + $number);
+            $_SESSION['value'][$id] += $number;
+        } else {
+            $json[] = array("username" => $id_user, "id_article" => $id, "number" => $number);
+            $_SESSION['value'][$id] = $number;
+        }
     } else {
         header("Location:index.php?error=not_even_stock");
         return;
